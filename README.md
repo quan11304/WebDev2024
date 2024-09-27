@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Name: Đỗ Trọng Đạt
+* ID: 22BI13075
+* Group ID: 21
+* Project Name: 19 - Travel Booking App
