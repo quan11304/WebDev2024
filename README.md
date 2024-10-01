@@ -10,8 +10,8 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: Hoàng Quân
-* ID: 22BI13368
+* Name: Hoàng Quân not
+* ID: 22BI1336813368
 * Group ID: 21
 * Project Name: 19 - Travel Booking Application
 
