@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: Nguyễn Tài Anh
-* ID: 22BI13028
-* Group ID: 21
-* Project Name: 19 - Travel Booking Application
+* Name: *YourNameHere*
+* ID: *YourIdHere*
+* Group ID: *Your Group ID here*
+* Project Name: *Your Project Name here*
