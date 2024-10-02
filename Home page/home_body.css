@@ -1,0 +1,73 @@
+.gallery {
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.movie-list {
+    display: flex;
+    height: 100%; /* Full height */
+    align-items: center;
+    transition: all 100ms ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 30px; /* Space between items */
+    position: relative;
+}
+
+.movie-list-item-img {
+    transition: all 100ms ease-in-out;
+    height: 270px; /* Adjust height */
+    width: 400px; /* Adjust width */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2); /* Zoom effect on hover */
+    opacity: 0.5; /* Darken effect on hover */
+}
+
+.movie-list-item-title {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    padding: 5px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: 100ms all ease-in-out;
+}
+
+.movie-list-item-desc {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    width: 250px;
+    opacity: 0; /* Initially hidden */
+    transition: 100ms all ease-in-out;
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: 100ms all ease-in-out;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1; /* Show text and button on hover */
+}
