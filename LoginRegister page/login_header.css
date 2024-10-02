@@ -1,0 +1,173 @@
+/* Apply global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+/* Header remains unaffected */
+.header {
+    width: 100%;
+    background-color: #003580; /* Keep the solid color of the header */
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Ensure header is above the overlay */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rest of the styles as needed */
+.navContainer {
+    width: 100%;
+    max-width: 1024px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* LOGIN / REGISTER BUTTON */
+.navItems {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navButtonRegister {
+    padding: 10px 20px;
+    background-color: white;
+    color: #003580;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navButtonRegister a{
+    text-decoration: none;
+}
+
+.navButtonRegister a:visited{
+    text-decoration: none;
+}
+.navButtonLogin{
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navButtonRegister:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+/* LOGO */
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* MENU */
+.navbar nav {
+    width: 100%;
+    padding-left: 270px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu li.active {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li.active div {
+    display: flex;
+    align-items: center;
+}
+
+.menu li.other div {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu i {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.menu li:hover {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.menu li:hover a {
+    color: #003580;
+}
+
+.menu li:hover i {
+    color: #003580;
+}
+
+/* LANGUAGE SELECTOR */
+.language-selector {
+    position: flex;
+    gap: 0px;
+    opacity: 0px;
+    background-color: #fff;
+    border-radius: 5px;
+    flex-shrink: 0;
+    padding: 2px 1px;
+    color: #fff;
+}
+
+#languageSelect {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: 19.92px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #000000;
+    border: none;
+}
