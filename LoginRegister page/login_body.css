@@ -10,7 +10,7 @@ body {
     position: relative;
     font-family: "Roboto", sans-serif;
     height: 100%;
-    background-image: url("/Code/WebDev2024/LoginRegister page/image/bg.jpg");
+    background-image: url("../LoginRegister page/image/bg.jpg");
     background-size: cover;
     background-position: center;
     margin: 0;

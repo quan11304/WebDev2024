@@ -1,73 +1,101 @@
-.gallery {
-    padding: 20px;
-    overflow: hidden; /* Prevent overflow */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.movie-list {
+/* Main container for the images */
+.image-list {
     display: flex;
-    height: 100%; /* Full height */
-    align-items: center;
-    transition: all 100ms ease-in-out;
+    justify-content: space-between; /* Distribute images with gaps */
+    padding: 20px 15px; /* 20px top/bottom gap and 15px left/right padding */
+    height: calc(100vh - 65px);
+    width: 100%;
+    max-width: 1920px; /* Ensure the total width is capped at 1920px */
+    margin: 0 auto;
 }
 
-.movie-list-item {
-    margin-right: 30px; /* Space between items */
+/* Each image container */
+.image-container {
     position: relative;
-}
-
-.movie-list-item-img {
-    transition: all 100ms ease-in-out;
-    height: 270px; /* Adjust height */
-    width: 400px; /* Adjust width */
-    object-fit: cover; /* Ensure the image covers the area */
-    border-radius: 20px; /* Rounded corners */
-}
-
-.movie-list-item:hover .movie-list-item-img {
-    transform: scale(1.2); /* Zoom effect on hover */
-    opacity: 0.5; /* Darken effect on hover */
-}
-
-.movie-list-item-title {
-    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-    padding: 5px 10px;
-    font-size: 24px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    opacity: 0; /* Initially hidden */
-    transition: 100ms all ease-in-out;
-}
-
-.movie-list-item-desc {
-    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-    padding: 10px;
-    font-size: 14px;
-    position: absolute;
-    top: 30%;
-    left: 10px;
-    width: 250px;
-    opacity: 0; /* Initially hidden */
-    transition: 100ms all ease-in-out;
-}
-
-.movie-list-item-button {
-    padding: 10px;
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-    border: none;
+    width: 365px; /* Exact width of each image */
+    height: 100%;
+    overflow: hidden;
     cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    opacity: 0; /* Initially hidden */
-    transition: 100ms all ease-in-out;
+    border-radius: 10px; /* Add border-radius */
 }
 
-.movie-list-item:hover .movie-list-item-title,
-.movie-list-item:hover .movie-list-item-desc,
-.movie-list-item:hover .movie-list-item-button {
-    opacity: 1; /* Show text and button on hover */
+/* Image style */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Ensure images also follow border-radius */
+}
+
+/* Name style (appears on hover) */
+.image-name {
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    background-color: rgb(53, 114, 239, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 5; /* Ensure it appears above the image */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect on image */
+.image-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(30%); /* Make the image 25% darker */
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+/* Description text that appears on hover */
+.description {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(53, 114, 239, 0.8);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+    border-radius: 0 0 10px 10px; /* Match the border-radius */
+}
+
+.image-button {
+    position: absolute;
+    bottom: 90px; /* Position it higher to avoid overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    font-size: 14px;
+}
+
+.image-container:hover .description,
+.image-container:hover .image-button,
+.image-container:hover .image-name {
+    opacity: 1;
+}
+/* Button hover effect */
+.image-button:hover {
+    background-color: rgb(53, 114, 239, 0.8);
+    color: white
 }
