@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/destination.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navContainer">
+            <img src="logo/logo.png" class="logo-image" alt="Logo">
+            <div class="navItems">
+                <button class="navButton">Register</button>
+                <button class="navButton">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="headerContainer">
+            <div class="headerList">
+                <div class="headerListItem">
+                    <i class="fas fa-bed"></i>
+                    <span>Hotels</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-utensils"></i>
+                    <span>Tours</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-plane"></i>
+                    <span>Flights</span>
+                </div>
+                <div class="headerListItem active">
+                    <i class="fas fa-hotel"></i>
+                    <span>Destination</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-car"></i>
+                    <span>Car Rentals</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <img src="image/Picture1.png" alt="background">
+        <div class="triangle-text">
+            <i class="fa-solid fa-map-location-dot"></i> Da Nang, Vietnam
+        </div>
+    </div>
+
+    <div class="explorations"> 
+        <div class="title">Must-explore Destinations</div>
+        <div class="tab-container">
+            <div class="tab active" onclick="setActiveTab(this)">Vietnam</div>
+            <div class="tab" onclick="setActiveTab(this)">Asia</div>
+            <div class="tab" onclick="setActiveTab(this)">Europe</div>
+            <div class="tab" onclick="setActiveTab(this)">Oceania</div>
+            <div class="tab" onclick="setActiveTab(this)">America</div>
+            <div class="tab" onclick="setActiveTab(this)">Africa</div>
+        </div>
+
+        <!-- Destination Wrapper for Vietnam -->
+        <div class="destination-wrapper" id="vietnamDestinations">
+            <div class="destination-section">
+                <div class="destination-card">
+                    <img src="image/vietnam-travel-5.jpg" alt="Destination 1">
+                    <div class="destination-name">Hanoi</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/at_ve-dep-thanh-pho-da-nang-giu-tron-tung-khoanh-khac_6b555585df3ca96d931cf6f4378c9488.jpg" alt="Destination 2">
+                    <div class="destination-name">Da Nang</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/tp-nha-trang-16818161974101240202452.jpg" alt="Destination 3">
+                    <div class="destination-name">Nha Trang</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/hochiminh.jp.jpg" alt="Destination 4">
+                    <div class="destination-name">Ho Chi Minh City</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/photography-hạ-long-bay-boat-ha-long-bay-wallpaper-preview.jpg" alt="Destination 5">
+                    <div class="destination-name">Ha Long Bay</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Destination Wrapper for Asia -->
+        <div class="destination-wrapper" id="asiaDestinations" style="display: none;">
+            <div class="destination-section">
+                <div class="destination-card">
+                    <img src="image/tokyo-dxva6ho3h8x6m3xb.jpg" alt="Destination 1">
+                    <div class="destination-name">Japan</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/360_F_98443741_G8VlrLoRGWUSA3cGgw36RqEiBkfVR9pX.jpg" alt="Destination 2">
+                    <div class="destination-name">Thailand</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/pexels-apasaric-2848492.jpg" alt="Destination 3">
+                    <div class="destination-name">South Korea</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/GettyImages-1145042281.png" alt="Destination 4">
+                    <div class="destination-name">Indonesia</div>
+                </div>
+                <div class="destination-card">
+                    <img src="image/kuala-lumpur-twins-malaysia-petronas-twin-towers.jpg" alt="Destination 5">
+                    <div class="destination-name">Malaysia</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        function setActiveTab(selectedTab) {
+            const tabs = document.querySelectorAll('.tab');
+            const vietnamDestinations = document.getElementById('vietnamDestinations');
+            const asiaDestinations = document.getElementById('asiaDestinations');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            selectedTab.classList.add('active');
+
+            // Hide both sections initially
+            vietnamDestinations.style.display = 'none';
+            asiaDestinations.style.display = 'none';
+
+            // Show the corresponding section based on the selected tab
+            if (selectedTab.textContent === "Vietnam") {
+                vietnamDestinations.style.display = 'block';
+            } else if (selectedTab.textContent === "Asia") {
+                asiaDestinations.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
