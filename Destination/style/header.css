@@ -1,5 +1,5 @@
 .header {
-    background-color: white;
+    background-color: #003580   ;
     color: white;
     display: flex;
     flex-direction: column;
@@ -25,11 +25,11 @@
     align-items: center;
     gap: 10px; 
     cursor: pointer;
-    color: #003580;
+    color: white;
 }
 
 .headerListItem.active {
-    border: 1px solid #003580;
+    border: 1px solid white;
     padding: 5px; 
     border-radius: 10px;
 }
