@@ -101,10 +101,26 @@ body::before {
     transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
+.input-icon {
+    position: absolute;
+    right: 10px; /* Align to the right of the input field */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.input-icon:hover {
+    opacity: 1;
+}
+    
 .logo-image {
-    width: 200px; /* Adjust size as needed */
+    width: 200px;
     height: auto;
-    margin-bottom: 20px; /* Space between logo and icon */
+    margin-bottom: 0px;
 }
 
 /* Register Text */
@@ -137,11 +153,11 @@ body::before {
 .input-group input {
     width: 100%;
     padding: 20px 40px; /* Increased padding for larger input */
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.288);
     color: #fff;
-    font-size: 18px; /* Increased font size for better readability */
+    font-size: 20px; 
 }
 
 /* Login Button */
@@ -150,7 +166,7 @@ body::before {
     padding: 20px; /* Increased padding for larger button */
     background-color: #3498db;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px; /* Increased font size */
     color: white;
     cursor: pointer;

@@ -111,9 +111,9 @@ body::before {
 }
 
 .logo-image {
-    width: 200px; /* Adjust size as needed */
+    width: 200px;
     height: auto;
-    margin-bottom: 20px; /* Space between logo and icon */
+    margin-bottom: 0px;
 }
 
 /* Login Text */
@@ -145,7 +145,7 @@ body::before {
 .input-group input {
     width: 100%;
     padding: 20px 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
@@ -157,8 +157,8 @@ body::before {
     padding: 20px;
     background-color: #3498db;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 10px;
+    font-size: 20px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;

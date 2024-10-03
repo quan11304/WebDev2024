@@ -4,8 +4,8 @@
     <title>Register</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../LoginRegister page/register_header.css"> <!-- Link to your header styles -->
-    <link rel="stylesheet" href="../LoginRegister page/register_body.css"> <!-- Link to your body styles -->
+    <link rel="stylesheet" href="../LoginRegister page/register_header.css"> 
+    <link rel="stylesheet" href="../LoginRegister page/register_body.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
@@ -78,7 +78,7 @@
         <div class="register-container">
             <div class="register-box">
                 <div class="left-column">
-                    <img src="../Destination/logo/logo.png" alt="Logo" class="logo-image">
+                    <img src="../Destination/logo/logo2.png" alt="Logo" class="logo-image">
                     <div class="icon-container">
                         <i class="fas fa-user-plus"></i>
                         <h2>Register</h2>
@@ -86,22 +86,22 @@
                     <p class="login-text">Already have an account? <a href="../LoginRegister page/login.html">Login</a></p>
                 </div>
                 <div class="right-column">
-                    <form>
+                    <form id="registerForm">
                         <div class="input-group">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" id="username" placeholder="Username" required>
                         </div>
                         <div class="input-group">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="email" placeholder="Email" required>
                         </div>
                         <div class="input-group">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Password" required>
+                            <input type="password" id="password" placeholder="Password" required>
                         </div>
                         <div class="input-group">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Repeat Password" required>
+                            <input type="password" id="repeatPassword" placeholder="Repeat Password" required>
                         </div>
                         <div class="register-actions">
                             <button type="submit" class="register-btn">Register</button>
@@ -111,5 +111,6 @@
             </div>
         </div>
     </div>
+    <script src="../LoginRegister page/register.js"></script>
 </body>
 </html>
