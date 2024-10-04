@@ -84,14 +84,25 @@ body::before {
 
 /* Icon Container */
 .icon-container {
-    margin-bottom: 10px; /* Space between icon and heading */
+    display: flex;
+    align-items: center; /* Vertically aligns the icon with the text */
+}
+
+.icon-container h2 {
+    margin: 0 10px 0 0; /* Adds space between the text and the icon */
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding-left: 20px;
 }
 
 .icon-container i {
     font-size: 60px; /* Size of the icon */
-    color: #fff; /* Icon color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+    margin-left: 0; /* Space between icon and text */
 }
 
 /* Optional: Hover Effect for the Icon */
@@ -99,10 +110,16 @@ body::before {
     transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
+.logo-image {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and icon */
+}
+
 /* Login Text */
 .login-text {
     margin-top: 24px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* Right Column */
