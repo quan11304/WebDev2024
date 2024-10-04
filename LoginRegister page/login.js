@@ -38,9 +38,9 @@ document.getElementById('viewPassword').addEventListener('click', function () {
     
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        passwordIcon.src = '../Icons/hide.png'; // Change to 'hide' icon
+        passwordIcon.src = '../LoginRegister page/image/ViewPassword.png'; 
     } else {
         passwordInput.type = 'password';
-        passwordIcon.src = '../Icons/view.png'; // Change back to 'view' icon
+        passwordIcon.src = '../LoginRegister page/image/ViewPassword.png'; // Change back to 'view' icon
     }
 });
