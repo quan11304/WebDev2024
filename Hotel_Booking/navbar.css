@@ -21,9 +21,9 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-weight: 500;
-    font-size: 24px;
+.logo img {
+    height: 35px; /* Scale the logo to fill the header's height */
+    width: 140px; /* Keep the logo's aspect ratio */
 }
 
 .navItems {
