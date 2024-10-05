@@ -8,8 +8,8 @@ html, body {
 .image-list {
     display: flex;
     justify-content: space-between; /* Distribute images with gaps */
-    padding: 20px 15px; /* 20px top/bottom gap and 15px left/right padding */
-    height: calc(100vh - 65px);
+    padding: 80px 15px; /* 20px top/bottom gap and 15px left/right padding */
+    height: calc(110vh - 25px);
     width: 100%;
     max-width: 1920px; /* Ensure the total width is capped at 1920px */
     margin: 0 auto;
