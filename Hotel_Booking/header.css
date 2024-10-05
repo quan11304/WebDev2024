@@ -22,7 +22,7 @@
 .headerList {
     display: flex;
     gap: 30px; /* Reduced gap */
-    margin-bottom: 30px; /* Reduced margin */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .headerListItem {
