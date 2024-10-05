@@ -1,0 +1,101 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Main container for the images */
+.image-list {
+    display: flex;
+    justify-content: space-between; /* Distribute images with gaps */
+    padding: 20px 15px; /* 20px top/bottom gap and 15px left/right padding */
+    height: calc(100vh - 65px);
+    width: 100%;
+    max-width: 1920px; /* Ensure the total width is capped at 1920px */
+    margin: 0 auto;
+}
+
+/* Each image container */
+.image-container {
+    position: relative;
+    width: 365px; /* Exact width of each image */
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px; /* Add border-radius */
+}
+
+/* Image style */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Ensure images also follow border-radius */
+}
+
+/* Name style (appears on hover) */
+.image-name {
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    background-color: rgb(53, 114, 239, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 5; /* Ensure it appears above the image */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect on image */
+.image-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(30%); /* Make the image 25% darker */
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+/* Description text that appears on hover */
+.description {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(53, 114, 239, 0.8);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+    border-radius: 0 0 10px 10px; /* Match the border-radius */
+}
+
+.image-button {
+    position: absolute;
+    bottom: 90px; /* Position it higher to avoid overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    font-size: 14px;
+}
+
+.image-container:hover .description,
+.image-container:hover .image-button,
+.image-container:hover .image-name {
+    opacity: 1;
+}
+/* Button hover effect */
+.image-button:hover {
+    background-color: rgb(53, 114, 239, 0.8);
+    color: white
+}

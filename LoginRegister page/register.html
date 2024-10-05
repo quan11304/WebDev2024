@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../LoginRegister page/register_header.css"> <!-- Link to your header styles -->
+    <link rel="stylesheet" href="../LoginRegister page/register_body.css"> <!-- Link to your body styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="../LoginRegister page/register.html">
+                    <img src="../Destination/logo/logo.png" alt="travel'USTH Logo">
+                </a>
+            </div>
+
+            <nav>
+                <ul class="menu">
+                    <li class="other">
+                        <i class="fas fa-home"></i>
+                        <a href="../Home page/home.html">Home</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-utensils"></i>
+                        <a href="#about">Tours</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-plane"></i>
+                        <a href="#services">Flights</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-bed"></i>
+                        <a href="">Hotels</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-hotel"></i>
+                        <a href="#contact">Entertainment</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-car"></i>
+                        <a href="#contact">Transportation</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="navContainer">
+                <div class="navItems">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="tiengviet">Tiếng Việt</option>
+                            <option value="english">English</option>
+                            <option value="fracais">Français</option>
+                        </select>
+                    </div>
+                    
+                    <button class="navButtonRegister">Register</button>
+                    <button class="navButtonLogin">
+                        <a href="../LoginRegister page/login.html">Login</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="register-container">
+            <div class="register-box">
+                <div class="left-column">
+                    <img src="../Destination/logo/logo.png" alt="Logo" class="logo-image">
+                    <div class="icon-container">
+                        <i class="fas fa-user-plus"></i>
+                        <h2>Register</h2>
+                    </div>
+                    <p class="login-text">Already have an account? <a href="../LoginRegister page/login.html">Login</a></p>
+                </div>
+                <div class="right-column">
+                    <form>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Repeat Password" required>
+                        </div>
+                        <div class="register-actions">
+                            <button type="submit" class="register-btn">Register</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
