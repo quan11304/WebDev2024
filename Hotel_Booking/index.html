@@ -16,45 +16,66 @@
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navContainer">
-            <span class="logo">Travel Booking</span>
+            <a href="../Home page/home.html">
+                <img src="../Destination/logo/logotrang.png" alt="Travel Booking Logo" class="logo-img">
+            </a>
             <div class="navItems">
-                <button type="button" class="navButton">Register</button>
-                <button type="button" class="navButton">Login</button>
+                <button type="button" class="navButton">
+                    <a href="../LoginRegister page/register.html">Register</a>
+                </button>
+                <button type="button" class="navButton">
+                    <a href="../LoginRegister page/login.html">Login</a>
+                </button>
             </div>
         </div>
     </nav>
+    
 
     <!-- Header Section -->
     <header class="header">
         <div class="headerContainer">
-            <div class="headerList">
-                <div class="headerListItem active">
-                    <i class="fas fa-bed"></i>
-                    <span>Hotels</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-utensils"></i>
-                    <span>Tours</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-plane"></i>
-                    <span>Flights</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-hotel"></i>
-                    <span>Entertainment</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-car"></i>
-                    <span>Car Rentals</span>
-                </div>
+            <nav>
+                <ul class="menu">
+                    <li class="other">
+                        <div>
+                            <i class="fas fa-home"></i>
+                            <a href="../Home page/home.html">Home</a>
+                        </div>
+                    </li>
 
-            </div>
+                    <li class="other">
+                        <i class="fas fa-utensils"></i>
+                        <a href="#about">Tours</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-plane"></i>
+                        <a href="#services">Flights</a>
+                    </li>
+
+                    <li class="active">
+                            <i class="fas fa-bed"></i>
+                            <a href="">Hotels</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-hotel"></i>
+                        <a href="#contact">Entertainment</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-car"></i>
+                        <a href="../Transportation/car_main.html">Transportation</a>
+                    </li>
+                </ul>
+            </nav>
             <h1 class="headerTitle">A lifetime of discounts? It's Genius.</h1>
             <p class="headerDesc">
                 Get rewarded for your travels – unlock instant savings of 10% or more with a free Travel Booking account.
             </p>
-            <button type="button" class="headerBtn">Sign in / Register</button>
+            <button type="button" class="headerBtn">
+                <a href="../LoginRegister page/register.html">Sign in / Register</a>
+            </button>
 
             <!-- Search Bar Section -->
             <div class="headerSearch">
