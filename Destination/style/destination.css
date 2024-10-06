@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif; 
-    margin: 0; 
-    padding: 0; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Description Styles */
 .description {
     font-size: 16px;
     margin-left: 430px;
     color: #8F9DBE;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-/* Background Styles */
 .background {
     position: relative;
     margin-top: -30px;
@@ -37,7 +34,6 @@ body {
     padding-right: 5px;
 }
 
-/* Explorations Section */
 .explorations {
     padding: 20px;
 }
@@ -47,15 +43,14 @@ body {
     font-weight: bold;
     margin-left: 430px;
     color: #333;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-/* Destination Wrapper */
 .destination-wrapper {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    margin: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .destination-section {
@@ -66,16 +61,17 @@ body {
     padding: 20px 0;
 }
 
-/* Destination Card Styles */
 .destination-card {
     position: relative;
-    width: 200px; /* Adjust the width */
-    height: 300px; /* Adjust the height for a better aspect ratio */
+    width: 200px;
+    height: 300px;
     background-color: #f9f9f9;
     border-radius: 12px;
-    overflow: hidden; /* Ensures image fits within card */
+    overflow: hidden;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
 }
 
 .destination-card img {
@@ -88,37 +84,34 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 15px 0; /* Add more padding for balance */
+    padding: 15px 0;
     font-size: 16px;
-    letter-spacing: 1px; /* Add some letter spacing for style */
+    letter-spacing: 1px;
 }
 
 .destination-card:hover {
     transform: scale(1.05);
 }
 
-/* Inspiring Review Section */
 .inspiring-review-section {
     padding: 40px;
     background-color: #f8f9fa;
-    text-align: center; /* Centers the title and description */
+    text-align: center;
 }
 
-/* Review Wrapper Styles */
 .review-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center; /* Centers the review cards */
-    max-width: 1200px; /* Optional: Set a max width for the content */
-    margin: 0 auto; /* Centers the grid wrapper */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Review Card Styles */
 .review-card {
     display: flex;
     flex-direction: column;
@@ -156,7 +149,6 @@ body {
     line-height: 1.6;
 }
 
-/* Tab Container Styles */
 .tab-container {
     display: flex;
     justify-content: center;
