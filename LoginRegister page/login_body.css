@@ -17,31 +17,32 @@ body {
     padding: 0;
 }
 
-/* Darker background overlay with blue tint */
 body::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure it stays behind the content */
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+    z-index: 1; /* Make sure it stays below other content */
 }
-
 .content-container {
     display: flex;
     flex-grow: 1; /* Ensure it grows to take up available height */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(228, 228, 228, 0.1);
+    filter: brightness(100%);
     width: 100%;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .login-container {
     width: 80%; /* Main takes 75% width */
     height: 80%;
-    background-color: rgb(167, 230, 255, 0.3);
-    border-radius: 10px;
+    background-color: rgba(247, 247, 247, 0.1);
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
     color: white;
@@ -53,9 +54,9 @@ body::before {
     width: 100%; 
     height: 100%;
     padding: 40px;
-    background: rgb(167, 230, 255, 0.4);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(185, 181, 181, 0.55);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #fff;
     justify-content: center;
     align-items: center;
@@ -101,10 +102,28 @@ body::before {
     transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
+.input-icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+    transition: opacity 1.0s;
+    margin-right: 20px;
+}
+
+.input-icon:hover {
+    opacity: 1;
+}
+    
 .logo-image {
-    width: 200px; /* Adjust size as needed */
+    width: 200px;
     height: auto;
-    margin-bottom: 20px; /* Space between logo and icon */
+    margin-bottom: 0px;
+    filter: brightness(100%);
 }
 
 /* Register Text */
@@ -131,17 +150,18 @@ body::before {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #fff;
+    color: #5e5e5e;
+    margin-left: 5px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 20px 40px; /* Increased padding for larger input */
-    border-radius: 5px;
+    padding: 20px 40px; 
+    border-radius: 10px;
     border: none;
     background-color: rgba(255, 255, 255, 0.4);
     color: #fff;
-    font-size: 18px; /* Increased font size for better readability */
+    font-size: 20px; 
 }
 
 /* Login Button */
@@ -150,7 +170,7 @@ body::before {
     padding: 20px; /* Increased padding for larger button */
     background-color: #3498db;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px; /* Increased font size */
     color: white;
     cursor: pointer;

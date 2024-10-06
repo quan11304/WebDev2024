@@ -13,13 +13,18 @@
 
 .listSearch {
     flex: 1;
-    background-color: #febb02;
+    background-color: rgb(167, 230, 255, 0.8);
     padding: 10px;
     border-radius: 10px;
     position: sticky;
     top: 10px;
     height: max-content;
 }
+
+/* .listSearch button {
+    border-radius: 10px;
+    background-color: rgb(58, 190, 249, 0.7);
+} */
 
 .lsTitle {
     font-size: 20px;
@@ -81,6 +86,11 @@
     cursor: pointer;
 }
 
+.listSearch > button:hover {
+    background-color: #005f9a;
+}
+
+
 .listResult {
     flex: 3;
 }
@@ -94,6 +104,9 @@
     margin-bottom: 20px;
     justify-content: space-between;
 }
+
+
+/* Hotel Detail */
 
 .siImg {
     width: 200px;
@@ -192,5 +205,5 @@
     padding: 10px 5px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
-

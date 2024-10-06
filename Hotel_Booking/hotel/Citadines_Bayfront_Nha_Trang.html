@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../hotel.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navContainer">
+            <a href="../../Home page/home.html">
+                <img src="../../Destination/logo/logotrang.png" alt="Travel Booking Logo" class="logo-img">
+            </a>
+            <div class="navItems">
+                <button type="button" class="navButton">
+                    <a href="../../LoginRegister page/register.html">Register</a>
+                </button>
+                <button type="button" class="navButton">
+                    <a href="../../LoginRegister page/login.html">Login</a>
+                </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="headerContainer1">
+            <nav>
+                <ul class="menu">
+                    <li class="other">
+                        <div>
+                            <i class="fas fa-home"></i>
+                            <a href="../../Home page/home.html">Home</a>
+                        </div>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-utensils"></i>
+                        <a href="#about">Tours</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-plane"></i>
+                        <a href="#services">Flights</a>
+                    </li>
+
+                    <li class="active">
+                            <i class="fas fa-bed"></i>
+                            <a href="">Hotels</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-hotel"></i>
+                        <a href="#contact">Entertainment</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-car"></i>
+                        <a href="../../Transportation/car_main.html">Transportation</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- Main Hotel Section -->
+    <div class="hotelContainer">
+        <!-- Image Slider Section (hidden initially) -->
+        <div id="slider" class="slider" style="display: none;">
+            <i class="fas fa-times close" onclick="closeSlider()"></i>
+            <i class="fas fa-arrow-left arrow left" onclick="prevSlide()"></i>
+            <i class="fas fa-arrow-right arrow right" onclick="nextSlide()"></i>            
+            <div class="sliderWrapper">
+                <div class="sliderImgWrapper">
+                    <img id="sliderImage" src="" alt="Hotel image" class="sliderImg" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Hotel Wrapper -->
+        <div class="hotelWrapper">
+            <button class="bookNow">Reserve or Book Now!</button>
+            <h1 class="hotelTitle">Citadines Bayfront Nha Trang</h1> <!-- Fixed typo here -->
+            <div class="hotelAddress">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>9 Duong Dinh Nghe, Phuoc My Ward, Son Tra District, Da Nang</span>
+            </div>
+            <span class="hotelDistance">Excellent location - 500m from center</span>
+            <span class="hotelPriceHighlight"> <!-- Fixed typo here -->
+                Book a stay over $302 at this property and get a free airport taxi
+            </span>
+
+            <!-- Hotel Images -->
+            <div class="hotelImages">
+                <div class="hotelImgWrapper" onclick="openSlider(0)">
+                    <img src="../images/images_hotel_room/Citadines_Bayfront_Nha_Trang1.jpeg" alt="Hotel 1" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(1)">
+                    <img src="../images/images_hotel_room/Citadines_Bayfront_Nha_Trang2.jpeg" alt="Hotel 2" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(2)">
+                    <img src="../images/images_hotel_room/Citadines_Bayfront_Nha_Trang3.jpeg" alt="Hotel 3" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(3)">
+                    <img src="../images/images_hotel_room/Citadines_Bayfront_Nha_Trang4.jpeg" alt="Hotel 4" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(4)">
+                    <img src="../images/images_hotel_room/Citadines_Bayfront_Nha_Trang5.jpeg" alt="Hotel 5" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(5)">
+                    <img src="../images/images_hotel_room/Citadines_Bayfront_Nha_Trang6.jpeg" alt="Hotel 6" class="hotelImg">
+                </div>
+            </div>
+
+            <!-- Hotel Details -->
+            <div class="hotelDetails">
+                <div class="hotelDetailsTexts">
+                    <h1 class="hotelTitle">Stay in the heart of the city</h1>
+                    <p class="hotelDesc">
+                        Staying at Citadines Bayfront Nha Trang is a good choice when you are visiting Loc Tho ward. 
+                        24-hours front desk is available to serve you, from check-in to check-out, or any assistance you need. 
+                        Should you desire more, do not hesitate to ask the front desk, we are always ready to accommodate you. 
+                        WiFi is available within public areas of the property to help you to stay connected with family and friends.
+                    </p>
+                </div>
+                <div class="hotelDetailsPrice">
+                    <h1>Perfect for a 9-night stay!</h1>
+                    <span>Located in the heart of the city, this property has an excellent location score of 9.8!</span>
+                    <h2><b>$945</b> (9 nights)</h2>
+                    <button>Reserve or Book Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Subscription Section and Footer remain the same -->
+        <div class="mail">
+            <div class="mailTitle">Save time, save money!</div>
+            <div class="mailDesc">Sign up and we'll send the best deals to you</div>
+            <div class="mailInputContainer">
+                <input type="text" placeholder="Your Email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="fLists">
+                <ul class="fList">
+                    <li class="fListItem">Countries</li>
+                    <li class="fListItem">Regions</li>
+                    <li class="fListItem">Cities</li>
+                    <li class="fListItem">Districts</li>
+                    <li class="fListItem">Airports</li>
+                    <li class="fListItem">Hotels</li>
+                </ul>
+            </div> 
+            <div class="fText">Copyright © 2022 Travel Booking. All rights reserved</div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Array to store the image sources
+        const photos = [
+            "../images/images_hotel_room/Citadines_Bayfront_Nha_Trang1.jpeg",
+            "../images/images_hotel_room/Citadines_Bayfront_Nha_Trang2.jpeg",
+            "../images/images_hotel_room/Citadines_Bayfront_Nha_Trang3.jpeg",
+            "../images/images_hotel_room/Citadines_Bayfront_Nha_Trang4.jpeg",
+            "../images/images_hotel_room/Citadines_Bayfront_Nha_Trang5.jpeg",
+            "../images/images_hotel_room/Citadines_Bayfront_Nha_Trang6.jpeg"
+        ];
+
+        let currentSlide = 0;
+
+        // Function to open the slider
+        function openSlider(index) {
+            document.getElementById('slider').style.display = 'flex';
+            currentSlide = index;
+            document.getElementById('sliderImage').src = photos[currentSlide];
+        }
+
+        // Function to close the slider
+        function closeSlider() {
+            document.getElementById('slider').style.display = 'none';
+        }
+
+        // Function to show the previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide === 0) ? photos.length - 1 : currentSlide - 1;
+            document.getElementById('sliderImage').src = photos[currentSlide];
+        }
+
+        // Function to show the next slide
+        function nextSlide() {
+            currentSlide = (currentSlide === photos.length - 1) ? 0 : currentSlide + 1;
+            document.getElementById('sliderImage').src = photos[currentSlide];
+        }
+    </script>
+
+</body>
+</html>
