@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,8 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/destination.css">
 </head>
-<body>
 
+<body>
     <div class="navbar">
         <div class="navContainer">
             <img src="logo/logotrang.png" class="logo-image" alt="Logo">
@@ -55,17 +56,10 @@
         </div>
     </div>
 
-    <div class="explorations"> 
+    <div class="explorations">
         <div class="title">The A to Z Travel Guides</div>
-        <div class="tab-container">
-            <div class="tab active" onclick="setExplorationTab(this)">Vietnam</div>
-            <div class="tab" onclick="setExplorationTab(this)">Asia</div>
-            <div class="tab" onclick="setExplorationTab(this)">Europe</div>
-            <div class="tab" onclick="setExplorationTab(this)">Oceania</div>
-            <div class="tab" onclick="setExplorationTab(this)">America</div>
-            <div class="tab" onclick="setExplorationTab(this)">Africa</div>
-        </div>
-    
+        <div class="description">Travel Guides for the Perfect Trip</div>
+
         <!-- Destination Wrapper for Vietnam -->
         <div class="destination-wrapper" id="explorationVietnamDestinations">
             <div class="destination-section">
@@ -79,7 +73,7 @@
                 </div>
                 <div class="destination-card">
                     <img src="image/tp-nha-trang-16818161974101240202452.jpg" alt="Destination 3">
-                    <div class="destination-name">Nha Trang</div>
+                    <div class="destination-name">Khanh Hoa</div>
                 </div>
                 <div class="destination-card">
                     <img src="image/hochiminh.jp.jpg" alt="Destination 4">
@@ -91,132 +85,64 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Destination Wrapper for Asia -->
-        <div class="destination-wrapper" id="explorationAsiaDestinations" style="display: none;">
-            <div class="destination-section">
-                <div class="destination-card">
-                    <img src="image/tokyo-dxva6ho3h8x6m3xb.jpg" alt="Destination 1">
-                    <div class="destination-name">Japan</div>
+
+        <div class="destinations">
+            <div class="title">Inspiring Review</div>
+            <div class="description">Enrich your planning by reading these articles.</div>
+
+            <div class="review-wrapper">
+                <div class="review-card">
+                    <div class="review-image">
+                        <img src="image/old_quarter.jpg" alt="Old Quarter">
+                    </div>
+                    <div class="review-content">
+                        <div class="review-title">The Old Quarter, Hanoi</div>
+                        <div class="review-text">Discover the rich cultural history of Hanoi’s Old Quarter and explore its bustling streets.</div>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <img src="image/360_F_98443741_G8VlrLoRGWUSA3cGgw36RqEiBkfVR9pX.jpg" alt="Destination 2">
-                    <div class="destination-name">Thailand</div>
+
+                <div class="review-card">
+                    <div class="review-image">
+                        <img src="image/halongbay.jpg" alt="Ha Long Bay">
+                    </div>
+                    <div class="review-content">
+                        <div class="review-title">Ha Long Bay, Quang Ninh</div>
+                        <div class="review-text">Enjoy the stunning views and serene atmosphere of Ha Long Bay.</div>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <img src="image/pexels-apasaric-2848492.jpg" alt="Destination 3">
-                    <div class="destination-name">South Korea</div>
+
+                <div class="review-card">
+                    <div class="review-image">
+                        <img src="image/benthanh.jpg" alt="Ben Thanh Market">
+                    </div>
+                    <div class="review-content">
+                        <div class="review-title">Ben Thanh Market, Ho Chi Minh City</div>
+                        <div class="review-text">Experience the vibrant atmosphere and local delights at Ben Thanh Market.</div>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <img src="image/GettyImages-1145042281.png" alt="Destination 4">
-                    <div class="destination-name">Indonesia</div>
+
+                <div class="review-card">
+                    <div class="review-image">
+                        <img src="image/nhatrang.jpg" alt="Nha Trang Beach">
+                    </div>
+                    <div class="review-content">
+                        <div class="review-title">Central Nha Trang Beach</div>
+                        <div class="review-text">Relax on the pristine shores of Nha Trang Beach.</div>
+                    </div>
                 </div>
-                <div class="destination-card">
-                    <img src="image/kuala-lumpur-twins-malaysia-petronas-twin-towers.jpg" alt="Destination 5">
-                    <div class="destination-name">Malaysia</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="destinations"> 
-        <div class="title">The A to Z Travel Guides</div>
-        <div class="tab-container">
-            <div class="tab active" onclick="setDestinationTab(this)">Popular</div>
-            <div class="tab" onclick="setDestinationTab(this)">For Foodie</div>
-            <div class="tab" onclick="setDestinationTab(this)">Family-friendly</div>
-            <div class="tab" onclick="setDestinationTab(this)">Famous Landmarks</div>
-            <div class="tab" onclick="setDestinationTab(this)">Enjoying the Nature</div>
-            <div class="tab" onclick="setDestinationTab(this)">Local Culture</div>
-        </div>
-    
-        <!-- Destination Wrapper for Popular -->
-        <div class="destination-wrapper" id="popularDestinations">
-            <div class="destination-section">
-                <div class="destination-card">
-                    <img src="image/old_quarter.jpg" alt="Old Quarter">
-                    <div class="destination-name">The Old Quarter, Hanoi</div>
-                </div>
-                <div class="destination-card">
-                    <img src="image/halongbay.jpg" alt="Ha Long Bay">
-                    <div class="destination-name">Ha Long Bay, Quang Ninh</div>
-                </div>
-                <div class="destination-card">
-                    <img src="image/popular-destination-3.jpg" alt="Destination 3">
-                    <div class="destination-name"></div>
-                </div>
-                <div class="destination-card">
-                    <img src="image/popular-destination-3.jpg" alt="Destination 3">
-                    <div class="destination-name">Rome</div>
-                </div>
-                <div class="destination-card">
-                    <img src="image/popular-destination-3.jpg" alt="Destination 3">
-                    <div class="destination-name">Rome</div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Destination Wrapper for Foodie -->
-        <div class="destination-wrapper" id="foodieDestinations" style="display: none;">
-            <div class="destination-section">
-                <div class="destination-card">
-                    <img src="image/foodie-destination-1.jpg" alt="Destination 1">
-                    <div class="destination-name">Bangkok</div>
-                </div>
-                <div class="destination-card">
-                    <img src="image/foodie-destination-2.jpg" alt="Destination 2">
-                    <div class="destination-name">Mexico City</div>
-                </div>
-                <div class="destination-card">
-                    <img src="image/foodie-destination-3.jpg" alt="Destination 3">
-                    <div class="destination-name">Istanbul</div>
+
+                <div class="review-card">
+                    <div class="review-image">
+                        <img src="image/banahills.jpg" alt="Ba Na Hills">
+                    </div>
+                    <div class="review-content">
+                        <div class="review-title">Ba Na Hills, Da Nang</div>
+                        <div class="review-text">Explore the picturesque views and attractions at Ba Na Hills.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <script>
-        function setExplorationTab(selectedTab) {
-            const tabs = document.querySelectorAll('.explorations .tab');
-            const vietnamDestinations = document.getElementById('explorationVietnamDestinations');
-            const asiaDestinations = document.getElementById('explorationAsiaDestinations');
-    
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-    
-            selectedTab.classList.add('active');
-    
-            vietnamDestinations.style.display = 'none';
-            asiaDestinations.style.display = 'none';
-    
-            if (selectedTab.textContent === "Vietnam") {
-                vietnamDestinations.style.display = 'block';
-            } else if (selectedTab.textContent === "Asia") {
-                asiaDestinations.style.display = 'block';
-            }
-        }
-    
-        function setDestinationTab(selectedTab) {
-            const tabs = document.querySelectorAll('.destinations .tab');
-            const popularDestinations = document.getElementById('popularDestinations');
-            const foodieDestinations = document.getElementById('foodieDestinations');
-    
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-    
-            selectedTab.classList.add('active');
-    
-            popularDestinations.style.display = 'none';
-            foodieDestinations.style.display = 'none';
-    
-            if (selectedTab.textContent === "Popular") {
-                popularDestinations.style.display = 'block';
-            } else if (selectedTab.textContent === "For Foodie") {
-                foodieDestinations.style.display = 'block';
-            }
-        }
-    </script>    
 </body>
+
 </html>

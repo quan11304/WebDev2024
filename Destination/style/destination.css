@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif; 
     margin: 0; 
     padding: 0; 
 }
 
+/* Description Styles */
+.description {
+    font-size: 16px;
+    margin-left: 430px;
+    color: #8F9DBE;
+    margin-bottom: 10px; 
+}
+
+/* Background Styles */
 .background {
     position: relative;
     margin-top: -30px;
@@ -27,6 +37,7 @@ body {
     padding-right: 5px;
 }
 
+/* Explorations Section */
 .explorations {
     padding: 20px;
 }
@@ -47,66 +58,126 @@ body {
     margin: 20px; 
 }
 
-/* Destination Section */
 .destination-section {
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: nowrap; 
-    gap: 10px; 
-    padding: 10px 0; 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 20px 0;
 }
 
+/* Destination Card Styles */
 .destination-card {
-    flex: 0 0 200px; 
-    height: 450px; 
-    background-color: #f9f9f9; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s; 
+    position: relative;
+    width: 200px; /* Adjust the width */
+    height: 300px; /* Adjust the height for a better aspect ratio */
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures image fits within card */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .destination-card img {
-    width: 100%; 
-    height: 70%; 
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .destination-name {
-    padding: 10px; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    color: white;
     font-weight: bold;
-    color: #555; 
-    text-align: center; 
-    height: 30%; 
+    text-align: center;
+    padding: 15px 0; /* Add more padding for balance */
+    font-size: 16px;
+    letter-spacing: 1px; /* Add some letter spacing for style */
 }
 
 .destination-card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
+/* Inspiring Review Section */
+.inspiring-review-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center; /* Centers the title and description */
+}
+
+/* Review Wrapper Styles */
+.review-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centers the review cards */
+    max-width: 1200px; /* Optional: Set a max width for the content */
+    margin: 0 auto; /* Centers the grid wrapper */
+}
+
+/* Review Card Styles */
+.review-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+.review-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.review-content {
+    padding: 20px;
+}
+
+.review-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Tab Container Styles */
 .tab-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-.tab {
-    padding: 10px 20px;
+.tab-button {
     background-color: #f0f0f0;
-    color: #007bff;
-    border-radius: 20px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 10px;
+    transition: background-color 0.3s;
 }
 
-.tab.active {
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-button.active {
     background-color: #007bff;
     color: white;
-}
-
-.tab:hover {
-    background-color: #e6e6e6;
 }
