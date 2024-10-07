@@ -1,34 +1,65 @@
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .box {
-    content: '';
     position: relative;
     height: 150px;
-    width: 80%;
-    margin: 20px 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    border: 1px solid #003580;
-    transform: skew(-10deg);
+    width: 70%;
+    margin: 20px 15%;
     display: flex;
     align-items: center;
-    /*clip-path: polygon(0 0, 100% 0%, 80% 100%, 20% 100%); !* Creates the parallelogram shape *!*/
+    background: #FAFAFA;
+}
+
+.box.left {
+    justify-items: left;
+}
+
+.box.right {
+    justify-content: right;
+}
+
+.box:hover {
+    border: none;
+    box-shadow: 10px 10px 10px #565656;
+    transition: 150ms;
 }
 
 .box img {
-    height: 100%;
-    /*clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);*/
-    overflow:hidden;
+    height: 101%;
+    overflow: hidden;
 }
 
-.box h1 {
-    position: relative;
-    padding: 20px;
-    color: #000000;
-    text-align: center;
+.box .text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    color: black;
+}
+
+.box.left .text {
+    text-align: left;
+}
+
+.box.right .text {
+    text-align: right;
+}
+
+.box .text h1 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.box .text p {
+    opacity: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+.box:hover .text p {
+    opacity: 1;
+    transition: 150ms;
 }
