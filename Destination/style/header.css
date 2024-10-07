@@ -1,0 +1,117 @@
+.header {
+    background-color: #003580   ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0; 
+    position: relative;
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 10px 0; 
+}
+
+.headerList {
+    display: flex;
+    gap: 40px; 
+    margin-bottom: 20px; 
+}
+
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    cursor: pointer;
+    color: white;
+}
+
+.headerListItem.active {
+    border: 1px solid white;
+    padding: 5px; 
+    border-radius: 10px;
+}
+
+.headerTitle {
+    font-size: 28px; 
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.headerDesc {
+    margin: 10px 0; 
+}
+
+.headerBtn {
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 8px 16px; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.headerSearch {
+    background-color: #003580;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px; 
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 80%;
+    max-width: 1024px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.headerSearchInput {
+    border: none;
+    outline: none;
+}
+
+.headerSearchText {
+    color: lightgray;
+    cursor: pointer;
+}
+
+.headerIcon {
+    color: lightgray;
+}
+
+.headerSearchItem:last-child .headerBtn {
+    background-color: #0071c2;
+    color: #003580;
+    font-weight: bold;
+    padding: 8px 16px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options {
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+    background-color: #003580;
+    color: gray;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}

@@ -1,0 +1,209 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.listWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+}
+
+.listSearch {
+    flex: 1;
+    background-color: rgb(167, 230, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+/* .listSearch button {
+    border-radius: 10px;
+    background-color: rgb(58, 190, 249, 0.7);
+} */
+
+.lsTitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.lsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.lsItem > label {
+    font-size: 12px;
+}
+
+.lsItem > input {   
+    background-color: white;
+    height: 30px;
+    border: none;
+    padding: 5px;
+}
+
+.lsItem > span {   
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lsOptionItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 12px;
+}
+
+.lsOptionInput {
+    background-color: white;
+    width: 50px;
+}
+
+.lsOptions {
+    padding: 10px;
+}
+
+.listSearch > button {
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.listSearch > button:hover {
+    background-color: #005f9a;
+}
+
+
+.listResult {
+    flex: 3;
+}
+
+.searchItem {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+
+/* Hotel Detail */
+
+.siImg {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.siDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+}
+
+.siTitle {
+    font-size: 20px;
+    color: #0071c2;
+}
+
+.siDistance {
+    font-size: 12px;
+}
+
+.siTaxiOp {
+    font-size: 12px;
+    background-color: #008009;
+    color: white;
+    width: max-content;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.siSubtitle {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.siFeatures {
+    font-size: 12px;
+}
+
+.siCancelOp {
+    font-size: 12px;
+    color: #008009;
+    font-weight: bold;
+}
+
+.siCancelOpSubtitle {
+    font-size: 12px;
+    color: #008009;
+}
+
+.siDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.siRating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.siRating > span {
+    font-weight: 500;
+}
+
+.siRating > button {
+    background-color: #003580;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+}
+
+.siDetailTexts {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.siPrice {
+    font-size: 24px;
+}
+
+.siTaxOp {
+    font-size: 12px;
+    color: gray;
+}
+
+.siCheckButton {
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
