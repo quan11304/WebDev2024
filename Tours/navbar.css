@@ -1,49 +1,32 @@
-/* Navbar styles */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    height: 50px;
+nav {
     background-color: #003580;
+    color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 0; 
+    position: relative;
 }
 
-.navbar .container {
+nav ul {
     width: 100%;
     max-width: 1024px;
-    color: white;
+    margin: 10px 0;
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
+}
+
+nav ul li {
+    display: flex;
     align-items: center;
-}
-
-.navbar .logo {
-    height: 60px; /* Set height to match Traveloka's logo */
-    width: auto;  /* Maintain aspect ratio */
-    margin-right: 20px; /* Optional: add space to the right for separation */
-    margin-top: 20px;
-    cursor: pointer; /* Clickable, leads to home */
-}
-
-.navbar .item {
-    display: flex;
     gap: 10px;
-}
-
-.navbar .button {
-    padding: 10px 20px;
-    background-color: #003580;
+    cursor: pointer; /* Clickable */
     color: white;
-    border: 2px solid white; /* Add a border for the outline */
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Optional transition effect */
 }
 
-.navbar .button:hover {
-    background-color: #003580; /* Change background on hover */
-    color: white; /* Change text color on hover */
+nav ul li.active {
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: default /* Non-clickable */
 }
