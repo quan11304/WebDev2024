@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Flight</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <div class="navContainer">
+            <span class="logo">Flight Booking</span>
+            <div class="navMenu">
+                <div class="headerListItem">
+                    <i class="fas fa-bed"></i>
+                    <span>Hotels</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-utensils"></i>
+                    <span>Tours</span>
+                </div>
+                <div class="headerListItem active">
+                    <i class="fas fa-plane"></i>
+                    <span>Flights</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-hotel"></i>
+                    <span>Entertainment</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-car"></i>
+                    <span>Car Rentals</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <main>
+         <!-- Order Flight Section -->
+         <section class="order-summary">
+            <h1>Order Flight</h1>
+            <div class="summary-details">
+                <h2>Flight Details:</h2>
+                <p><strong>From:</strong> <span id="summary-from"></span></p>
+                <p><strong>To:</strong> <span id="summary-to"></span></p>
+                <p><strong>Departure Date:</strong> <span id="summary-departure"></span></p>
+                <p><strong>Return Date:</strong> <span id="summary-return"></span></p>
+                <p><strong>Passengers:</strong> <span id="summary-passengers"></span></p>
+                <p><strong>Class:</strong> <span id="summary-class"></span></p>
+            </div>
+
+            <button id="confirm-order-btn" class="confirm-btn">Confirm Order</button>
+        </section>
+        <script>
+            window.addEventListener('load', function () {
+                // Get data from localStorage
+                const from = localStorage.getItem('from');
+                const to = localStorage.getItem('to');
+                const departure = localStorage.getItem('departure');
+                const returnDate = localStorage.getItem('returnDate');
+                const passengers = localStorage.getItem('passengers');
+                const flightClass = localStorage.getItem('flightClass');
+
+                // Display the data in the order summary
+                document.getElementById('summary-from').textContent = from || 'N/A';
+                document.getElementById('summary-to').textContent = to || 'N/A';
+                document.getElementById('summary-departure').textContent = departure || 'N/A';
+                document.getElementById('summary-return').textContent = returnDate || 'N/A';
+                document.getElementById('summary-passengers').textContent = passengers || 'N/A';
+                document.getElementById('summary-class').textContent = flightClass || 'N/A';
+            });
+
+        </script>
+    <!-- Available Flights Section -->
+    <section class="flight-selection">
+        <h2>🛫 Available Flights</h2>
+        <div class="flight-carousel-container">
+            <div class="flight-options" id="flight-carousel">
+                <!-- Flight cards will be generated here -->
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FlightBooking. All rights reserved.</p>
+    </footer>
+    <script src="random.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
