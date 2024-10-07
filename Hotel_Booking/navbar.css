@@ -6,10 +6,12 @@ body {
 }
 
 .navbar {
-    height: 35px; /* Reduced height */
+    height: 60px; /* Tăng chiều cao của navbar để có thêm khoảng trống */
     background-color: #003580;
     display: flex;
     justify-content: center;
+    margin-bottom: 0; /* Giảm khoảng cách dưới */
+    padding-bottom: 0; /* Giảm padding dưới nếu cần */
 }
 
 .navContainer {
@@ -18,12 +20,15 @@ body {
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Căn giữa logo và nút theo chiều dọc */
 }
 
-.logo {
-    font-weight: 500;
-    font-size: 24px;
+/* Logo Styles */
+.logo-img {
+    height: 50px; /* Điều chỉnh chiều cao logo nếu cần */
+    width: auto;  /* Giữ tỉ lệ gốc */
+    margin-right: 20px; /* Optional: thêm khoảng cách bên phải */
+    margin-top: 5px; /* Điều chỉnh khoảng cách từ trên xuống */
 }
 
 .navItems {
@@ -32,13 +37,19 @@ body {
 }
 
 .navButton {
-    padding: 5px 15px; /* Adjusted padding for smaller height */
+    padding: 3px 10px; /* Điều chỉnh kích thước cho nút */
     background-color: white;
     color: #003580;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 5px; /* Thêm khoảng cách từ trên xuống */
 }
+
+.navButton a {  
+    text-decoration: none; /* Xóa gạch dưới cho liên kết */  
+    color: inherit; /* Sử dụng màu chữ của nút */  
+}  
 
 .navButton:hover {
     background-color: #0073e6;
