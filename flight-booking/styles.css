@@ -1,0 +1,398 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    padding: 10px 20px; /* Reduce padding for a smaller navbar */
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 22px; /* Make the logo slightly smaller */
+    margin-bottom: 10px; /* Space between the logo and menu */
+}
+
+/* Menu under the logo */
+.navMenu {
+    display: flex;
+    gap: 30px; /* Space out the menu items */
+    margin-bottom: 10px;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 5px 10px; /* Add some padding for better click area */
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.headerListItem.active,
+.headerListItem:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+.navItems {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Add space between the menu and buttons */
+}
+
+.navButton {
+    padding: 8px 15px; /* Reduce button size */
+    background-color: white;
+    color: #003580;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navButton:hover {
+    background-color: #0073e6;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Styling dropdown box for selecting options*/
+
+.dropdown1, .dropdown2 {
+    position: relative; /* Ensure dropdown positioning is relative to parent */
+}
+
+.dropdown1-content, .dropdown2-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the input */
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown1-option, .dropdown2-option {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.dropdown1-option:hover, .dropdown2-option:hover {
+    background-color: #f1f1f1; /* Change background color on hover */
+}
+
+
+/* Header Styling */
+.header {
+    background-color: #003580; /* Blue background */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headerList {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.headerListItem.active,
+.headerListItem:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.headerTitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.headerDesc {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.headerBtn {
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.headerBtn:hover {
+    background-color: #005bb5;
+}
+
+/* Main Content Section */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Booking Form Styling */
+.booking-form {
+    padding: 40px;
+    border-radius: 15px;
+    background-color: white; /* White background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.booking-form form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* More flexible grid */
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left; /* Align labels and inputs better */
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #0071c2;
+    outline: none;
+}
+
+/* Round Trip Checkbox */
+.round-trip-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.round-trip-checkbox input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.search-btn {
+    background-color: #ff5722;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Flight Selection Section */
+.flight-selection {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.flight-selection h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flight-selection p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #003580;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tabs .active-tab {
+    background-color: #ff5722;
+}
+
+/* Carousel Styling */
+.flight-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flight-options {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.flight-card {
+    min-width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    overflow: hidden;
+}
+
+.flight-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.flight-details {
+    padding: 15px;
+}
+
+.flight-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flight-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.price {
+    font-size: 20px;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* Arrow Styling */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.book-now-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.book-now-btn:hover {
+    background-color: #e64a19;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #003580;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
