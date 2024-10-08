@@ -1,24 +1,24 @@
 // Sample car data with prices depending on driver type
 const carData = {
     4: [ // Cars with 4 seats
-        { name: 'Hyundai i10', priceWithDriver: '30 USD', priceWithoutDriver: '24 USD ', image: '../Transportation/car4seats/hyndaii104.webp' },
-        { name: 'Toyota Raize', priceWithDriver: '30 USD', priceWithoutDriver: '24 USD ', image: '../Transportation/car4seats/toyotaRaize4.jpg' },
-        { name: 'Hyundai Wigo', priceWithDriver: '33 USD ', priceWithoutDriver: '24 USD ', image: '../Transportation/car4seats/toyotaWigo4.jpg' },
-        { name: 'VinFast VF8', priceWithDriver: '30 USD ', priceWithoutDriver: '24 USD ', image: '../Transportation/car4seats/vinfastVf84.jpg' },
+        { name: 'Hyundai i10', priceWithDriver: '30 USD', priceWithoutDriver: '24 USD ', image: src='../Transportation/car4seats/hyndaii104.webp' },
+        { name: 'Toyota Raize', priceWithDriver: '30 USD', priceWithoutDriver: '24 USD ', image: src='../Transportation/car4seats/toyotaRaize4.jpg' },
+        { name: 'Hyundai Wigo', priceWithDriver: '33 USD ', priceWithoutDriver: '24 USD ', image: src='../Transportation/car4seats/toyotaWigo4.jpg' },
+        { name: 'VinFast VF8', priceWithDriver: '30 USD ', priceWithoutDriver: '24 USD ', image: src='../Transportation/car4seats/vinfastVf84.jpg' },
     ],
     7: [ // Cars with 7 seats
-        { name: 'CRV', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: '../Transportation/car7seats/crv7.webp' },
-        { name: 'Sedona', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: '../Transportation/car7seats/sedona7.jpg' },
-        { name: 'XL7', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: '../Transportation/car7seats/xl77.png' },
-        { name: 'Xpander Cross 7', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: '../Transportation/car7seats/xpander-cross-7.jpg' }
+        { name: 'CRV', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: src='../Transportation/car7seats/crv7.webp' },
+        { name: 'Sedona', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: src='../Transportation/car7seats/sedona7.jpg' },
+        { name: 'XL7', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: src='../Transportation/car7seats/xl77.png' },
+        { name: 'Xpander Cross 7', priceWithDriver: '35 USD ', priceWithoutDriver: '30 USD ', image: src='../Transportation/car7seats/xpander-cross-7.jpg' }
     ],
     16: [ // Cars with 16 seats
-        { name: 'Ford Transit', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: '../Transportation/car16seats/fordsit16.png' },
-        { name: 'Iveco Daily', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: '../Transportation/car16seats/ivcoDaily16.jpg' },
-        { name: 'Limousine', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: '../Transportation/car16seats/limousin.jpg' },
+        { name: 'Ford Transit', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/fordsit16.png' },
+        { name: 'Iveco Daily', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/ivcoDaily16.jpg' },
+        { name: 'Limousine', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/limousin.jpg' },
     ],
     camping: [ // Camping cars
-        { name: 'GAZElle', priceWithDriver: '55 USD ', priceWithoutDriver: '50 USD ', image: '../Transportation/campingCar/GAZelle1.jpg' },
+        { name: 'GAZElle', priceWithDriver: '55 USD ', priceWithoutDriver: '50 USD ', image: src='../Transportation/campingCar/GAZelle1.jpg' },
     ]
 };
 
