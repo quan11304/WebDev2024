@@ -1,9 +1,4 @@
-/* Header styles */
-
-#grad {
-    background-image: linear-gradient(#003580, #3ABEF9);;
-}
-
+/*for background of banner part*/
 .banner {
     display: flex;
     align-items: center;
@@ -11,8 +6,10 @@
     padding-bottom: 50px;
     justify-content: center;
     width: 100%;
+    background-image: linear-gradient(#003580, #3ABEF9);
 }
 
+/*contain the content of banner*/
 .bannerContainer {
     max-width: 1024px;
     display: flex;
@@ -20,8 +17,7 @@
     align-items: center;
 }
 
-
-.bannerList {
+.bannerContent {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -30,46 +26,16 @@
     color: white;
 }
 
-.bannerList img {
+.bannerContent img {
     width: 100%;
     object-fit: cover;
     box-shadow: 5px 5px 10px rgb(0, 0, 0);
 
 }
 /*Text style for header*/
-.bannerListTx {
+.bannerContentTx {
     font-size: 20px;
     text-align: justify;
-}
-
-
-/*Search Container*/
-.bannerSearch{
-    display: flex;
-    position: absolute;
-    bottom: -25px;
-    width: 80%;
-    max-width: 1024px;
-    align-items: center; /*center items along vertical axis*/
-}
-
-/*icon search*/
-.bannerSearch i{
-    color: black;
-    position: absolute;
-    padding-left: 10px;
-}
-
-/*Input for search box*/
-.bannerSearch input {
-    padding-left: 30px;
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    border: 3px solid #febb02;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-
 }
 
 
