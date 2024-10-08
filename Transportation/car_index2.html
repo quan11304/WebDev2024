@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Transportation/navbar-2.css">
+    <link rel="stylesheet" href="../Transportation/banner.css">   
+    <link rel="stylesheet" href="../Transportation/footer.css">
+    <link rel="stylesheet" href="../Transportation/main.css">
+    <link rel="stylesheet" href="../Transportation/selection.css">
+
+
+    <style>
+        body, html {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+    <body>
+        <header class="navbar" style="height: 100px;">
+            <div class="navContainer" style="justify-content: space-between;">
+                <img src="..\logo\logotrang.png" style="height: 50px;">
+                <div class="navButton">
+                    <button type="submit">Register</button>
+                    <button type="submit">Login</button>
+                </div>
+            </div>
+            <div class="navContainer" style="column-gap: 40px;">
+                <div class="navMenu">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="navMenu">
+                    <i class="fas fa-bed"></i>
+                    <span>Hotels</span>
+                </div>
+                <div class="navMenu">
+                    <i class="fas fa-utensils"></i>
+                    <span>Tours</span>
+                </div>
+                <div class="navMenu">
+                    <i class="fas fa-plane"></i>
+                    <span>Flights</span>
+                </div>
+                <div class="navMenu">
+                    <i class="fas fa-hotel"></i>
+                    <span>Destination</span>
+                </div>
+                <div class="navMenu active">
+                    <i class="fas fa-car"></i>
+                    <span>Transportation</span>
+                </div>
+            </div> 
+        </header>
+
+        <!--Main body-->
+        <main>
+            <div class="mainContainer" style="margin-top: 20px; box-shadow: none;">
+                <!--Flex row contain 2 flex columns-->
+                <div class="mainPartRow" style="align-items: flex-start;">
+                    <!--There are 3 elements in flex column-->
+                    <div class="mainPartColumn" style="flex: 3;">
+                        <!--Click to hide or display the rentail information-->
+                        <div style="margin-left: 10px;">
+                            <span style="font-size:28px;cursor:pointer; color: rgb(27, 70, 200);" onclick="toggleNav()"><i class="fa-solid fa-bookmark"></i></span>
+                        </div>
+                        <!--Display the rental information from previous page-->
+                        <div class="mainPartColumn" id="rental-details" style="padding: 10px; margin-top: -20px;    
+                        box-shadow: 50px 0px 50px -50px rgba(0,0,0,0.45) inset;">
+                            <!-- Rental details will be injected here -->
+                        </div>
+                        <!--Show the total price when click rent the car-->
+                        <div id="total-price"></div>
+                    </div>
+                    <!--This column show list of cars that relevant to the requirment-->
+                    <div class="mainPartColumn" id="car-list" style="border-left: 1px solid black; padding-left:10px; flex: 7;
+                    box-shadow: -20px -4px 6px -20px rgba(0,0,0,0.45);">
+                        <!-- Car list will be injected here -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div class="footerContainer">
+                <div class="footerContent">
+                    <div class="footerTitle">Developer - Group 21</div>
+                    <ul>
+                        <li>Lê Văn Trường</li>
+                        <li>Hoàng Quân</li>
+                        <li>Nguyễn Tài Anh</li>
+                        <li>Nguyễn Hải Nam</li>
+                        <li>Đỗ Bảo Nhi</li>
+                        <li>Đỗ Trọng Đạt</li>
+                    </ul>
+                </div>
+
+                <div class="footerContent">
+                    <div class="footerTitle">Developer - Group 21</div>
+                    <ul>
+                        <li>Lê Văn Trường</li>
+                        <li>Hoàng Quân</li>
+                        <li>Nguyễn Tài Anh</li>
+                        <li>Nguyễn Hải Nam</li>
+                        <li>Đỗ Bảo Nhi</li>
+                        <li>Đỗ Trọng Đạt</li>
+                    </ul>
+                </div>
+            
+        </footer>
+        
+        <!--This file contain the funtion to:
+            Display the filterd data get from previous page based on user selection
+            Calculate total of price based on number of days and price per day then display for particular car
+            Get the car rent information of the user to make a bill-->
+        <script src="../Transportation/display.js"></script>
+    </body>
+</html>
