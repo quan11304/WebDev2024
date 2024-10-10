@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+<div class="navbar">
+    <div class="navContainer">
+        <span class="logo">Flight Booking</span>
+        <!-- Navigation menu right under the logo -->
+        <div class="navMenu">
+            <div class="headerListItem">
+                <i class="fas fa-bed"></i>
+                <span>Hotels</span>
+            </div>
+            <div class="headerListItem">
+                <i class="fas fa-utensils"></i>
+                <span>Tours</span>
+            </div>
+            <div class="headerListItem active">
+                <i class="fas fa-plane"></i>
+                <span>Flights</span>
+            </div>
+            <div class="headerListItem">
+                <i class="fas fa-hotel"></i>
+                <span>Entertainment</span>
+            </div>
+            <div class="headerListItem">
+                <i class="fas fa-car"></i>
+                <span>Car Rentals</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Flight Booking Form -->
+        <section class="booking-form">
+            <form id="flight-form">
+                <div class="form-group">
+                    <label for="from"><i class="fa-solid fa-plane-departure"></i> From:</label>
+                    <input type="text" id="from" placeholder="Jakarta (JKTA)" autocomplete="off">
+                    <div class="dropdown1">
+                        <div class="dropdown1-content">
+                            <div class="dropdown1-option" onclick="setValue('Sân bay Tân Sơn Nhất (SGN)', 'from')">Sân bay Tân Sơn Nhất (SGN)</div>
+                            <div class="dropdown1-option" onclick="setValue('Sân bay Nội Bài (HAN)', 'from')">Sân bay Nội Bài (HAN)</div>
+                            <div class="dropdown1-option" onclick="setValue('Sân bay Đà Nẵng (DAD)', 'from')">Sân bay Đà Nẵng (DAD)</div>
+                            <div class="dropdown1-option" onclick="setValue('Sân bay quốc tế Changi (SIN)', 'from')">Sân bay quốc tế Changi (SIN)</div>
+                            <div class="dropdown1-option" onclick="setValue('Sân bay quốc tế Kuala Lumpur (KUL)', 'from')">Sân bay quốc tế Kuala Lumpur (KUL)</div>
+                            <div class="dropdown1-option" onclick="setValue('Sân bay quốc tế Incheon (ICN)', 'from')">Sân bay quốc tế Incheon (ICN)</div>
+                            <div class="dropdown1-option" onclick="setValue('Sân bay quốc tế Đào Viên (TPE)', 'from')">Sân bay quốc tế Đào Viên (TPE)</div>
+                            <div class="dropdown1-option" onclick="setValue('Bangkok', 'from')">Bangkok</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="to"><i class="fa-solid fa-plane-arrival"></i> To:</label>
+                    <input type="text" id="to" placeholder="Chọn thành phố hoặc sân bay" autocomplete="off">
+                    <div class="dropdown2">
+                        <div class="dropdown2-content">
+                            <div class="dropdown2-option" onclick="setValue('Bali / Denpasar (DPS)', 'to')">Bali / Denpasar (DPS)</div>
+                            <div class="dropdown2-option" onclick="setValue('Hà Nội (HAN)', 'to')">Hà Nội (HAN)</div>
+                            <div class="dropdown2-option" onclick="setValue('Đà Nẵng (DAD)', 'to')">Đà Nẵng (DAD)</div>
+                            <div class="dropdown2-option" onclick="setValue('Sân bay Tân Sơn Nhất (SGN)', 'to')">Sân bay Tân Sơn Nhất (SGN)</div>
+                            <div class="dropdown2-option" onclick="setValue('Nha Trang (CXR)', 'to')">Nha Trang (CXR)</div>
+                            <div class="dropdown2-option" onclick="setValue('Bangkok', 'to')">Bangkok</div>
+                            <div class="dropdown2-option" onclick="setValue('Seoul (ICN)', 'to')">Seoul (ICN)</div>
+                            <div class="dropdown2-option" onclick="setValue('Singapore (SIN)', 'to')">Singapore (SIN)</div>
+                        </div>
+                    </div>
+                </div>
+                <script src="dropdown.js"></script>
+                
+
+                <div class="form-group">
+                    <label for="departure"><i class="fa-solid fa-calendar"></i> Departure Date:</label>
+                    <input type="date" id="departure">
+                </div>
+                <div class="form-group round-trip-checkbox">
+                    <label for="return"><input type="checkbox" id="return-toggle"> Round Trip</label>
+                    <input type="date" id="return" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="passengers"><i class="fa-solid fa-users"></i> Passengers:</label>
+                    <input type="text" id="passenger-summary" value="1 Adult, 0 Children, 0 Infants" readonly>
+                </div>
+                
+                <!-- Passenger selection section that will show below the dropdown -->
+                <div id="passenger-selection" style="display:none; position: absolute; border: 1px solid #ccc; background-color: #fff; padding: 10px; z-index: 1; width: 345px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div>
+                        <label>Adults (12+ years)</label>
+                        <button id="adult-decrement">-</button>
+                        <span id="adult-count">1</span>
+                        <button id="adult-increment">+</button>
+                    </div>
+                    <div>
+                        <label>Children (2 - 11 years)</label>
+                        <button id="child-decrement">-</button>
+                        <span id="child-count">0</span>
+                        <button id="child-increment">+</button>
+                    </div>
+                    <div>
+                        <label>Infants (under 2 years)</label>
+                        <button id="infant-decrement">-</button>
+                        <span id="infant-count">0</span>
+                        <button id="infant-increment">+</button>
+                    </div>
+                    <button id="confirm-passengers" style="margin-top: 10px;">Confirm</button>
+                </div>
+                
+                <script src="passenger.js"></script>
+
+                <div class="form-group">
+                    <label for="class"><i class="fa-solid fa-chair"></i> Class:</label>
+                    <select id="class">
+                        <option value="Economy">Economy</option>
+                        <option value="Business">Business</option>
+                        <option value="First Class">First Class</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="search-btn" id="search-flights-btn"><i class="fa-solid fa-search"></i> Search Flights</button>
+                </div>
+            </form>
+        </section>
+
+
+        
+            <!-- noidia Selection Section -->
+            <section class="flight-selection">
+                <h2>🛫 Travel to exciting domestic destinations</h2> 
+                <br>
+                <!-- Arrow Buttons for Scrolling -->
+                <div class="flight-carousel-container">
+                    <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
+                    
+                    <div class="flight-options" id="flight-carousel">
+                        <!-- First Flight Card -->
+                        <div class="flight-card">
+                            <img src="image/danang.jpg" alt="Đà Nẵng" class="flight-image">
+                            <div class="flight-details">
+                                <h3>Hà Nội - Đà Nẵng</h3>
+                                <p>14 - 15 Tháng 10 2024</p>
+                                <p>Vietravel Airlines</p>
+                                <p class="price">₫1,622,765</p>
+                            </div>
+                        </div>
+        
+                        <!-- More flight cards -->
+                        <div class="flight-card">
+                            <img src="image/nhatrang.jpg" alt="Nha Trang" class="flight-image">
+                            <div class="flight-details">
+                                <h3>Hà Nội - Nha Trang</h3>
+                                <p>6 - 9 Tháng 11 2024</p>
+                                <p>VietJet Air</p>
+                                <p class="price">₫2,097,604</p>
+                            </div>
+                        </div>
+                        <div class="flight-card">
+                            <img src="image/tphcm.jpg" alt="TP HCM" class="flight-image">
+                            <div class="flight-details">
+                                <h3>Hà Nội - TP HCM</h3>
+                                <p>14 - 15 Tháng 12 2024</p>
+                                <p>VietJet Air</p>
+                                <p class="price">₫2,122,961</p>
+                            </div>
+                        </div>
+            
+                        <!-- Fourth Flight Card -->
+                        <div class="flight-card">
+                            <img src="image/dalat.jpg" alt="Đà Lạt" class="flight-image">
+                            <div class="flight-details">
+                                <h3>Hà Nội - Đà Lạt</h3>
+                                <p>24 - 25 Tháng 10 2024</p>
+                                <p>VietJet Air</p>
+                                <p class="price">₫2,037,138</p>
+                            </div>
+                        </div>
+                        <div class="flight-card">
+                            <img src="image/danang.jpg" alt="Đà Nẵng" class="flight-image">
+                            <div class="flight-details">
+                                <h3>Hà Nội - Đà Nẵng</h3>
+                                <p>14 - 15 Tháng 10 2024</p>
+                                <p>Vietravel Airlines</p>
+                                <p class="price">₫1,622,765</p>
+                            </div>
+                        </div>
+        
+                        <!-- More flight cards -->
+                        <div class="flight-card">
+                            <img src="image/nhatrang.jpg" alt="Nha Trang" class="flight-image">
+                            <div class="flight-details">
+                                <h3>Hà Nội - Nha Trang</h3>
+                                <p>6 - 9 Tháng 11 2024</p>
+                                <p>VietJet Air</p>
+                                <p class="price">₫2,097,604</p>
+                            </div>
+                        </div>
+                        <!-- Additional cards... -->
+                    </div>
+        
+                    <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
+                </div>
+        
+                <button class="book-now-btn">Book now!</button>
+            </section>
+        </main>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FlightBooking. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

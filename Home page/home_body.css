@@ -2,30 +2,27 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-size: 100%; /* Base font size for scaling */
 }
 
+/* Main container for the images */
 .image-list {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap for smaller screens */
     justify-content: space-between; /* Distribute images with gaps */
-    padding: 5rem 1.5rem; /* Adjust padding using rem units */
+    padding: 80px 15px; /* 20px top/bottom gap and 15px left/right padding */
+    height: calc(110vh - 25px);
     width: 100%;
-    max-width: 1920px; /* Cap total width at 1920px */
-    margin: 0 auto; /* Center the content */
+    max-width: 1920px; /* Ensure the total width is capped at 1920px */
+    margin: 0 auto;
 }
 
 /* Each image container */
 .image-container {
     position: relative;
-    flex: 1 1 22rem; /* Flex-grow, flex-shrink, and min-width, scaled to rem */
-    max-width: 365px; /* Ensures images don't get too large */
-    height: 810px; /* Adjust to maintain aspect ratio */
+    width: 365px; /* Exact width of each image */
+    height: 100%;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 0.625rem; /* Scaled to rem units */
+    border-radius: 10px; /* Add border-radius */
 }
 
 /* Image style */
@@ -34,21 +31,21 @@ html, body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    border-radius: 0.625rem; /* Ensure images follow border-radius */
+    border-radius: 10px; /* Ensure images also follow border-radius */
 }
 
 /* Name style (appears on hover) */
 .image-name {
     position: absolute;
-    top: 0.625rem; 
+    top: 10px; 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.125rem;
+    font-size: 18px;
     color: white;
-    background-color: rgba(53, 114, 239, 0.8);
-    padding: 0.5rem 1rem;
-    border-radius: 0.3125rem;
-    z-index: 5;
+    background-color: rgb(53, 114, 239, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 5; /* Ensure it appears above the image */
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -57,7 +54,7 @@ html, body {
 /* Hover effect on image */
 .image-container:hover img {
     transform: scale(1.1);
-    filter: brightness(30%);
+    filter: brightness(30%); /* Make the image 25% darker */
     transition: transform 0.3s ease, filter 0.3s ease; 
 }
 
@@ -65,31 +62,31 @@ html, body {
 .description {
     position: absolute;
     bottom: 0;
-    background-color: rgba(53, 114, 239, 0.8);
+    background-color: rgb(53, 114, 239, 0.8);
     color: white;
     width: 100%;
-    padding: 1rem;
+    padding: 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 1.25rem;
-    border-radius: 0 0 0.625rem 0.625rem;
+    font-size: 20px;
+    border-radius: 0 0 10px 10px; /* Match the border-radius */
 }
 
 .image-button {
     position: absolute;
-    bottom: 5.625rem; /* Adjust button position */
+    bottom: 90px; /* Position it higher to avoid overlap */
     left: 50%;
     transform: translateX(-50%);
-    padding: 0.625rem 1.25rem;
+    padding: 10px 20px;
     background-color: #fff;
     color: #000;
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 5px;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 10;
-    font-size: 0.875rem;
+    font-size: 14px;
 }
 
 .image-container:hover .description,
@@ -97,32 +94,8 @@ html, body {
 .image-container:hover .image-name {
     opacity: 1;
 }
-
 /* Button hover effect */
 .image-button:hover {
-    background-color: rgba(53, 114, 239, 0.8);
-    color: white;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 1200px) {
-    .image-container {
-        flex: 1 1 45%; /* Adjust width for medium screens */
-        max-width: none; /* Remove max-width for better scaling */
-    }
-}
-
-@media (max-width: 768px) {
-    .image-container {
-        flex: 1 1 100%; /* Full width for small screens */
-        margin: 1rem 0; /* Adjust margin for small screens */
-    }
-    
-    .image-button {
-        bottom: 3.75rem; /* Adjust button position */
-    }
-    
-    .description {
-        font-size: 1.125rem; /* Scale down description text */
-    }
-}
+    background-color: rgb(53, 114, 239, 0.8);
+    color: white
+} 

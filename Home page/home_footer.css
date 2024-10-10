@@ -1,4 +1,4 @@
-/*footer container*/
+/* Footer container */
 .footer {
     background-color: rgb(0, 31, 63);
     display: flex;
@@ -8,39 +8,150 @@
     padding-top: 20px;
     padding-bottom: 100px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Aligning items to the top */
 }
 
-
+/* Main footer wrapper */
 .footerContainer {
     width: 100%;
     max-width: 1200px;
-    color:white;
     display: flex;
-    column-gap: 150px;
-    row-gap: 100px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Ensuring space between columns */
+    column-gap: 150px; /* Gap between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    color: white;
 }
 
-/*Content inside the container*/
+/* Content inside the container */
 .footerContent {
+    flex: 1; /* Let each column grow equally */
     display: flex;
     flex-direction: column;
+    min-width: 200px; 
+    border-radius: 10px;
 }
 
-/*Title style*/
+/* Title style */
 .footerTitle {
     font-weight: 500;
     font-size: 24px;
+    margin-bottom: 15px; 
+    color: #fff;
+    padding-top: 10px;
 }
 
-.footerContent ul{
+.footerTitle ul{
+    color: #fff;
+}
+
+.footerTitle ul li a{
+    color: #fff;
+}
+
+.mainLogo{
+    width: 160px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Style for the list in each footer column */
+.footerContent ul {
     line-height: 30px;
     list-style-type: none;
     padding-left: 0;
+    margin: 0; 
 }
 
+.footerContent ul li a {
+    color: rgb(141, 139, 139);
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+}
 
+/* Remove underline and keep links white even after visiting */
+.footerContent ul li a:visited {
+    color: rgb(141, 139, 139); 
+    text-decoration: none; /* Ensure no underline */
+}
 
+.footerContent ul li i {
+    color: rgb(141, 139, 139); /* Make the links white */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+}
 
+.footerContent ul li i:visited {
+    color: rgb(141, 139, 139);
+    text-decoration: none; /* Ensure no underline */
+}
+
+/* Optional: Hover effect to improve UX */
+.footerContent ul li a:hover {
+    text-decoration: underline; /* Optional underline on hover */
+}
+
+/* Bank logos style */
+.bankLogos {
+    display: flex;
+    flex-wrap: wrap; /* Wrapping if logos overflow */
+    gap: 10px; /* Gap between logos */
+    border-radius: 10px;
+}
+
+.bankLogos img {
+    border-radius: 10px;
+    width: 85px;
+    height: 55px; /* Maintain the aspect ratio */
+    background-color: #fff;
+}
+
+.bankLogos img:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+.bankLogo {
+    max-width: 100px; /* Increased from 50px to 100px */
+    height: 70px; /* Ensures the height adjusts proportionally */
+}
+
+/* Download logos style */
+.downloadLogos {
+    display: flex;
+    flex-direction: column; /* Stack the images vertically */
+    gap: 10px; /* Add space between the images */
+    width: 100%;
+}
+
+.downloadLogos:hover{
+    cursor: pointer;
+}
+
+.downloadLogo {
+    max-width: 150px; /* Adjust the size of the download logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive design for download logos */
+@media (max-width: 768px) {
+    .downloadLogos {
+        align-items: center; /* Center the logos on smaller screens */
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerContent {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .bankLogos {
+        justify-content: center;
+    }
+}

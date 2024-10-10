@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    padding: 10px 20px; /* Reduce padding for a smaller navbar */
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 22px; /* Make the logo slightly smaller */
+    margin-bottom: 10px; /* Space between the logo and menu */
+}
+
+/* Menu under the logo */
+.navMenu {
+    display: flex;
+    gap: 30px; /* Space out the menu items */
+    margin-bottom: 10px;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 5px 10px; /* Add some padding for better click area */
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.headerListItem.active,
+.headerListItem:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+.navItems {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Add space between the menu and buttons */
+}
+
+.navButton {
+    padding: 8px 15px; /* Reduce button size */
+    background-color: white;
+    color: #003580;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navButton:hover {
+    background-color: #0073e6;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Reduced size for summary-details card */
+.summary-details {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 500px; /* Max width to reduce the card size */
+    margin: 20px auto; /* Center the card and add margin */
+}
+
+h2 {
+    margin: 0 0 10px; /* Reduced margin for the heading */
+    font-size: 20px; /* Smaller font size for the heading */
+}
+
+p {
+    margin: 3px 0; /* Reduced margin for paragraphs */
+    font-size: 16px; /* Slightly smaller font size for paragraph text */
+}
+
+strong {
+    font-weight: bold; /* Bold text for labels */
+}
+
+#summary-from, 
+#summary-to, 
+#summary-departure, 
+#summary-return, 
+#summary-passengers, 
+#summary-class {
+    padding: 3px 6px; /* Reduced padding around the text */
+    background-color: rgba(255, 255, 255, 0.2); /* Light background for text */
+    border-radius: 4px; /* Rounded corners for text */
+    font-size: 14px; /* Smaller font size for the text */
+}
+
+/* Optional: Add a hover effect for the details */
+.summary-details:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Section Styling */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Order Flight Section */
+.order-summary {
+    text-align: center; /* Center the Order Flight heading */
+    margin-bottom: 40px;
+}
+
+.order-summary h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #003580;
+}
+
+/* Available Flights Section */
+.flight-selection {
+    margin-top: 40px;
+}
+
+.flight-selection h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #003580;
+    margin-bottom: 20px;
+}
+
+/* Flight List Styling */
+.flight-carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flight-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Flight Card Styling */
+.flight-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flight-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Flight Details Section */
+.flight-details {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.flight-details h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    color: #003580;
+}
+
+.flight-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.flight-time {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+.flight-time span {
+    font-size: 14px;
+    color: #003580;
+}
+
+/* Price Section */
+.price-details {
+    text-align: right;
+}
+
+.price {
+    font-size: 20px;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Select Button Styling */
+.select-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-button:hover {
+    background-color: #0056b3;
+}
+
+        
