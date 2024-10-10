@@ -1,0 +1,10 @@
+.review-body {
+    font-size: 16px;
+    margin-left: 430px;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 950px;
+    text-align: justify;
+    color: black;
+}
