@@ -7,4 +7,6 @@
     max-width: 950px;
     text-align: justify;
     color: black;
+    margin-bottom: -15px; /* Adjust the value to control spacing */
+
 }
