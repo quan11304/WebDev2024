@@ -8,9 +8,9 @@ main {
     height: 150px;
     width: 70%;
     margin: 20px 15%;
+    background: #FAFAFA;
     display: flex;
     align-items: center;
-    background: #FAFAFA;
 }
 
 .box.left {
@@ -22,14 +22,19 @@ main {
 }
 
 .box:hover {
-    border: none;
     box-shadow: 10px 10px 10px #565656;
     transition: 150ms;
 }
 
-.box img {
-    height: 101%;
+.box .img-frame {
+    height: 101%; /* 151.5px */
+    width: 269px;
+    flex-shrink: 0;
     overflow: hidden;
+}
+
+.box .img-frame img {
+    max-height: 100%;
 }
 
 .box .text {
