@@ -16,6 +16,10 @@ Student Info
 * ID: 22BI13322
 * Name: Nguyễn Tài Anh
 * ID: 22BI13028
+* Name: Lê Văn Trường
+* ID: 22BI13440
+* Name: Đỗ Bảo Nhi
+* ID: 22BI13349
 <br><br>
 * Group ID: 21
 * Project Name: 19 - Travel Booking Application

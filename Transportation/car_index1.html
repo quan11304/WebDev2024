@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transportation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--Link to icon-->
+        <link rel="stylesheet" href="../Transportation/navbar-2.css">
+        <link rel="stylesheet" href="../Transportation/banner.css">   
+        <link rel="stylesheet" href="../Transportation/footer.css">
+        <link rel="stylesheet" href="../Transportation/main.css">
+
+        <!--set general font and format-->
+        <style>
+            body, html {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--Navigation bar part-->
+        <!--Navigation bar on header contain logo bar and menu bar, which are displayed 
+        by separate navigation container-->
+        <header style="height: 100px;">
+            <div class="navContainer" style="justify-content: space-between;">
+                <img src="..\logo\logotrang.png" style="height: 50px;">
+                <div class="navButton">
+                    <a href="../LoginRegister page/register.html">
+                        <button type="submit">Register</button>
+                    </a>
+                    <a href="../LoginRegister page/login.html">
+                        <button type="submit">Login</button>
+                    </a>
+                </div>
+            </div>
+            <!--Navigation bar menu-->
+            <!--each navigation container is arranged in -->
+            <div class="navContainer" style="column-gap: 40px;">
+                <a href="../Home page/home.html" class="navMenu">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="../Hotel_Booking/index.html" class="navMenu">
+                    <i class="fas fa-bed"></i>
+                    <span>Hotels</span>
+                </a>
+                <div class="navMenu">
+                    <i class="fas fa-utensils"></i>
+                    <span>Tours</span>
+                </div>
+                <a href="../flight-booking/index.html" class="navMenu">
+                    <i class="fas fa-plane"></i>
+                    <span>Flights</span>
+                </a>
+                <a href="../Destination/destination.html" class="navMenu">
+                    <i class="fas fa-hotel"></i>
+                    <span>Destination</span>
+                </a>
+                <a href="../Transportation/car_index1.html" class="navMenu active">
+                    <i class="fas fa-car"></i>
+                    <span>Transportation</span>
+                </a>
+            </div> 
+        </header>
+
+        <!--Main body-->
+        <main>
+            <!--banner background contain the banner container-->
+            <div class="banner">
+                <div class="bannerContainer">
+                    <!--Banner container restrict the scope of content and include 2 column for banner introduciton and image-->
+                    <div class="bannerContent">
+                        <h1>Your destination, our mission!</h1>
+                        <div class="bannerContentTx">
+                            <p>Ready for your next adventure? Our car rental service offers a wide selection of vehicles to suit every need—perfect for
+                            getaways, business trips, or family vacations. Enjoy easy online booking, competitive rates, and exceptional customer service.
+                            <p>Hit the road and start your journey today!</p>
+                        </div>
+                    </div>
+                    <div class="bannerContent">
+                        <img src="..\Transportation\image\car banner2.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!--Create the main container to restrict the scope of content-->
+            <div class="mainContainer">
+                <!--Create a flex row including With and Without selection and Select car type-->
+                <div class="mainPartRow" style="justify-content: space-between;">
+                    <!--For the With and Without selection-->
+                    <div id="mySelection" style="width: 50%;"> <!--id mySelection for js code function run - highlight and unhighlight-->
+                        <button class="btn clicked" onclick="filterSelection('without')">Without Driver</button>
+                        <button class="btn" onclick="filterSelection('with')">With Driver</button>
+                    </div>
+                    <!--For the car type selection-->
+                    <div style="margin-left: auto;"> <!--set to the the right margin-->
+                        <div class="error" id="seat_e">Please choose car type</div>
+                        <select id="seat" class="search-select" >
+                            <option value="">Select a Car type</option>
+                            <option value="4">4</option>
+                            <option value="7">7</option>
+                            <option value="16">16</option>
+                            <option value="camping">Camping Car (about 6 people)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!--Flex row content selection attribute-->
+                <div class="mainPartRow">
+                    <!--If user choose Without Driver, this content will be displayed-->
+                    <!--require to ensure user fulfill the information-->
+                    <!--Class error will be enabled if user do not fulfil all category-->
+                    <div class="filterDiv without">
+                        <!--Search row contain 2 search column-->
+                        <div class="search-row">
+                            <div class="search-column">
+                                <!--For the city selection-->
+                                <label class="search-label" for="city">City:</label>
+                                <div class="error" id="city_e1">Please choose your city</div>
+                                <select id="city1" class="search-select" required>
+                                    <option value="">Select a city</option>
+                                    <option value="Hà Nội">Hà Nội</option>
+                                    <option value="Nha Trang">Nha Trang</option>
+                                    <option value="Đà Nẵng">Đà Nẵng</option>
+                                    <option value="Hồ Chí Minh City">Hồ Chí Minh City</option>
+                                    <option value="Quảng Ninh">Quảng Ninh</option>
+                                    <option value="Phú Quốc">Phú Quốc</option>
+                                </select>
+                            </div>
+                            <!--For entering rental location-->
+                            <div class="search-column">
+                                <label class="search-label" for="rentalLocation">Rental Location:</label>
+                                <div class="error" id="rent_e1">Please enter your rental location</div>
+                                <input type="text" id="rentalLocation1" class="search-input" placeholder="Enter rental location" required>
+                            </div>
+                        </div>
+
+                        <div class="search-row">
+                            <!--For choosing the start date, default is today-->
+                            <div class="search-column">
+                                <label class="search-label" for="startDate">Start Date: <i style="font-weight: normal; font-size: 12px;">(mm/dd/yyyy)</i> </label> 
+                                <input type="date" id="startDate1" class="search-input" required>
+                            </div>
+                            <!--For choosing the start time, default is 09:00 AM-->
+                            <div class="search-column">
+                                <label class="search-label" for="startTime">Start Time:</label>
+                                <input type="time" value="09:00" id="startTime" class="search-input" required>
+                            </div>
+                            <!--For choosing the start date, default is today+3-->
+                            <div class="search-column">
+                                <label class="search-label" for="endDate">End Date: <i style="font-weight: normal; font-size: 12px;">(mm/dd/yyyy)</i></label>
+                                <input type="date" id="endDate1" class="search-input" required>
+                            </div>
+                            <!--For choosing the end time, default is 09:00 AM-->
+                            <div class="search-column">
+                                <label class="search-label" for="endTime">End Time:</label>
+                                <input type="time" value="09:00" id="endTime" class="search-input" required>
+                            </div>
+                        </div>
+                        <!--Search button - filter based on the selection and display the result in car_index2.html-->
+                        <button class="search-button" onclick="filterResults('without')">Search</button>
+                    </div>
+
+                    <!--If user choose With Driver, this content will be displayed-->
+                    <div class="filterDiv with">
+                        <div class="search-row">
+                            <!--City selection-->
+                            <div class="search-column">
+                                <label class="search-label" for="city">City:</label>
+                                <div class="error" id="city_e2">Please choose your city</div>
+                                <select id="city2" class="search-select" required>
+                                    <option value="">Select a city</option>
+                                    <option value="Hà Nội">Hà Nội</option>
+                                    <option value="Nha Trang">Nha Trang</option>
+                                    <option value="Đà Nẵng">Đà Nẵng</option>
+                                    <option value="Hồ Chí Minh City">Hồ Chí Minh City</option>
+                                    <option value="Quảng Ninh">Quảng Ninh</option>
+                                    <option value="Phú Quốc">Phú Quốc</option>
+                                </select>
+                            </div>
+                            <!--Enter rental location-->
+                            <div class="search-column">
+                                <label class="search-label" for="rentalLocation">Rental Location:</label>
+                                <div class="error" id="rent_e2">Please enter your rental location</div>
+                                <input type="text" id="rentalLocation2" class="search-input" placeholder="Enter rental location" required>
+                            </div>
+                        </div>
+
+                        <div class="search-row">
+                            <!--Start date-->
+                            <div class="search-column">
+                                <label class="search-label" for="startDate">Start Date: <i style="font-weight: normal; font-size: 12px;">(mm/dd/yyyy)</i></label>
+                                <input type="date" id="startDate2" class="search-input" required>
+                            </div>
+                            <!--End date-->
+                            <div class="search-column">
+                                <label class="search-label" for="endDate">End Date: <i style="font-weight: normal; font-size: 12px;">(mm/dd/yyyy)</i></label>
+                                <input type="date" id="endDate2" class="search-input" required>
+                            </div>
+                            <!--Pickup time-->
+                            <div class="search-column">
+                                <label class="search-label" for="pickupTime">Pickup Time:</label>
+                                <input type="time" value="09:00" id="pickupTime" class="search-input" required>
+                            </div>
+                        </div>
+
+                        <!--Search button link to car_index2.html and display the content 
+                        corresponding to With Driver Option and user selection-->
+                        <button class="search-button" onclick="filterResults('with')">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--New container to display popular car and car brand logo-->
+            <div class="mainContainer" style="margin-top:10px;padding-bottom: 100px;">
+                <div class="mainPartRow" style="justify-content: center;">
+                    <h2>Popular Cars</h2>
+                </div>
+                <!--Flex row contain 3 flex columns-->
+                <div class="mainPartRow" style="justify-content: center; padding-bottom: 30px;">
+                    <!--Show the first car including car namw, image, number of seats and suitcase-->
+                    <!--mainPartColumn grow - when hover the flex, it will bigger-->
+                    <div class="mainPartColumn grow" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px; padding: 50px 5px;align-items: center;">
+                        <img src="../Transportation/car4seats/vinfastVf84.jpg" style="height: 150px; width: 250px;">
+                        <p style="text-align: center; font-weight: bold;">Vinfast Vf8</p>
+                        <div class="mainPartRow" style="font-size: 14px;color: gray;">
+                            <div class="mainPartRow"  style="gap: 5px; justify-content: center;">
+                                <i class="fa-solid fa-user"></i>
+                                <span>4</span>    
+                            </div>
+                            <div class="mainPartRow" style="gap: 5px; justify-content: center;">
+                                <i class="fa-solid fa-suitcase-rolling"></i>
+                                <span>2</span>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--The second car-->
+                    <div class="mainPartColumn grow" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px; padding: 50px 5px; align-items: center;">
+                        <img src="../Transportation/car7seats/xpander-cross-7.jpg" style="height: 150px; width: 250px;">
+                        <p style="text-align: center; font-weight: bold;">Xpander Cross 7</p>
+                        <div class="mainPartRow" style="font-size: 14px;color: gray;">
+                            <div class="mainPartRow"  style="gap: 5px; justify-content: center;">
+                                <i class="fa-solid fa-user"></i>
+                                <span>7</span>    
+                            </div>
+                            <div class="mainPartRow" style="gap: 5px; justify-content: center;">
+                                <i class="fa-solid fa-suitcase-rolling"></i>
+                                <span>2</span>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--The third car-->
+                    <div class="mainPartColumn grow" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px; padding: 50px 5px;align-items: center;">
+                        <img src="../Transportation/car16seats/limousin16.jpg" style="height: 150px; width: 250px;">
+                        <p style="text-align: center; font-weight: bold;">Limousin</p>
+                        <div class="mainPartRow" style="font-size: 14px;color: gray;">
+                            <div class="mainPartRow"  style="gap: 5px; justify-content: center;">
+                                <i class="fa-solid fa-user"></i>
+                                <span>16</span>    
+                            </div>
+                            <div class="mainPartRow" style="gap: 5px; justify-content: center;">
+                                <i class="fa-solid fa-suitcase-rolling"></i>
+                                <span>4</span>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Horizontal line for division-->
+                <div class="mainPartRow" style="border: 1px solid black; width: 90%;;margin-bottom: 50px;"></div>
+
+                <!--Flex row contain 2 flex columns to display the car brand logo-->
+                <div class="mainPartRow" style="column-gap: 50px;">
+                    <!--Some introductions-->
+                    <div class="mainPartColumn" style="width: 50%; text-align: justify;">
+                        <h2>Variety of Car brands</h2>
+                        <p>Experience the freedom of choice with our car rental service, 
+                        offering a range of top car brands designed for comfort, reliability, and style. 
+                        Whether for business or adventure, we have the perfect ride ready for you!</p>
+                    </div>
+                    <!--add the logo image with the same height 50px-->
+                    <div class="mainPartColumn">
+                        <div class="mainPartRow" style="flex-wrap: wrap; row-gap: 30px; justify-content: center;">
+                            <img src="../Transportation/logoCar/ford.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/gaz.jpg" style="height: 50px;">
+                            <img src="../Transportation/logoCar/honda.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/hyndai.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/iveco.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/kia.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/mazda.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/mitsubishi.webp" style="height: 50px;">
+                            <img src="../Transportation/logoCar/suzuki.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/toyota.png" style="height: 50px;">
+                            <img src="../Transportation/logoCar/vinfast.png" style="height: 50px;">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+
+        <!--Footer-->
+        <footer class="footer">
+        <div class="footerContainer">
+            <!-- First Column: Logos -->
+            <div class="footerContent">
+                <div class="footerTitle">Payment partner</div>
+                <img src="../Destination/logo/logotrang.png" alt="Group 21 Logo" class="mainLogo">
+                <div class="bankLogos">
+                    <img src="../Home page/Home_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
+                    <img src="../Home page/Home_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
+                    <img src="../Home page/Home_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
+                    <img src="../Home page/Home_image/VIB.png" alt="Bank 4" class="bankLogo">
+                    <img src="../Home page/Home_image/TPBank.png" alt="Bank 5" class="bankLogo">
+                    <img src="../Home page/Home_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
+                    <img src="../Home page/Home_image/Visa.png" alt="Bank 7" class="bankLogo">
+                    <img src="../Home page/Home_image/VNPay.png" alt="Bank 6" class="bankLogo">
+                    <img src="../Home page/Home_image/Momo.png" alt="Bank 6" class="bankLogo">
+                </div>
+            </div>
+
+            <!-- Second Column: About Us -->
+            <div class="footerContent">
+                <div class="footerTitle">About Us</div>
+                <ul>
+                    <li>Lê Văn Trường - 22BI13440</li>
+                    <li>Hoàng Quân - 22BI13368</li>
+                    <li>Nguyễn Tài Anh - 22BI13028</li>
+                    <li>Nguyễn Hải Nam - 22BI13322</li>
+                    <li>Đỗ Bảo Nhi - 22BI13349</li>
+                    <li>Đỗ Trọng Đạt - 22BI13075</li>
+                </ul>
+            </div>
+
+            <!-- Third Column: Links -->
+            <div class="footerContent">
+                <div class="footerTitle">Quick Links</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/quan11304/WebDev2024">Github</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/TravelokaVN">Facebook</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/traveloka.vn/">Instagram</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-google"></i>
+                        <a href="https://www.traveloka.com/en-vn">Google</a>
+                    </li>
+                </ul>
+
+                <div class="footerTitle">Download</div>
+                <div class="downloadLogos">
+                    <a href="https://play.google.com/store/apps/details?id=com.traveloka.android&hl=vi&pli=1">
+                        <img src="../Home page/Home_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
+                    </a>
+
+                    <a href="https://apps.apple.com/vn/app/traveloka-kh%C3%A1ch-s%E1%BA%A1n-v%C3%A9-m%C3%A1y-bay/id898244857?l=vi">
+                        <img src="../Home page/Home_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </footer>
+
+        <!--This js code file contain the function help
+            Display the content based on Without and With option
+            Get the data input to display on other page
+            Ensure the user completely fulfil the selection pane-->
+        <script src="../Transportation/for_idx1.js"></script>
+    </body>
+
+    </body>
+</html>
