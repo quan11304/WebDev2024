@@ -22,10 +22,10 @@ body {
 }
 
 .logo-image {
-    height: 60px; /* Set height to match Traveloka's logo */
-    width: auto;  /* Maintain aspect ratio */
-    margin-right: 20px; /* Optional: add space to the right for separation */
-    margin-top: 20px;
+    height: 50px; 
+    width: auto;  
+    margin-right: 20px; 
+    margin-top: 5px; 
 }
 
 .navItems {
@@ -46,4 +46,4 @@ body {
 .navButton:hover {
     background-color: #003580; /* Change background on hover */
     color: white; /* Change text color on hover */
-}
+} 
