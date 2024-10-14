@@ -224,7 +224,7 @@ a {
 .highlight-section {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     margin-left: 260px; /* Moves the whole section 260px to the right */
 }
 
@@ -240,8 +240,8 @@ a {
 }
 
 .icon-container i {
-    color: white; /* Change the icon color to white */
-    font-size: 20px; /* Adjust size as needed */
+    color: white; 
+    font-size: 20px; 
 }
 
 .text-container h2 {
@@ -256,6 +256,36 @@ a {
     margin: 0;
     color: #777;
 }
+
+.icon-container-2 {
+    background-color: #47BEAD;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.icon-container-2 i {
+    color: white; 
+    font-size: 20px; 
+}
+
+.text-container-2 h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #47BEAD;
+    font-weight: bold;
+}
+
+.text-container-2 p {
+    font-size: 16px;
+    margin: 0;
+    color: #777;
+}
+
 
 
 

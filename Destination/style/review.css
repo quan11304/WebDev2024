@@ -6,15 +6,13 @@
 
 .review-body {
     font-size: 16px;
-    margin-left: 430px;
-    margin-bottom: 10px;
-    padding: 20px;
-    margin: 0 auto;
     max-width: 950px;
     text-align: justify;
+    padding: 20px;
     color: black;
-    margin-bottom: -15px; /* Adjust the value to control spacing */
+    margin: 0 auto 7px auto; /* Centering with negative bottom margin */
 }
+
 
 .review-title {
     font-size: 48px; 
@@ -24,3 +22,30 @@
     text-align: center; /* This will center the text */
 }
 
+.review-numbering {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 450px;
+    color: black;
+    margin-top: 10px;
+}
+
+.review-list {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 80px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.picture-description {
+    font-size: 15px;
+    text-align: center;
+    color: #666666;
+}
+
+.image-size {
+    width: 850px;
+    height: auto;
+  }
