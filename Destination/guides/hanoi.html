@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/destination.css">
     <link rel="stylesheet" href="../style/destination_title.css">
+    <link rel="stylesheet" href="../style/carousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 
@@ -59,96 +62,300 @@
     </div>
 
     <div class="explorations">
-        <div class="title" style="font-size: 48px; color: #333; margin-left: 430px;">Hanoi</div>
+        <div class="description-title">Hanoi</div>
         <div class="description" style="font-size: 16px; padding: 20px; margin: 0 auto; max-width: 950px; text-align: justify; color: black;">
-            Welcome to Hanoi, the captivating capital of Vietnam, where ancient traditions blend seamlessly with modern vibrancy. This bustling metropolis, steeped in over a thousand years of history, offers visitors a mesmerizing tapestry of cultural experiences, architectural marvels, and culinary delights. At the heart of the city lies the tranquil Hoan Kiem Lake, a serene oasis surrounded by the chaotic energy of the Old Quarter. This iconic landmark, home to the picturesque Turtle Tower and Ngoc Son Temple, embodies the soul of Hanoi and is intrinsically linked to the legendary tale of the golden turtle, captivating both locals and tourists alike. As you venture beyond the lake, you'll discover a city rich in historical significance and architectural splendor. The imposing Ho Chi Minh Mausoleum, situated in Ba Dinh Square, stands as a solemn tribute to Vietnam's revolutionary leader and offers insight into the nation's complex past. Nearby, the Temple of Literature, known locally as Van Mieu, beckons with its exquisite Confucian architecture and serene courtyards. This ancient seat of learning, once Vietnam's first national university, provides a fascinating glimpse into the country's scholarly traditions and serves as a testament to the enduring importance of education in Vietnamese culture. Whether you're exploring the bustling streets of the Old Quarter, savoring the aromatic flavors of Vietnamese cuisine, or immersing yourself in the city's rich history, Hanoi promises an unforgettable journey through the heart of Vietnam.
+            <span class="shortText">
+                Welcome to Hanoi, the captivating capital of Vietnam, where ancient traditions blend seamlessly with modern vibrancy. This bustling metropolis, steeped in over a thousand years of history, offers visitors a mesmerizing tapestry of cultural experiences, architectural marvels, and culinary delights. At the heart of the city lies the tranquil Hoan Kiem Lake, a serene oasis surrounded by the chaotic energy of the Old Quarter.
+            </span>
+            <span class="moreText" style="display: none;">
+                This iconic landmark, home to the picturesque Turtle Tower and Ngoc Son Temple, embodies the soul of Hanoi and is intrinsically linked to the legendary tale of the golden turtle, captivating both locals and tourists alike. <br><br>
+                As you venture beyond the lake, you'll discover a city rich in historical significance and architectural splendor. The imposing Ho Chi Minh Mausoleum, situated in Ba Dinh Square, stands as a solemn tribute to Vietnam's revolutionary leader and offers insight into the nation's complex past. <br><br>
+                Nearby, the Temple of Literature, known locally as Van Mieu, beckons with its exquisite Confucian architecture and serene courtyards. This ancient seat of learning, once Vietnam's first national university, provides a fascinating glimpse into the country's scholarly traditions and serves as a testament to the enduring importance of education in Vietnamese culture. <br><br>
+                Whether you're exploring the bustling streets of the Old Quarter, savoring the aromatic flavors of Vietnamese cuisine, or immersing yourself in the city's rich history, Hanoi promises an unforgettable journey through the heart of Vietnam.
+            </span>
+            <a href="javascript:void(0);" class="readMoreLink" onclick="toggleReadMore(this)">Read More</a>
         </div>
+    </div>
 
-        <!--<i class="fa-solid fa-location-dot"></i> -->
+    <div class="highlight-section">
+        <div class="icon-container">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="text-container">
+            <h2>Get to Know Ha Noi</h2>
+            <p>Take a tour of this destination's highlights</p>
+        </div>
+    </div>       
+    
+    <div class="line"></div> <!-- New line div -->
 
         <div class="explorations">
-            <div class="title">Top Sights in Hanoi</div>
+            <div class="location-title">Top Sights in Hanoi</div>
 
-            <div class="review-wrapper">
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/chuamotcot.jpg" alt="One Pillar Pagoda">
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/onepillarpagoda.html" >
+                                        <img src="../image/chuamotcot.jpg" alt="One Pillar Pagoda">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">One Pillar Pagoda</div>
+                                    <div class="review-text">The 11th-century wooden shrine of Hanoi, it represents a lotus blossom.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/hcmmaso.html" >
+                                        <img src="../image/ho-chi-minh-mausoleum-thumb_1662726979.jpeg" alt="Ho Chi Minh Mausoleum">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Ho Chi Minh Mausoleum</div>
+                                    <div class="review-text">A very important historical sight in Hanoi.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/ngocson.html" >
+                                        <img src="../image/ngoc-son-temple_64236.jpg" alt="Ngoc Son Temple">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Ngoc Son Temple</div>
+                                    <div class="review-text">This temple on Hoan Kiem Lake island honors scholars and war heroes.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/kvc.html" >
+                                        <img src="../image/Hanoi_Temple_of_Literature.jpg" alt="Temple of Literature">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Temple of Literature</div>
+                                    <div class="review-text">The temple is one of the oldest sights in Hanoi and it was founded as Vietnam's first university.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/hkl.html" >
+                                        <img src="../image/ho-hoan-kiem-2.jpg" alt="Hoan Kiem Lake">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Hoan Kiem Lake</div>
+                                    <div class="review-text">A popular lake among locals and tourists.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/vme.html" >
+                                        <img src="../image/Dan_toc_hoc_1.jpg" alt="Vietnam Museum of Ethnology">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Vietnam Museum of Ethnology</div>
+                                    <div class="review-text">This first-class museum has a lot to show.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/holo.html" >
+                                        <img src="../image/Hoa-Lo-Prison-Museum-1024x479.jpg" alt="Hoa Lo Prison Museum">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Hoa Lo Prison Museum</div>
+                                    <div class="review-text">Hoa Lo Prison will help gain a greater insight into the life of Vietnamese revolutionaries during the First Indochina War.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../locations/hanoi/joseph.html" >
+                                        <img src="../image/Inside-of-St-Josephs-Cathedral.jpg" alt="St. Joseph's Cathedral">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">St. Joseph's Cathedral</div>
+                                    <div class="review-text">This cathedral is one of the sights remaining from the French colonial time.</div>
+                                </div>
+                            </div>
+                        </div>
+            
                     </div>
-                    <div class="review-content">
-                        <div class="review-title">One Pillar Pagoda</div>
-                        <div class="review-text">The 11th-century wooden shrine of Hanoi, it represents a lotus blossom.</div>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+            </div> 
 
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/ho-chi-minh-mausoleum-thumb_1662726979.jpeg" alt="Ho Chi Minh Mausoleum">
-                    </div>
-                    <div class="review-content">
-                        <div class="review-title">Ho Chi Minh Mausoleum</div>
-                        <div class="review-text">A very important historical sight in Hanoi.</div>
-                    </div>
+            <div class="highlight-section" style="padding-top: 30px">
+                <div class="icon-container-2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                <div class="text-container-2">
+                    <h2>Explore Hanoi</h2>
+                    <p>Create your itinerary with our top picks below</p>
+                </div>
+            </div> 
 
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/ngoc-son-temple_64236.jpg" alt="Ngoc Son Temple">
+            <div class="explorations">
+                <div class="location-title">Local Cuisine</div>
+            
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../cuisine/hanoi/top10.html" >
+                                        <img src="../image/food0.jpg" alt="10 Hanoi food shops that don’t need a name to be famous">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">10 Hanoi food shops that don’t need a name to be famous</div>
+                                    <div class="review-text">These streetside eateries have survived the tests of time thanks just to word of mouth.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../cuisine/hanoi/phoga.html" >
+                                        <img src="../image/phoga0.jpg" alt="Chicken pho">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Hanoi comfort food: decades of chicken pho satisfaction</div>
+                                    <div class="review-text">For over two decades, a beloved Hanoi chicken pho spot has been known for its noodles paired with various chicken cuts and broth simmered for hours, along with welcoming service.</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../cuisine/hanoi/street.html" >
+                                        <img src="../image/street0.jpg" alt="Culinary">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">A culinary experience turns soulful on a Hanoi downtown street</div>
+                                    <div class="review-text">Ly Quoc Su street which connects an iconic cathedral with Hang Bong Street offers many variations of a Hanoi dining theme.</div>
+                                </div>
+                            </div>
+                        </div>   
+                        
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../cuisine/hanoi/cuisine.html" >
+                                        <img src="../image/cuisine0.jpg" alt="Culinary">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Hanoi cuisine - a distinctive cultural product of Vietnam</div>
+                                    <div class="review-text">Hanoi's cuisine, a cultural heritage, reflects both material and spiritual elements, from ingredients and flavors to cooking art and dining etiquette.</div>
+                                </div>
+                            </div>
+                        </div>  
                     </div>
-                    <div class="review-content">
-                        <div class="review-title">Ngoc Son Temple</div>
-                        <div class="review-text">This temple on Hoan Kiem Lake island honors scholars and war heroes, known for its preserved turtle and red-painted bridge.</div>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+            </div> 
 
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/Hanoi_Temple_of_Literature.jpg" alt="Temple of Literature">
+            <div class="explorations">
+                <div class="location-title">Must-try Activities</div>
+            
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../activity/hanoi/cycling.html" >
+                                        <img src="../image/activity1.jpg" alt="Activity">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Cycling Around Hanoi - Half-Day Tour</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../activity/hanoi/motorbike.html" >
+                                        <img src="../image/motorbike1.jpg" alt="Activity">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Hanoi Sightseeing on Motorbike - Half-Day Tour</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../activity/hanoi/bus.html" >
+                                        <img src="../image/bus1.jpg" alt="Activity">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Hanoi Hop-on Hop-off Bus Pass</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-item swiper-slide">
+                            <div class="review-card">
+                                <div class="review-image">
+                                    <a href="../activity/hanoi/aquarium.html" >
+                                        <img src="../image/aquarium.jpg" alt="Activity">
+                                    </a>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-title">Lotte World Aquarium</div>
+                                </div>
+                            </div>
+                        </div>           
                     </div>
-                    <div class="review-content">
-                        <div class="review-title">Temple of Literature</div>
-                        <div class="review-text">The temple is one of the oldest sights in Hanoi and it was founded as Vietnam's first university. </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/ho-hoan-kiem-2.jpg" alt="Hoan Kiem Lake">
-                    </div>
-                    <div class="review-content">
-                        <div class="review-title">Hoan Kiem Lake</div>
-                        <div class="review-text">A popular lake among countless locals and tourists where to find a rare breed of turtle and the perfect spot to observe the life in Hanoi.</div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/Dan_toc_hoc_1.jpg" alt="Vietnam Museum of Ethnology">
-                    </div>
-                    <div class="review-content">
-                        <div class="review-title">Vietnam Museum of Ethnology</div>
-                        <div class="review-text">With over 50 different ethnic groups in the country, this first class museum has a lot to show.</div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/Hoa-Lo-Prison-Museum-1024x479.jpg" alt="Hoa Lo Prison Museum">
-                    </div>
-                    <div class="review-content">
-                        <div class="review-title">Hoa Lo Prison Museum</div>
-                        <div class="review-text">Hoa Lo Prison will help gain a greater insight into the life of Vietnamese revolutionaries during the First Indochina War.</div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-image">
-                        <img src="../image/nhatholon2.jpg" alt="St. Joseph's Cathedral">
-                    </div>
-                    <div class="review-content">
-                        <div class="review-title">St. Joseph's Cathedral</div>
-                        <div class="review-text">This cathedral is one of the sights remaining from the French colonial time.</div>
-                    </div>
-                </div>
+            </div> 
+            <script src="../script/script.js"></script>    
 
             </body>
 </html>
