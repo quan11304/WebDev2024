@@ -16,7 +16,6 @@
     background-color: rgb(167, 230, 255, 0.8);
     padding: 10px;
     border-radius: 10px;
-    position: sticky;
     top: 10px;
     height: max-content;
 }
@@ -39,7 +38,7 @@
     margin-bottom: 10px;
 }
 
-.lsItem > label {
+.lsItem > label {   /* Destination, Date Range, Options */
     font-size: 12px;
 }
 
@@ -91,7 +90,7 @@
 }
 
 
-.listResult {
+.listResult {   /* Input length does not affect Search size */
     flex: 3;
 }
 
@@ -106,7 +105,7 @@
 }
 
 
-/* Hotel Detail */
+/* Hotel Detail with image*/
 
 .siImg {
     width: 200px;
