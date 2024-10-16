@@ -3,6 +3,18 @@ main {
     flex-direction: column;
 }
 
+.banner {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Background */
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
 .box {
     position: relative;
     height: 150px;
@@ -18,12 +30,14 @@ main {
 }
 
 .box.right {
-    justify-content: right;
+    justify-items: right;
 }
 
 .box:hover {
     box-shadow: 10px 10px 10px #565656;
-    transition: 150ms;
+    cursor: pointer;
+    transform: scale(105%);
+    transition: all 150ms linear, transform 300ms;
 }
 
 .box .img-frame {
@@ -53,9 +67,20 @@ main {
 }
 
 .box .text h1 {
+    position: absolute;
     padding: 0;
     margin: 0;
-    width: 100%;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.box:hover .text h1 {
+    position: relative;
+    transform: initial;
+    padding: 0;
+    margin: 0;
+    top: initial;
+    transition: transform 0s;
 }
 
 .box .text p {
