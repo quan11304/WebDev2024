@@ -9,34 +9,21 @@
     position: relative;
 }
 
+/* HEADER CONTAINER  Only for hotel_index.html*/
 .headerContainer {
     width: 100%;
     max-width: 1024px;
     margin: 10px 0 30px 0; /* Adjusted margins */
 }
 
-.headerContainer1 {
+/* HEADER LIST  Only for hotel_list.html*/
+.headerContainer_listMode {
     width: 100%;
     max-width: 1024px;
     margin: 0; /* Adjusted margins */
 }
 
-
-.headerContainer.listMode {
-    margin: 20px 0 0 0;
-}
-
-
 /* MENU */
-.navbar nav {  
-    width: 100%;  
-    padding: 5px 0; /* Giảm khoảng cách trên và dưới */  
-    background-color: #003580; /* Màu nền xanh */  
-    display: flex;  
-    justify-content: center; /* Căn giữa menu */  
-    align-items: center;   
-}  
-
 .menu {  
     display: flex;  
     justify-content: center;
@@ -130,17 +117,23 @@
 .headerSearch {
     background-color: white;
     border: 3px solid #febb02;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 8px; /* Reduced padding */
-    border-radius: 5px;
-    position: absolute;
+    display: flex;  /* easily arrange the child elements within the element */
+    align-items: center;  /* Centering along the vertical axis  */
+    justify-content: space-around;  /* Centering along the horizontal axis  */
+    padding: 8px; 
+    border-radius: 5px;  
+    position: absolute;  /* The element will not affect the layout of other elements and can move freely within the positioning area. */
     bottom: -25px;
     width: 80%;
     max-width: 1024px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/*
+gap : The space between child elements in a container.
+padding : The space between the container and its border.
+margin : The space between the container and its parent.
+*/
 
 .headerSearchItem {
     display: flex;
@@ -155,14 +148,14 @@
 
 .headerSearchText {
     color: lightgray;
-    cursor: pointer;
+    cursor: pointer;  /* The cursor property specifies the mouse cursor to display when it is over an element. */
 }
 
 .headerIcon {
     color: lightgray;
 }
 
-.headerSearchItem:last-child .headerBtn {
+/* .headerSearchItem:last-child .headerBtn {
     background-color: #0071c2;
     color: white;
     font-weight: bold;
@@ -170,19 +163,18 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 
 .options {
     display: none;
-    z-index: 2;
+    z-index: 2;   /* When click Optipns it will be positioned above image*/
     position: absolute;
     top: 50px;
     border-radius: 5px;
     background-color: white;
     color: gray;
     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
-    z-index: 1000; /* Để đảm bảo nó nằm trên các phần tử khác */
 }
 
 .optionItem {

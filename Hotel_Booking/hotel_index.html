@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="../Home page/home_footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
     <!-- Navbar Section -->
+    <!-- Include logo and button register and login -->
     <nav class="navbar">
         <div class="navContainer">
             <a href="../Home page/home.html">
@@ -69,10 +70,12 @@
                     </li>
                 </ul>
             </nav>
+            
             <h1 class="headerTitle">A lifetime of discounts? It's Genius.</h1>
             <p class="headerDesc">
                 Get rewarded for your travels – unlock instant savings of 10% or more with a free Travel Booking account.
             </p>
+            
             <button type="button" class="headerBtn">
                 <a href="../LoginRegister page/register.html">Sign in / Register</a>
             </button>
@@ -80,18 +83,17 @@
             <!-- Search Bar Section -->
             <div class="headerSearch">
                 <div class="headerSearchItem">
-                    <i class="fas fa-bed headerIcon"></i>
-                    <input type="text" 
+                    <i class="fas fa-bed headerIcon"></i>     <!-- <i> display an icon from Font Awesome.</i> -->
+                    <input 
+                    type="text" 
                     placeholder="Where are you going?" 
-                    class="headerSearchInput"
-                    onChange="{e => setDestination(e.target.value)}"
-                    >
+                    class="headerSearchInput">
                 </div>
                 <div class="headerSearchItem">
                     <i class="fas fa-calendar-alt headerIcon"></i>
                     <input 
                     type="text" 
-                    id="datePicker" 
+                    id="datePicker"    
                     class="headerSearchInput" 
                     placeholder="Select date range" readonly>
                 </div>
@@ -142,28 +144,24 @@
                 <img src="images/hanoi.jpg" alt="A view of Ha Noi" class="featuredImg" />
                 <div class="featuredTitle">
                     <h1>Ha Noi</h1>
-                    <h2>123 properties</h2>
                 </div>
             </div>
             <div class="featuredItem">
                 <img src="images/danang.jpg" alt="A view of Da Nang" class="featuredImg" />
                 <div class="featuredTitle"> 
                     <h1>Da Nang</h1>
-                    <h2>124 properties</h2>
                 </div>
             </div>
             <div class="featuredItem">
                 <img src="images/nhatrang.jpg" alt="A view of Nha Trang" class="featuredImg" />
                 <div class="featuredTitle">
                     <h1>Nha Trang</h1>   
-                    <h2>125 properties</h2>
                 </div>
             </div>
             <div class="featuredItem">
                 <img src="images/hochiminh.jpg" alt="A view of Ho Chi Minh" class="featuredImg" />
                 <div class="featuredTitle">
                     <h1>Ho Chi Minh</h1>
-                    <h2>126 properties</h2>
                 </div>
             </div>
         </div>
@@ -341,15 +339,5 @@
     <!-- Include JavaScript libraries -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
-
-    <script>
-                // Handle the search action
-                function handleSearch() {
-                    const destination = document.getElementById('destinationInput').value;
-                    const dateRange = document.getElementById('datePicker').value;
-                    // Redirect to list.html with query parameters
-                    window.location.href = `list.html?destination=${encodeURIComponent(destination)}&dates=${encodeURIComponent(dateRange)}`;
-                }
-    </script>
 </body>
 </html>

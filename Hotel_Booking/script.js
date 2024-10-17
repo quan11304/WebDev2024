@@ -5,7 +5,7 @@ flatpickr("#datePicker", {
     mode: "range",
     minDate: "today",
     dateFormat: "Y-m-d",
-    onChange: function(selectedDates, dateStr, instance) {
+    onChange: function(selectedDates, dateStr) {  // selectedDates use in future
         console.log("Selected date range:", dateStr);
     }
 });
@@ -72,7 +72,7 @@ document.getElementById('roomDecrease').onclick = () => {
 
 updateUserInfo(); // Initialize user info display
 
-// Function to handle search and navigate to list.html
+// Function to handle search and navigate to hotel_list.html
 const handleSearch = () => {
     const destination = document.querySelector(".headerSearchInput").value;
     const dateRange = document.getElementById('datePicker').value; // Get date range
@@ -81,6 +81,6 @@ const handleSearch = () => {
     const rooms = options.room;
 
     // Redirect to list.html with query parameters
-    window.location.href = `list.html?destination=${encodeURIComponent(destination)}&dateRange=${encodeURIComponent(dateRange)}&adults=${adults}&children=${children}&rooms=${rooms}`;
+    window.location.href = `hotel_list.html?destination=${encodeURIComponent(destination)}&dateRange=${encodeURIComponent(dateRange)}&adults=${adults}&children=${children}&rooms=${rooms}`;
 };
 

@@ -1,4 +1,5 @@
 // Function to get URL parameters
+// retrieve and analyze parameters from a URL, returning an object containing the values of specific parameters
 const getParams = (url) => {
     const params = new URLSearchParams(url);
     return {
@@ -10,9 +11,9 @@ const getParams = (url) => {
     };
 };
 
-
+// Display and set search data from URL parameters on the website.
 const displaySearchData = () => {
-    const searchParams = getParams(window.location.search);
+    const searchParams = getParams(window.location.search);   // window.location.search = ?destination=Hanoi&dateRange=2023-01-01&adults=2&children=1&rooms=1
 
     // Set destination
     document.querySelector("input[type='text']").value = searchParams.destination;
@@ -33,27 +34,30 @@ const displaySearchData = () => {
     document.querySelectorAll(".lsOptionInput")[4].value = searchParams.rooms; // Rooms
 };
 
-        // Populate the hotel list
-        const populateHotelList = (destination = '', dateRange = '') => {
-            const listResult = document.getElementById('listResult');
-            let filteredHotels = hotels;
 
-            // Lấy giá trị từ các input
-            const minPriceInput = parseFloat(document.querySelectorAll(".lsOptionInput")[0].value) || 0;
-            const maxPriceInput = parseFloat(document.querySelectorAll(".lsOptionInput")[1].value) || Infinity;
+// Populate the hotel list
+// Filter and display a list of hotels based on user input for the destination and price range.
+const populateHotelList = (destination = '', dateRange = '') => {   // In the future, we need dateRange
+    const listResult = document.getElementById('listResult');
+        let filteredHotels = hotels;
 
-            // Lọc khách sạn dựa trên địa điểm
+        // Get the min and max price from lsOptionInput
+        // parseFloat is used to convert the input values to numbers.
+        const minPriceInput = parseFloat(document.querySelectorAll(".lsOptionInput")[0].value) || 0;
+        const maxPriceInput = parseFloat(document.querySelectorAll(".lsOptionInput")[1].value) || Infinity;
+
+            // Filtering Hotel by Destination
             if (destination) {
                 filteredHotels = filteredHotels.filter(hotel => hotel.city.toLowerCase() === destination.toLowerCase());
             }
 
-            // Lọc khách sạn dựa trên giá
+            // Filtering Hotel by Price
             filteredHotels = filteredHotels.filter(hotel => hotel.price >= minPriceInput && hotel.price <= maxPriceInput);
 
             listResult.innerHTML = ""; // Clear previous results
-            if (filteredHotels.length > 0) {
+            if (filteredHotels.length > 0) {  // If there are results
                 filteredHotels.forEach(hotel => {
-                    const hotelItem = document.createElement('div');
+                    const hotelItem = document.createElement('div');  // div will be used to hold all the information about the hotel, such as its name, image, and details.
                     hotelItem.className = 'searchItem';
                     hotelItem.innerHTML = `
                         <img src="${hotel.img}" alt="" class="siImg" />
@@ -78,20 +82,20 @@ const displaySearchData = () => {
                             </div>
                         </div>
                     `;
-                    listResult.appendChild(hotelItem);
-                });
+                    listResult.appendChild(hotelItem);  // Adds the newly created hotelItem div to the listResult element
+                });                                     // appendChild method inserts the hotelItem as a child of the listResult element in the DOM.
             } else {
                 listResult.innerHTML = `<p>No hotels available in ${destination} within the specified price range.</p>`;
-            }
-        };
+        }
+};
 
 // Initialize Flatpickr with custom behavior
 const initFlatpickr = () => {
-    const dateRangeInput = document.querySelector("#dateRange");
+    const dateRangeInput = document.querySelector("#dateRange");  // Selects the input element with the ID dateRange from the DOM and assigns it to the dateRangeInput variable.
 
     flatpickr(dateRangeInput, {
-        mode: "range",
-        dateFormat: "Y-m-d",
+        mode: "range",          // select a start date and an end date.
+        dateFormat: "Y-m-d",      
         minDate: "today",
         allowInput: false, // Disallow manual changes
     });
@@ -104,23 +108,23 @@ const initFlatpickr = () => {
     });
 };
 
-        // Run function when the page loads
-        window.onload = () => {
-            displaySearchData();
-            initFlatpickr();
+// Run function when the page loads
+window.onload = () => {
+    displaySearchData();
+    initFlatpickr();
         
-            // Lấy giá trị ban đầu từ input và hiển thị khách sạn ngay lập tức
-            const destinationInputValue = document.getElementById('destinationInput').value;
-            const dateRangeValue = document.getElementById('dateRange').value;
+    // Get initial value from input and display hotel immediately
+    const destinationInputValue = document.getElementById('destinationInput').value;
+    const dateRangeValue = document.getElementById('dateRange').value;
         
-            // Hiển thị khách sạn ngay khi tải trang
-            populateHotelList(destinationInputValue, dateRangeValue);
+    // Show hotels as soon as page loads
+    populateHotelList(destinationInputValue, dateRangeValue);
         
-            // Add event listener cho nút search
-            document.getElementById('searchButton').addEventListener("click", () => {
-                const destinationInputValue = document.getElementById('destinationInput').value;
-                const dateRangeValue = document.getElementById('dateRange').value;
+    // Add event listener to button search
+    document.getElementById('searchButton').addEventListener("click", () => {
+        const destinationInputValue = document.getElementById('destinationInput').value;
+        const dateRangeValue = document.getElementById('dateRange').value;
         
-                populateHotelList(destinationInputValue, dateRangeValue); // Lọc kết quả dựa trên input
+        populateHotelList(destinationInputValue, dateRangeValue); // Filter results based on input
             });
-        };
+};
