@@ -155,17 +155,6 @@ margin : The space between the container and its parent.
     color: lightgray;
 }
 
-/* .headerSearchItem:last-child .headerBtn {
-    background-color: #0071c2;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-} */
-
-
 .options {
     display: none;
     z-index: 2;   /* When click Optipns it will be positioned above image*/
