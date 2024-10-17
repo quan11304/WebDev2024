@@ -1,0 +1,38 @@
+.headerImageContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.headerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.headerOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.headerOverlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0; /* Remove margin to prevent spacing issues */
+}
+
+.headerOverlay p {
+    font-size: 1.5rem;
+    margin-top: 10px; /* Keep some space between the heading and the paragraph */
+    white-space: nowrap; /* Prevent the paragraph from wrapping to the next line */
+}
+
+

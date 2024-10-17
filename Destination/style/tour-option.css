@@ -1,0 +1,56 @@
+
+
+.ticket-container {
+    max-width: 800px; 
+    margin: 40px auto; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.tour-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: transform 0.2s;
+}
+
+.tour-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tour-details {
+    flex-grow: 1;
+}
+
+.tour-details h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.price {
+    color: #ff6600; /* Price color */
+    font-size: 22px; /* Price font size */
+    font-weight: bold;
+}
+
+.select-btn {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.select-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

@@ -1,17 +1,18 @@
 .header {
-    background-color: #003580   ;
+    background-color: #003580;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0; 
+    padding: 0 0;
     position: relative;
+    z-index: 1; /* Ensure it stays above the background */
 }
 
 .headerContainer {
     width: 100%;
     max-width: 1024px;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
 .headerList {

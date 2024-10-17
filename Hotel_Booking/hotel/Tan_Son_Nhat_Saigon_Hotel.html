@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="../../Home page/home_footer.css">
+    <link rel="stylesheet" href="../hotel.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navContainer">
+            <a href="../../Home page/home.html">
+                <img src="../../Destination/logo/logotrang.png" alt="Travel Booking Logo" class="logo-img">
+            </a>
+            <div class="navItems">
+                <button type="button" class="navButton">
+                    <a href="../../LoginRegister page/register.html">Register</a>
+                </button>
+                <button type="button" class="navButton">
+                    <a href="../../LoginRegister page/login.html">Login</a>
+                </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="headerContainer1">
+            <nav>
+                <ul class="menu">
+                    <li class="other">
+                        <div>
+                            <i class="fas fa-home"></i>
+                            <a href="../../Home page/home.html">Home</a>
+                        </div>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-utensils"></i>
+                        <a href="#about">Tours</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-plane"></i>
+                        <a href="#services">Flights</a>
+                    </li>
+
+                    <li class="active">
+                            <i class="fas fa-bed"></i>
+                            <a href="">Hotels</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-hotel"></i>
+                        <a href="#contact">Entertainment</a>
+                    </li>
+
+                    <li class="other">
+                        <i class="fas fa-car"></i>
+                        <a href="../../Transportation/car_main.html">Transportation</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- Main Hotel Section -->
+    <div class="hotelContainer">
+        <!-- Image Slider Section (hidden initially) -->
+        <div id="slider" class="slider" style="display: none;">
+            <i class="fas fa-times close" onclick="closeSlider()"></i>
+            <i class="fas fa-arrow-left arrow left" onclick="prevSlide()"></i>
+            <i class="fas fa-arrow-right arrow right" onclick="nextSlide()"></i>            
+            <div class="sliderWrapper">
+                <div class="sliderImgWrapper">
+                    <img id="sliderImage" src="" alt="Hotel image" class="sliderImg" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Hotel Wrapper -->
+        <div class="hotelWrapper">
+            <button class="bookNow">Reserve or Book Now!</button>
+            <h1 class="hotelTitle">Tan Son Nhat Saigon Hotel</h1> <!-- Fixed typo here -->
+            <div class="hotelAddress">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>178 Bui Vien, Pham Ngu Lao ward, District 1, Ho Chi Minh City</span>
+            </div>
+            <span class="hotelDistance">Excellent location - 500m from center</span>
+            <span class="hotelPriceHighlight"> <!-- Fixed typo here -->
+                Book a stay over $310 at this property and get a free airport taxi
+            </span>
+
+            <!-- Hotel Images -->
+            <div class="hotelImages">
+                <div class="hotelImgWrapper" onclick="openSlider(0)">
+                    <img src="../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel1.jpeg" alt="Hotel 1" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(1)">
+                    <img src="../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel2.jpeg" alt="Hotel 2" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(2)">
+                    <img src="../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel3.jpeg" alt="Hotel 3" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(3)">
+                    <img src="../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel4.jpeg" alt="Hotel 4" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(4)">
+                    <img src="../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel5.jpeg" alt="Hotel 5" class="hotelImg">
+                </div>
+                <div class="hotelImgWrapper" onclick="openSlider(5)">
+                    <img src="../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel6.jpeg" alt="Hotel 6" class="hotelImg">
+                </div>
+            </div>
+
+            <!-- Hotel Details -->
+            <div class="hotelDetails">
+                <div class="hotelDetailsTexts">
+                    <h1 class="hotelTitle">Stay in the heart of the city</h1>
+                    <p class="hotelDesc">
+                        Staying at Tan Son Nhat Saigon Hotel is a good choice when you are visiting Ward 9. 
+                        24-hours front desk is available to serve you, from check-in to check-out, or any assistance you need. 
+                        Should you desire more, do not hesitate to ask the front desk, we are always ready to accommodate you.
+                        WiFi is available within public areas of the property to help you to stay connected with family and friends.
+                    </p>
+                </div>
+                <div class="hotelDetailsPrice">
+                    <h1>Perfect for a 9-night stay!</h1>
+                    <span>Located in the heart of the city, this property has an excellent location score of 9.8!</span>
+                    <h2><b>$945</b> (9 nights)</h2>
+                    <button>Reserve or Book Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Subscription Section and Footer remain the same -->
+        <div class="mail">
+            <div class="mailTitle">Save time, save money!</div>
+            <div class="mailDesc">Sign up and we'll send the best deals to you</div>
+            <div class="mailInputContainer">
+                <input type="text" placeholder="Your Email">
+                <button><a href="/../LoginRegister page/register.html">Subscribe</a></button>
+            </div>
+        </div>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="footerContainer">
+        <!-- First Column: Logos -->
+        <div class="footerContent">
+            <div class="footerTitle">Payment partner</div>
+            <img src="/../Destination/logo/logotrang.png" alt="Group 21 Logo" class="mainLogo">
+            <div class="bankLogos">
+                <img src="/../Home page/Home_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
+                <img src="/../Home page/Home_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
+                <img src="/../Home page/Home_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
+                <img src="/../Home page/Home_image/VIB.png" alt="Bank 4" class="bankLogo">
+                <img src="/../Home page/Home_image/TPBank.png" alt="Bank 5" class="bankLogo">
+                <img src="/../Home page/Home_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
+                <img src="/../Home page/Home_image/Visa.png" alt="Bank 7" class="bankLogo">
+                <img src="/../Home page/Home_image/VNPay.png" alt="Bank 6" class="bankLogo">
+                <img src="/../Home page/Home_image/Momo.png" alt="Bank 6" class="bankLogo">
+            </div>
+        </div>
+
+        <!-- Second Column: About Us -->
+        <div class="footerContent">
+            <div class="footerTitle">About Us</div>
+            <ul>
+                <li>Lê Văn Trường - 22BI13440</li>
+                <li>Hoàng Quân - 22BI13368</li>
+                <li>Nguyễn Tài Anh - 22BI13028</li>
+                <li>Nguyễn Hải Nam - 22BI13322</li>
+                <li>Đỗ Bảo Nhi - 22BI13349</li>
+                <li>Đỗ Trọng Đạt - 22BI13075</li>
+            </ul>
+        </div>
+
+        <!-- Third Column: Links -->
+        <div class="footerContent">
+            <div class="footerTitle">Quick Links</div>
+            <ul>
+                <li>
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/quan11304/WebDev2024">Github</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/TravelokaVN">Facebook</a>
+                </li>
+
+                <li>
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/traveloka.vn/">Instagram</a>
+                </li>
+
+                <li>
+                    <i class="fa-brands fa-google"></i>
+                    <a href="https://www.traveloka.com/en-vn">Google</a>
+                </li>
+            </ul>
+
+            <div class="footerTitle">Download</div>
+            <div class="downloadLogos">
+                <a href="https://play.google.com/store/apps/details?id=com.traveloka.android&hl=vi&pli=1">
+                    <img src="/../Home page/Home_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
+                </a>
+
+                <a href="https://apps.apple.com/vn/app/traveloka-kh%C3%A1ch-s%E1%BA%A1n-v%C3%A9-m%C3%A1y-bay/id898244857?l=vi">
+                    <img src="/../Home page/Home_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    </div>
+
+    <script>
+        // Array to store the image sources
+        const photos = [
+            "../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel1.jpeg",
+            "../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel2.jpeg",
+            "../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel3.jpeg",
+            "../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel4.jpeg",
+            "../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel5.jpeg",
+            "../images/images_hotel_room/Tan_Son_Nhat_Saigon_Hotel6.jpeg"
+        ];
+
+        let currentSlide = 0;
+
+        // Function to open the slider
+        function openSlider(index) {
+            document.getElementById('slider').style.display = 'flex';
+            currentSlide = index;
+            document.getElementById('sliderImage').src = photos[currentSlide];
+        }
+
+        // Function to close the slider
+        function closeSlider() {
+            document.getElementById('slider').style.display = 'none';
+        }
+
+        // Function to show the previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide === 0) ? photos.length - 1 : currentSlide - 1;
+            document.getElementById('sliderImage').src = photos[currentSlide];
+        }
+
+        // Function to show the next slide
+        function nextSlide() {
+            currentSlide = (currentSlide === photos.length - 1) ? 0 : currentSlide + 1;
+            document.getElementById('sliderImage').src = photos[currentSlide];
+        }
+    </script>
+
+</body>
+</html>

@@ -5,38 +5,84 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     position: relative;
 }
 
+/* HEADER CONTAINER  Only for hotel_index.html*/
 .headerContainer {
     width: 100%;
     max-width: 1024px;
-    margin: 10px 0 50px 0; /* Adjusted margins */
+    margin: 10px 0 30px 0; /* Adjusted margins */
 }
 
-.headerContainer.listMode {
-    margin: 20px 0 0 0;
+/* HEADER LIST  Only for hotel_list.html*/
+.headerContainer_listMode {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0; /* Adjusted margins */
 }
 
-.headerList {
-    display: flex;
-    gap: 30px; /* Reduced gap */
-    margin-bottom: 30px; /* Reduced margin */
+/* MENU */
+.menu {  
+    display: flex;  
+    justify-content: center;
+    align-items: center;  
+    margin: 0;   
+}  
+
+
+.menu li {  
+    margin: 0 10px; /* Giảm khoảng cách giữa các mục */  
+    display: flex;  
+    align-items: center;   
+    padding: 10px 15px; /* Tăng padding để tạo khoảng cách giữa icon và chữ */  
+    background-color: transparent; /* Màu nền mặc định */  
+    border-radius: 5px; /* Bo góc */  
+} 
+
+.menu li.active {
+    border: 1px solid #ffffff; /* Circle border */
+    padding: 10px; 
+    border-radius: 20px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-.headerListItem {
-    display: flex;
+.menu li.active div {
+    display: flex; 
     align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    color: white;
 }
 
-.headerListItem.active {
-    border: 1px solid white;
-    padding: 8px; /* Reduced padding */
-    border-radius: 15px; /* Adjusted radius */
+.menu li.other div {
+    display: flex; 
+    align-items: center; 
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu i {
+    color: #fff; 
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.menu li:hover {
+    background-color: #fff; 
+    border-radius: 5px; 
+}
+
+.menu li:hover a {
+    color: #003580; 
+}
+
+.menu li:hover i {
+    color: #003580;
 }
 
 .headerTitle {
@@ -59,20 +105,35 @@
     cursor: pointer;
 }
 
+.headerBtn a {
+    color: white;
+    text-decoration: none;
+}
+
+.headerBtn:hover {
+    background-color: #0073e6;
+}
+
 .headerSearch {
     background-color: white;
     border: 3px solid #febb02;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 8px; /* Reduced padding */
-    border-radius: 5px;
-    position: absolute;
+    display: flex;  /* easily arrange the child elements within the element */
+    align-items: center;  /* Centering along the vertical axis  */
+    justify-content: space-around;  /* Centering along the horizontal axis  */
+    padding: 8px; 
+    border-radius: 5px;  
+    position: absolute;  /* The element will not affect the layout of other elements and can move freely within the positioning area. */
     bottom: -25px;
     width: 80%;
     max-width: 1024px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/*
+gap : The space between child elements in a container.
+padding : The space between the container and its border.
+margin : The space between the container and its parent.
+*/
 
 .headerSearchItem {
     display: flex;
@@ -87,14 +148,14 @@
 
 .headerSearchText {
     color: lightgray;
-    cursor: pointer;
+    cursor: pointer;  /* The cursor property specifies the mouse cursor to display when it is over an element. */
 }
 
 .headerIcon {
     color: lightgray;
 }
 
-.headerSearchItem:last-child .headerBtn {
+/* .headerSearchItem:last-child .headerBtn {
     background-color: #0071c2;
     color: white;
     font-weight: bold;
@@ -102,19 +163,18 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 
 .options {
     display: none;
-    z-index: 2;
+    z-index: 2;   /* When click Optipns it will be positioned above image*/
     position: absolute;
     top: 50px;
     border-radius: 5px;
     background-color: white;
     color: gray;
     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
-    z-index: 1000; /* Để đảm bảo nó nằm trên các phần tử khác */
 }
 
 .optionItem {

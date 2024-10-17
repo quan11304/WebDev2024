@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Nang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/destination.css">
+    <link rel="stylesheet" href="../style/destination_title.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navContainer">
+            <img src="../logo/logotrang.png" class="logo-image" alt="Logo">
+            <div class="navItems">
+                <button class="navButton">Register</button>
+                <button class="navButton">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="headerContainer">
+            <div class="headerList">
+                <div class="headerListItem">
+                    <i class="fas fa-bed"></i>
+                    <span>Hotels</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-utensils"></i>
+                    <span>Tours</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-plane"></i>
+                    <span>Flights</span>
+                </div>
+                <div class="headerListItem active">
+                    <i class="fas fa-hotel"></i>
+                    <span>Destination</span>
+                </div>
+                <div class="headerListItem">
+                    <i class="fas fa-car"></i>
+                    <span>Car Rentals</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Image Section -->
+        <div class="headerImageContainer">
+            <img src="../image/hcmbg.jpg" alt="HCM" class="headerImage">
+            <div class="headerOverlay">
+                <h1>Da Nang</h1>
+                <p>Feel the breeze and embrace the waves in Da Nang</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="explorations">
+        <div class="description-title">Da Nang</div>
+        <div class="description" style="font-size: 16px; padding: 20px; margin: 0 auto; max-width: 950px; text-align: justify; color: black;">
+            <span class="shortText">
+                Da Nang, situated on the central coast of Vietnam, is a vibrant and rapidly developing city known for its stunning beaches, rich history, and dynamic culture. As one of the country's largest cities, Da Nang is a major economic, educational, and cultural hub.
+            </span>
+            <span class="moreText" style="display: none;">
+                <br></br>Here's some general information about this fascinating destination: Da Nang is nestled between the Annamite Mountain Range and the South China Sea, offering breathtaking natural landscapes. Its coastal location grants it access to beautiful beaches such as My Khe and Non Nuoc, attracting tourists from around the globe.
+            </span>
+            <a href="javascript:void(0);" class="readMoreLink" onclick="toggleReadMore(this)">Read More</a>
+        </div>
+    </div>    
+
+    <div class="highlight-section">
+        <div class="icon-container">
+            <i class="fa-solid fa-location-dot"></i> 
+        </div>
+        <div class="text-container">
+            <h2>Get to Know Ho Chi Minh City</h2>
+            <p>Take a tour of this destination's highlights</p>
+        </div>
+    </div>
+
+    <script src="../script/script.js"></script>   
+</body>
+</html>
