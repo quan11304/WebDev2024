@@ -71,7 +71,7 @@ main {
 .banner .triangle-text {
     position: absolute;
     bottom: 30px;
-    right: 50px;
+    right: 30px;
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -144,7 +144,8 @@ main {
     text-align-last: right;
 }
 
-.box .text h1 {
+.box .text h2 {
+    font-size: 30px;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -153,11 +154,11 @@ main {
     white-space: nowrap;
 }
 
-.box.right .text h1 {
+.box.right .text h2 {
     right: 289px; /* 269px (width of image) + 20px for padding */
 }
 
-.box:hover .text h1 {
+.box:hover .text h2 {
     position: relative;
     transform: initial;
     padding: 0;
@@ -210,7 +211,7 @@ main {
         width: 90%;
         margin: 20px 5%;
     }
-    .banner .text h1 {
+    .banner .text h2 {
         font-size:50px;
     }
     .banner .text p {
