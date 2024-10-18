@@ -1,92 +1,10 @@
-/* Global Reset */
-* {
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Navbar styles */
-.navbar {
-    background-color: #003580;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navContainer {
-    width: 100%;
-    max-width: 1200px;
-    color: white;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
-    padding: 10px 20px; /* Reduce padding for a smaller navbar */
 }
-
-.logo {
-    font-weight: 600;
-    font-size: 22px; /* Make the logo slightly smaller */
-    margin-bottom: 10px; /* Space between the logo and menu */
-}
-
-/* Menu under the logo */
-.navMenu {
-    display: flex;
-    gap: 30px; /* Space out the menu items */
-    margin-bottom: 10px;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.headerListItem {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    padding: 5px 10px; /* Add some padding for better click area */
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-}
-
-.headerListItem.active,
-.headerListItem:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
-}
-
-.navItems {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px; /* Add space between the menu and buttons */
-}
-
-.navButton {
-    padding: 8px 15px; /* Reduce button size */
-    background-color: white;
-    color: #003580;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navButton:hover {
-    background-color: #0073e6;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
 
 /*Styling dropdown box for selecting options*/
 
@@ -113,69 +31,6 @@ body {
 }
 
 
-/* Header Styling */
-.header {
-    background-color: #003580; /* Blue background */
-    color: white;
-    padding: 50px 0;
-    text-align: center;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.headerContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.headerList {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.headerListItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 12px;
-    transition: background-color 0.3s ease;
-    border-radius: 10px;
-}
-
-.headerListItem.active,
-.headerListItem:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.headerTitle {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.headerDesc {
-    margin: 20px 0;
-    font-size: 18px;
-}
-
-.headerBtn {
-    background-color: #0071c2;
-    color: white;
-    font-weight: 500;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.headerBtn:hover {
-    background-color: #005bb5;
-}
-
 /* Main Content Section */
 main {
     max-width: 1200px;
@@ -185,6 +40,7 @@ main {
 
 /* Booking Form Styling */
 .booking-form {
+    margin-top: 70px;
     padding: 40px;
     border-radius: 15px;
     background-color: white; /* White background */
@@ -201,6 +57,7 @@ main {
 
 .form-group {
     text-align: left; /* Align labels and inputs better */
+    box-sizing: border-box;
 }
 
 .form-group label {
@@ -218,6 +75,7 @@ main {
     font-size: 16px;
     width: 100%;
     transition: border-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 .form-group input:focus, 
@@ -386,13 +244,75 @@ main {
     background-color: #e64a19;
 }
 
+/* The Modal (background) */
+.modal {
+    display: flex; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    margin-top: 70px;
+}
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #003580;
-    color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px; /* Increase padding to 20px all around */
+    border: 1px solid #888;
+    max-width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Make this relative for positioning the button */
+    border-radius: 10px; /* Rounded corners */
+    margin: auto; /* Center modal */
+    top: 10%; /* Adjust top positioning for better centering */
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px; /* Add margin to separate from the content */
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Flight Details */
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #e74c3c;
+}
+
+/* Book Button */
+.book-button {
+    background-color: orange; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position relative to modal content */
+    bottom: 20px; /* Position from bottom */
+    right: 20px; /* Position from right */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.book-button:hover {
+    background-color: darkorange; /* Darker color on hover */
 }

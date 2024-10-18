@@ -6,39 +6,55 @@
     <title>Flight Booking</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../header/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navbar Section -->
-    <div class="navbar">
-        <div class="navContainer">
-            <span class="logo">Flight Booking</span>
-            <!-- Navigation menu right under the logo -->
-            <div class="navMenu">
-                <div class="headerListItem">
-                    <i class="fas fa-bed"></i>
-                    <span>Hotels</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-utensils"></i>
-                    <span>Tours</span>
-                </div>
-                <div class="headerListItem active">
-                    <i class="fas fa-plane"></i>
-                    <span>Flights</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-hotel"></i>
-                    <span>Entertainment</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-car"></i>
-                    <span>Car Rentals</span>
-                </div>
+    <!--Navigation bar part-->
+    <!--Navigation bar on header contain logo bar and menu bar, which are displayed 
+    by separate navigation container-->
+    <header style="height: 100px;">
+        <div class="navContainer" style="justify-content: space-between;">
+            <img src="../logo/logotrang.png">
+            <div class="navButton">
+                <a href="../LoginRegister page/register.html">
+                    <button type="submit">Register</button>
+                </a>
+                <a href="../LoginRegister page/login.html">
+                    <button type="submit">Login</button>
+                </a>
             </div>
-
         </div>
-    </div>
+        <!--Navigation bar menu-->
+        <!--each navigation container is arranged in -->
+        <div class="navContainer" style="column-gap: 40px;">
+            <a href="../Home page/home.html" class="navMenu">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../Hotel_Booking/hotel_index.html" class="navMenu">
+                <i class="fas fa-bed"></i>
+                <span>Hotels</span>
+            </a>
+            <a href="../Tours/tours.html" class="navMenu">
+                <i class="fas fa-utensils"></i>
+                <span>Tours</span>
+            </a>
+            <a href="../flight-booking/index.html" class="navMenu">
+                <i class="fas fa-plane"></i>
+                <span>Flights</span>
+            </a>
+            <a href="../Destination/destination.html" class="navMenu">
+                <i class="fas fa-hotel"></i>
+                <span>Destination</span>
+            </a>
+            <a href="../Transportation/car_index1.html" class="navMenu active">
+                <i class="fas fa-car"></i>
+                <span>Transportation</span>
+            </a>
+        </div> 
+    </header>
 
 
     <!-- Main Content Section -->
@@ -137,180 +153,173 @@
 
 
         
-            <!-- noidia Selection Section -->
-            <section class="flight-selection">
-                <h2>🛫 Travel to exciting domestic destinations</h2> 
-                <br>
-                <!-- Arrow Buttons for Scrolling -->
-                <div class="flight-carousel-container">
-                    <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
-                    
-                    <div class="flight-options" id="flight-carousel">
-                        <!-- First Flight Card -->
-                        <div class="flight-card">
-                            <img src="image/danang.jpg" alt="Đà Nẵng" class="flight-image">
-                            <div class="flight-details">
-                                <h3>Hà Nội - Đà Nẵng</h3>
-                                <p>14 - 15 Tháng 10 2024</p>
-                                <p>Vietravel Airlines</p>
-                                <p class="price">₫1,622,765</p>
-                            </div>
+        <!-- noidia Selection Section -->
+        <section class="flight-selection">
+            <h2>🛫 Travel to exciting domestic destinations</h2> 
+            <br>
+            <!-- Arrow Buttons for Scrolling -->
+            <div class="flight-carousel-container">
+                <button class="arrow left-arrow" id="left-arrow">&#10094;</button>
+                
+                <div class="flight-options" id="flight-carousel">
+                    <!-- First Flight Card -->
+                    <div class="flight-card">
+                        <img src="image/danang.jpg" alt="Đà Nẵng" class="flight-image">
+                        <div class="flight-details">
+                            <h3>Hà Nội - Đà Nẵng</h3>
+                            <p>14 - 15 Tháng 10 2024</p>
+                            <p>Vietravel Airlines</p>
+                            <p class="price">₫1,622,765</p>
                         </div>
-        
-                        <!-- More flight cards -->
-                        <div class="flight-card">
-                            <img src="image/nhatrang.jpg" alt="Nha Trang" class="flight-image">
-                            <div class="flight-details">
-                                <h3>Hà Nội - Nha Trang</h3>
-                                <p>6 - 9 Tháng 11 2024</p>
-                                <p>VietJet Air</p>
-                                <p class="price">₫2,097,604</p>
-                            </div>
+                    </div>
+    
+                    <!-- More flight cards -->
+                    <div class="flight-card">
+                        <img src="image/nhatrang.jpg" alt="Nha Trang" class="flight-image">
+                        <div class="flight-details">
+                            <h3>Hà Nội - Nha Trang</h3>
+                            <p>6 - 9 Tháng 11 2024</p>
+                            <p>VietJet Air</p>
+                            <p class="price">₫2,097,604</p>
                         </div>
-                        <div class="flight-card">
-                            <img src="image/tphcm.jpg" alt="TP HCM" class="flight-image">
-                            <div class="flight-details">
-                                <h3>Hà Nội - TP HCM</h3>
-                                <p>14 - 15 Tháng 12 2024</p>
-                                <p>VietJet Air</p>
-                                <p class="price">₫2,122,961</p>
-                            </div>
+                    </div>
+                    <div class="flight-card">
+                        <img src="image/tphcm.jpg" alt="TP HCM" class="flight-image">
+                        <div class="flight-details">
+                            <h3>Hà Nội - TP HCM</h3>
+                            <p>14 - 15 Tháng 12 2024</p>
+                            <p>VietJet Air</p>
+                            <p class="price">₫2,122,961</p>
                         </div>
-            
-                        <!-- Fourth Flight Card -->
-                        <div class="flight-card">
-                            <img src="image/dalat.jpg" alt="Đà Lạt" class="flight-image">
-                            <div class="flight-details">
-                                <h3>Hà Nội - Đà Lạt</h3>
-                                <p>24 - 25 Tháng 10 2024</p>
-                                <p>VietJet Air</p>
-                                <p class="price">₫2,037,138</p>
-                            </div>
-                        </div>
-                        <div class="flight-card">
-                            <img src="image/danang.jpg" alt="Đà Nẵng" class="flight-image">
-                            <div class="flight-details">
-                                <h3>Hà Nội - Đà Nẵng</h3>
-                                <p>14 - 15 Tháng 10 2024</p>
-                                <p>Vietravel Airlines</p>
-                                <p class="price">₫1,622,765</p>
-                            </div>
-                        </div>
-        
-                        <!-- More flight cards -->
-                        <div class="flight-card">
-                            <img src="image/nhatrang.jpg" alt="Nha Trang" class="flight-image">
-                            <div class="flight-details">
-                                <h3>Hà Nội - Nha Trang</h3>
-                                <p>6 - 9 Tháng 11 2024</p>
-                                <p>VietJet Air</p>
-                                <p class="price">₫2,097,604</p>
-                            </div>
-                        </div>
-                        <!-- Additional cards... -->
                     </div>
         
-                    <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
+                    <!-- Fourth Flight Card -->
+                    <div class="flight-card">
+                        <img src="image/dalat.jpg" alt="Đà Lạt" class="flight-image">
+                        <div class="flight-details">
+                            <h3>Hà Nội - Đà Lạt</h3>
+                            <p>24 - 25 Tháng 10 2024</p>
+                            <p>VietJet Air</p>
+                            <p class="price">₫2,037,138</p>
+                        </div>
+                    </div>
+                    <div class="flight-card">
+                        <img src="image/danang.jpg" alt="Đà Nẵng" class="flight-image">
+                        <div class="flight-details">
+                            <h3>Hà Nội - Đà Nẵng</h3>
+                            <p>14 - 15 Tháng 10 2024</p>
+                            <p>Vietravel Airlines</p>
+                            <p class="price">₫1,622,765</p>
+                        </div>
+                    </div>
+    
+                    <!-- More flight cards -->
+                    <div class="flight-card">
+                        <img src="image/nhatrang.jpg" alt="Nha Trang" class="flight-image">
+                        <div class="flight-details">
+                            <h3>Hà Nội - Nha Trang</h3>
+                            <p>6 - 9 Tháng 11 2024</p>
+                            <p>VietJet Air</p>
+                            <p class="price">₫2,097,604</p>
+                        </div>
+                    </div>
+                    <!-- Additional cards... -->
                 </div>
-        
-                <button class="book-now-btn">Book now!</button>
-            </section>
-        </main>
-        
-        <!-- Airline Partners Section -->
-        <section class="airline-partners">
-            <h2>Airline Partners</h2>
-            <p class="airline-subtitle">Domestic & International Airline Partners</p>
-            <p>We are partnering with various airlines across the globe to get you to wherever you need to be.</p>
-            <div class="airline-logo-grid">
-                <img src="image/vietjet.png" alt="Vietjet">
-                <img src="image/bamboo.png" alt="Bamboo Airways">
-                <img src="image/vietnamairlines.png" alt="Vietnam Airlines">
-                <img src="image/vietravelairlines.png" alt="Vietravel Airlines">
-                <img src="image/pacific.png" alt="Pacific Airlines">
-                <img src="image/thailion.png" alt="Thai Lion">
-                <img src="image/nok.png" alt="Nok Air">
-                <img src="image/scoot.png" alt="Scoot">
-                <img src="image/singapore.png" alt="Singapore Airlines">
-                <img src="image/malaysia.png" alt="Malaysia Airlines">
-                <img src="image/cathay.png" alt="Cathay Pacific">
-                <!-- Add more airline logos as needed -->
+    
+                <button class="arrow right-arrow" id="right-arrow">&#10095;</button>
             </div>
+    
+            <button class="book-now-btn">Book now!</button>
         </section>
 
-        <!--Footer-->
-        <footer class="footer">
-            <div class="footerContainer">
-                <!-- First Column: Logos -->
-                <div class="footerContent">
-                    <div class="footerTitle">Payment partner</div>
-                    <img src="../logo/logotrang.png" alt="Group 21 Logo" class="mainLogo">
-                    <div class="bankLogos">
-                        <img src="../footer/footer_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
-                        <img src="../footer/footer_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
-                        <img src="../footer/footer_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
-                        <img src="../footer/footer_image/VIB.png" alt="Bank 4" class="bankLogo">
-                        <img src="../footer/footer_image/TPBank.png" alt="Bank 5" class="bankLogo">
-                        <img src="../footer/footer_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
-                        <img src="../footer/footer_image/Visa.png" alt="Bank 7" class="bankLogo">
-                        <img src="../footer/footer_image/VNPay.png" alt="Bank 6" class="bankLogo">
-                        <img src="../footer/footer_image/Momo.png" alt="Bank 6" class="bankLogo">
-                    </div>
+        <!-- Modal Structure -->
+        <div id="flight-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="modal-flight-details">
+                    <img id="modal-image" class="modal-image" src="" alt="Flight Image">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-date"></p>
+                    <p id="modal-airline"></p>
+                    <p id="modal-price" class="price"></p>
                 </div>
+                <button class="book-button">Book</button>
+            </div>
+        </div>
+    </main>
 
-                <!-- Second Column: About Us -->
-                <div class="footerContent">
-                    <div class="footerTitle">About Us</div>
-                    <ul>
-                        <li>Lê Văn Trường - 22BI13440</li>
-                        <li>Hoàng Quân - 22BI13368</li>
-                        <li>Nguyễn Tài Anh - 22BI13028</li>
-                        <li>Nguyễn Hải Nam - 22BI13322</li>
-                        <li>Đỗ Bảo Nhi - 22BI13349</li>
-                        <li>Đỗ Trọng Đạt - 22BI13075</li>
-                    </ul>
-                </div>
-
-                <!-- Third Column: Links -->
-                <div class="footerContent">
-                    <div class="footerTitle">Quick Links</div>
-                    <ul>
-                        <li>
-                            <i class="fa-brands fa-github"></i>
-                            <a href="https://github.com/quan11304/WebDev2024">Github</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-facebook"></i>
-                            <a href="https://www.facebook.com/TravelokaVN">Facebook</a>
-                        </li>
-
-                        <li>
-                            <i class="fa-brands fa-instagram"></i>
-                            <a href="https://www.instagram.com/traveloka.vn/">Instagram</a>
-                        </li>
-
-                        <li>
-                            <i class="fa-brands fa-google"></i>
-                            <a href="https://www.traveloka.com/en-vn">Google</a>
-                        </li>
-                    </ul>
-
-                    <div class="footerTitle">Download</div>
-                    <div class="downloadLogos">
-                        <a href="https://play.google.com/store/apps/details?id=com.traveloka.android&hl=vi&pli=1">
-                            <img src="../footer/footer_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
-                        </a>
-
-                        <a href="https://apps.apple.com/vn/app/traveloka-kh%C3%A1ch-s%E1%BA%A1n-v%C3%A9-m%C3%A1y-bay/id898244857?l=vi">
-                            <img src="../footer/footer_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
-                        </a>
-                    </div>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footerContainer">
+            <!-- First Column: Logos -->
+            <div class="footerContent">
+                <div class="footerTitle">Payment partner</div>
+                <img src="../logo/logotrang.png" alt="Group 21 Logo" class="mainLogo">
+                <div class="bankLogos">
+                    <img src="../footer/footer_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
+                    <img src="../footer/footer_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
+                    <img src="../footer/footer_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
+                    <img src="../footer/footer_image/VIB.png" alt="Bank 4" class="bankLogo">
+                    <img src="../footer/footer_image/TPBank.png" alt="Bank 5" class="bankLogo">
+                    <img src="../footer/footer_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
+                    <img src="../footer/footer_image/Visa.png" alt="Bank 7" class="bankLogo">
+                    <img src="../footer/footer_image/VNPay.png" alt="Bank 6" class="bankLogo">
+                    <img src="../footer/footer_image/Momo.png" alt="Bank 6" class="bankLogo">
                 </div>
             </div>
-        </footer>
-    </body>
-</html>
 
+            <!-- Second Column: About Us -->
+            <div class="footerContent">
+                <div class="footerTitle">About Us</div>
+                <ul>
+                    <li>Lê Văn Trường - 22BI13440</li>
+                    <li>Hoàng Quân - 22BI13368</li>
+                    <li>Nguyễn Tài Anh - 22BI13028</li>
+                    <li>Nguyễn Hải Nam - 22BI13322</li>
+                    <li>Đỗ Bảo Nhi - 22BI13349</li>
+                    <li>Đỗ Trọng Đạt - 22BI13075</li>
+                </ul>
+            </div>
+
+            <!-- Third Column: Links -->
+            <div class="footerContent">
+                <div class="footerTitle">Quick Links</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/quan11304/WebDev2024">Github</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/TravelokaVN">Facebook</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/traveloka.vn/">Instagram</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-google"></i>
+                        <a href="https://www.traveloka.com/en-vn">Google</a>
+                    </li>
+                </ul>
+
+                <div class="footerTitle">Download</div>
+                <div class="downloadLogos">
+                    <a href="https://play.google.com/store/apps/details?id=com.traveloka.android&hl=vi&pli=1">
+                        <img src="../footer/footer_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
+                    </a>
+
+                    <a href="https://apps.apple.com/vn/app/traveloka-kh%C3%A1ch-s%E1%BA%A1n-v%C3%A9-m%C3%A1y-bay/id898244857?l=vi">
+                        <img src="../footer/footer_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
+
