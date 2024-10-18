@@ -20,7 +20,7 @@ function loginUser() {
 
     // Check if the input matches the stored data
     if ((inputUsernameOrEmail === storedEmail || inputUsernameOrEmail === storedUsername) && inputPassword === storedPassword) {
-        window.location.href = '/Code/WebDev2024/Home page/home.html';
+        window.location.href = '../Home page/home.html';
     } else {
         alert('Username/Email or Password is invalid!');
     }
