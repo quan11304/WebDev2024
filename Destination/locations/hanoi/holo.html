@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoa Lo Prison Museum
-</title>
+    <title>Hoa Lo Prison Museum</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../style/navbar.css">
+    <link rel="stylesheet" href="../../../header/navbar.css">
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/destination.css">
     <link rel="stylesheet" href="../../style/destination_title.css">
@@ -15,43 +14,47 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="navContainer">
-            <img src="../../logo/logotrang.png" class="logo-image" alt="Logo">
-            <div class="navItems">
-                <button class="navButton">Register</button>
-                <button class="navButton">Login</button>
+    <header style="height: 100px;">
+        <div class="navContainer" style="justify-content: space-between;">
+            <img src="../../../logo/logotrang.png"  >
+            <div class="navButton">
+                <a href="../LoginRegister page/register.html">
+                    <button type="submit">Register</button>
+                </a>
+                <a href="../LoginRegister page/login.html">
+                    <button type="submit">Login</button>
+                </a>
             </div>
         </div>
-    </div>
-
-    <div class="header">
-        <div class="headerContainer">
-            <div class="headerList">
-                <div class="headerListItem">
-                    <i class="fas fa-bed"></i>
-                    <span>Hotels</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-utensils"></i>
-                    <span>Tours</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-plane"></i>
-                    <span>Flights</span>
-                </div>
-                <div class="headerListItem active">
-                    <i class="fas fa-hotel"></i>
-                    <span>Destination</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-car"></i>
-                    <span>Car Rentals</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        <!--Navigation bar menu-->
+        <!--each navigation container is arranged in -->
+        <div class="navContainer" style="column-gap: 40px;">
+            <a href="../Home page/home.html" class="navMenu">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../Hotel_Booking/hotel_index.html" class="navMenu">
+                <i class="fas fa-bed"></i>
+                <span>Hotels</span>
+            </a>
+            <a href="../Tours/tours.html" class="navMenu">
+                <i class="fas fa-utensils"></i>
+                <span>Tours</span>
+            </a>
+            <a href="../flight-booking/index.html" class="navMenu">
+                <i class="fas fa-plane"></i>
+                <span>Flights</span>
+            </a>
+            <a href="../Destination/destination.html" class="navMenu">
+                <i class="fas fa-hotel"></i>
+                <span>Destination</span>
+            </a>
+            <a href="../Transportation/car_index1.html" class="navMenu active">
+                <i class="fas fa-car"></i>
+                <span>Transportation</span>
+            </a>
+        </div> 
+    </header>
     <div class="explorations">
         <div class="description-title">Hoa Lo Prison Museum
 
