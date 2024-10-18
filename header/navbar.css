@@ -1,0 +1,56 @@
+/* Navbar styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1024px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center the logo and button vertically */
+}
+
+/* Logo Styles */
+.logo-img {
+    height: 50px;
+    width: auto;  /* Keep original ratio */
+    margin-right: 20px; 
+    margin-top: 5px; 
+}
+
+.navItems {
+    display: flex;
+    gap: 10px;
+}
+
+.navButton {
+    padding: 3px 10px; /* Adjust the size of the button */
+    background-color: white;
+    color: #003580;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.navButton a {  
+    text-decoration: none; 
+    color: inherit; /* Use button text color */  
+}  
+
+.navButton:hover {
+    background-color: #0073e6;
+    color: white;
+}
