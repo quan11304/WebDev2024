@@ -58,4 +58,3 @@ destinationSwiper.update();
 
 
 
-
