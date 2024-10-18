@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Booking</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../header/navbar.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../footer/footer.css">
@@ -15,25 +15,51 @@
 
     <!-- Navbar Section -->
     <!-- Include logo and button register and login -->
-    <nav class="navbar">
-        <div class="navContainer">
-            <a href="../Home page/home.html">
-                <img src="../Destination/logo/logotrang.png" alt="Travel Booking Logo" class="logo-img">
-            </a>
-            <div class="navItems">
-                <button type="button" class="navButton">
-                    <a href="../LoginRegister page/register.html">Register</a>
-                </button>
-                <button type="button" class="navButton">
-                    <a href="../LoginRegister page/login.html">Login</a>
-                </button>
+    <header style="height: 100px;">
+        <div class="navContainer" style="justify-content: space-between;">
+            <img src="../logo/logotrang.png" >
+            <div class="navButton">
+                <a href="../LoginRegister page/register.html">
+                    <button type="submit">Register</button>
+                </a>
+                <a href="../LoginRegister page/login.html">
+                    <button type="submit">Login</button>
+                </a>
             </div>
         </div>
-    </nav>
+        <!--Navigation bar menu-->
+        <!--each navigation container is arranged in -->
+        <div class="navContainer" style="column-gap: 40px;">
+            <a href="../Home page/home.html" class="navMenu">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../Hotel_Booking/hotel_index.html" class="navMenu">
+                <i class="fas fa-bed"></i>
+                <span>Hotels</span>
+            </a>
+            <a href="../Tours/tours.html" class="navMenu">
+                <i class="fas fa-utensils"></i>
+                <span>Tours</span>
+            </a>
+            <a href="../flight-booking/index.html" class="navMenu">
+                <i class="fas fa-plane"></i>
+                <span>Flights</span>
+            </a>
+            <a href="../Destination/destination.html" class="navMenu">
+                <i class="fas fa-hotel"></i>
+                <span>Destination</span>
+            </a>
+            <a href="../Transportation/car_index1.html" class="navMenu active">
+                <i class="fas fa-car"></i>
+                <span>Transportation</span>
+            </a>
+        </div> 
+    </header>
     
 
     <!-- Header Section -->
-    <header class="header">
+    <div class="header">
         <div class="headerContainer">
             <nav>
                 <ul class="menu">
@@ -133,7 +159,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Home Section -->
     <main class="homeContainer">
