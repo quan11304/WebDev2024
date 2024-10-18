@@ -1,0 +1,75 @@
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #003580;
+    position: fixed; /*always stay in the same place even if page scrolled*/
+    z-index: 2; /*set stack order of an element*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.navContainer a {
+    text-decoration: none;
+}
+
+.navContainer a:hover{
+    background-color: #fff; 
+    color: #003580;
+    border-radius: 20px; 
+    transition: color 0.3s;
+
+}
+
+.navContainer img {
+    height: 50px;
+}
+
+/*Display the button to login and register*/
+.navButton {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.navButton button{
+    border: none;  
+    cursor: pointer; 
+    border-radius: 5px; 
+    padding: 5px 15px 5px 15px;
+}
+
+.navButton button:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+/*Navigation menu link to another page*/
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/*mark the page where the user is at*/
+.navMenu.active {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}

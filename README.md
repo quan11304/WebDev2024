@@ -20,6 +20,8 @@ Student Info
 * ID: 22BI13440
 * Name: Đỗ Bảo Nhi
 * ID: 22BI13349
+* Name: Đỗ Trọng Đạt
+* ID: 22BI13075
 <br><br>
 * Group ID: 21
 * Project Name: 19 - Travel Booking Application

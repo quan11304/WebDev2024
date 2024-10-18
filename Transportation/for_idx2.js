@@ -15,7 +15,7 @@ const carData = {
     16: [ // Cars with 16 seats
         { name: 'Ford Transit', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/fordsit16.png' },
         { name: 'Iveco Daily', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/ivcoDaily16.jpg' },
-        { name: 'Limousine', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/limousin.jpg' },
+        { name: 'Limousine', priceWithDriver: '40 USD ', priceWithoutDriver: '35 USD ', image: src='../Transportation/car16seats/limousin16.jpg' },
     ],
     camping: [ // Camping cars
         { name: 'GAZElle', priceWithDriver: '55 USD ', priceWithoutDriver: '50 USD ', image: src='../Transportation/campingCar/GAZelle1.jpg' },

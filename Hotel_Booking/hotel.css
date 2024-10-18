@@ -1,4 +1,5 @@
 .hotelContainer {
+    padding-top: 125px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;

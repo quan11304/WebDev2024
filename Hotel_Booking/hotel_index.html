@@ -5,74 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Booking</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../header/navbar.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
     <!-- Navbar Section -->
-    <nav class="navbar">
-        <div class="navContainer">
-            <a href="../Home page/home.html">
-                <img src="../Destination/logo/logotrang.png" alt="Travel Booking Logo" class="logo-img">
-            </a>
-            <div class="navItems">
-                <button type="button" class="navButton">
-                    <a href="../LoginRegister page/register.html">Register</a>
-                </button>
-                <button type="button" class="navButton">
-                    <a href="../LoginRegister page/login.html">Login</a>
-                </button>
+    <!-- Include logo and button register and login -->
+    <header style="height: 100px;">
+        <div class="navContainer" style="justify-content: space-between;">
+            <img src="../logo/logotrang.png" >
+            <div class="navButton">
+                <a href="../LoginRegister page/register.html">
+                    <button type="submit">Register</button>
+                </a>
+                <a href="../LoginRegister page/login.html">
+                    <button type="submit">Login</button>
+                </a>
             </div>
         </div>
-    </nav>
+        <!--Navigation bar menu-->
+        <!--each navigation container is arranged in -->
+        <div class="navContainer" style="column-gap: 40px;">
+            <a href="../Home page/home.html" class="navMenu">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../Hotel_Booking/hotel_index.html" class="navMenu">
+                <i class="fas fa-bed"></i>
+                <span>Hotels</span>
+            </a>
+            <a href="../Tours/tours.html" class="navMenu">
+                <i class="fas fa-utensils"></i>
+                <span>Tours</span>
+            </a>
+            <a href="../flight-booking/index.html" class="navMenu">
+                <i class="fas fa-plane"></i>
+                <span>Flights</span>
+            </a>
+            <a href="../Destination/destination.html" class="navMenu">
+                <i class="fas fa-hotel"></i>
+                <span>Destination</span>
+            </a>
+            <a href="../Transportation/car_index1.html" class="navMenu active">
+                <i class="fas fa-car"></i>
+                <span>Transportation</span>
+            </a>
+        </div> 
+    </header>
     
 
     <!-- Header Section -->
-    <header class="header">
+    <div class="header">
         <div class="headerContainer">
-            <nav>
-                <ul class="menu">
-                    <li class="other">
-                        <div>
-                            <i class="fas fa-home"></i>
-                            <a href="../Home page/home.html">Home</a>
-                        </div>
-                    </li>
-
-                    <li class="other">
-                        <i class="fas fa-utensils"></i>
-                        <a href="#about">Tours</a>
-                    </li>
-
-                    <li class="other">
-                        <i class="fas fa-plane"></i>
-                        <a href="#services">Flights</a>
-                    </li>
-
-                    <li class="active">
-                            <i class="fas fa-bed"></i>
-                            <a href="">Hotels</a>
-                    </li>
-
-                    <li class="other">
-                        <i class="fas fa-hotel"></i>
-                        <a href="#contact">Entertainment</a>
-                    </li>
-
-                    <li class="other">
-                        <i class="fas fa-car"></i>
-                        <a href="../Transportation/car_main.html">Transportation</a>
-                    </li>
-                </ul>
-            </nav>
+            
             <h1 class="headerTitle">A lifetime of discounts? It's Genius.</h1>
             <p class="headerDesc">
                 Get rewarded for your travels – unlock instant savings of 10% or more with a free Travel Booking account.
             </p>
+            
             <button type="button" class="headerBtn">
                 <a href="../LoginRegister page/register.html">Sign in / Register</a>
             </button>
@@ -80,18 +74,17 @@
             <!-- Search Bar Section -->
             <div class="headerSearch">
                 <div class="headerSearchItem">
-                    <i class="fas fa-bed headerIcon"></i>
-                    <input type="text" 
+                    <i class="fas fa-bed headerIcon"></i>     <!-- <i> display an icon from Font Awesome.</i> -->
+                    <input 
+                    type="text" 
                     placeholder="Where are you going?" 
-                    class="headerSearchInput"
-                    onChange="{e => setDestination(e.target.value)}"
-                    >
+                    class="headerSearchInput">
                 </div>
                 <div class="headerSearchItem">
                     <i class="fas fa-calendar-alt headerIcon"></i>
                     <input 
                     type="text" 
-                    id="datePicker" 
+                    id="datePicker"    
                     class="headerSearchInput" 
                     placeholder="Select date range" readonly>
                 </div>
@@ -131,7 +124,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Home Section -->
     <main class="homeContainer">
@@ -142,28 +135,24 @@
                 <img src="images/hanoi.jpg" alt="A view of Ha Noi" class="featuredImg" />
                 <div class="featuredTitle">
                     <h1>Ha Noi</h1>
-                    <h2>123 properties</h2>
                 </div>
             </div>
             <div class="featuredItem">
                 <img src="images/danang.jpg" alt="A view of Da Nang" class="featuredImg" />
                 <div class="featuredTitle"> 
                     <h1>Da Nang</h1>
-                    <h2>124 properties</h2>
                 </div>
             </div>
             <div class="featuredItem">
                 <img src="images/nhatrang.jpg" alt="A view of Nha Trang" class="featuredImg" />
                 <div class="featuredTitle">
                     <h1>Nha Trang</h1>   
-                    <h2>125 properties</h2>
                 </div>
             </div>
             <div class="featuredItem">
                 <img src="images/hochiminh.jpg" alt="A view of Ho Chi Minh" class="featuredImg" />
                 <div class="featuredTitle">
                     <h1>Ho Chi Minh</h1>
-                    <h2>126 properties</h2>
                 </div>
             </div>
         </div>
@@ -273,15 +262,15 @@
                 <div class="footerTitle">Payment partner</div>
                 <img src="../Destination/logo/logotrang.png" alt="Group 21 Logo" class="mainLogo">
                 <div class="bankLogos">
-                    <img src="/../Home page/Home_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
-                    <img src="/../Home page/Home_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
-                    <img src="/../Home page/Home_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
-                    <img src="/../Home page/Home_image/VIB.png" alt="Bank 4" class="bankLogo">
-                    <img src="/../Home page/Home_image/TPBank.png" alt="Bank 5" class="bankLogo">
-                    <img src="/../Home page/Home_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
-                    <img src="/../Home page/Home_image/Visa.png" alt="Bank 7" class="bankLogo">
-                    <img src="/../Home page/Home_image/VNPay.png" alt="Bank 6" class="bankLogo">
-                    <img src="/../Home page/Home_image/Momo.png" alt="Bank 6" class="bankLogo">
+                    <img src="../footer/footer_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
+                    <img src="../footer/footer_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
+                    <img src="../footer/footer_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
+                    <img src="../footer/footer_image/VIB.png" alt="Bank 4" class="bankLogo">
+                    <img src="../footer/footer_image/TPBank.png" alt="Bank 5" class="bankLogo">
+                    <img src="../footer/footer_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
+                    <img src="../footer/footer_image/Visa.png" alt="Bank 7" class="bankLogo">
+                    <img src="../footer/footer_image/VNPay.png" alt="Bank 6" class="bankLogo">
+                    <img src="../footer/footer_image/Momo.png" alt="Bank 6" class="bankLogo">
                 </div>
             </div>
     
@@ -325,11 +314,11 @@
                 <div class="footerTitle">Download</div>
                 <div class="downloadLogos">
                     <a href="https://play.google.com/store/apps/details?id=com.traveloka.android&hl=vi&pli=1">
-                        <img src="/../Home page/Home_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
+                        <img src="../footer/footer_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
                     </a>
 
                     <a href="https://apps.apple.com/vn/app/traveloka-kh%C3%A1ch-s%E1%BA%A1n-v%C3%A9-m%C3%A1y-bay/id898244857?l=vi">
-                        <img src="/../Home page/Home_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
+                        <img src="../footer/footer_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
                     </a>
                 </div>
             </div>
@@ -341,15 +330,5 @@
     <!-- Include JavaScript libraries -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
-
-    <script>
-                // Handle the search action
-                function handleSearch() {
-                    const destination = document.getElementById('destinationInput').value;
-                    const dateRange = document.getElementById('datePicker').value;
-                    // Redirect to list.html with query parameters
-                    window.location.href = `list.html?destination=${encodeURIComponent(destination)}&dates=${encodeURIComponent(dateRange)}`;
-                }
-    </script>
 </body>
 </html>
