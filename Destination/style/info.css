@@ -34,17 +34,17 @@
     color: #555;
   }
   
-  a {
+  .icon, .card a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
   }
   
-  a i {
+  .icon, .card a i {
     font-size: 12px;
   }
   
-  a:hover {
+  .icon, .card a:hover {
     text-decoration: underline;
   }
   
