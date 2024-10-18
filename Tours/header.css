@@ -5,7 +5,6 @@ body {
 }
 
 .header {
-    height: 50px;
     background-color: #003580;
     display: flex;
     justify-content: center;
@@ -28,12 +27,12 @@ body {
     cursor: pointer; /* Clickable, leads to home */
 }
 
-.header .item {
+.header .navButton {
     display: flex;
     gap: 10px;
 }
 
-.header .button {
+.header button {
     padding: 10px 20px;
     background-color: #003580;
     color: white;
@@ -43,7 +42,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; /* Optional transition effect */
 }
 
-.header .button:hover {
+.header button:hover {
     background-color: #003580; /* Change background on hover */
     color: white; /* Change text color on hover */
 }

@@ -1,4 +1,5 @@
 header {
+    height: 100px;
     width: 100%;
     background-color: #003580;
     position: fixed; /*always stay in the same place even if page scrolled*/
