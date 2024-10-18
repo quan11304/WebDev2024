@@ -1,11 +1,14 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 main {
     display: flex;
     flex-direction: column;
 }
 
 .banner {
-    width: 100%;
-    height: 400px;
+    position: relative;
     overflow: hidden;
 }
 
@@ -13,6 +16,65 @@ main {
 .banner img {
     width: 100%;
     height: auto;
+    z-index: -1;
+    position: relative;
+}
+
+.banner .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* To put the textbox in the middle of the banner */
+
+    color: white;
+    text-shadow: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .text h1 {
+    margin: 0;
+    font-size: 72px;
+    text-shadow:
+            5px 5px 4px rgba(0, 0, 0, 0.5),
+            -5px 5px 4px rgba(0, 0, 0, 0.5),
+            5px -5px 4px rgba(0, 0, 0, 0.5),
+            -5px -5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner .text p {
+    font-size: 24px;
+    text-shadow:
+            1px 1px 4px rgba(0, 0, 0, 0.5),
+            -1px 1px 4px rgba(0, 0, 0, 0.5),
+            1px -1px 4px rgba(0, 0, 0, 0.5),
+            -1px -1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner .triangle {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 400px solid transparent;   /* Width */
+    border-top: 90px solid transparent;     /* Height */
+    border-bottom: 100px solid #3ABEF980;   /* #3ABEF9 with 50% transparency */
+}
+
+.banner .triangle-text {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .box {
@@ -36,13 +98,13 @@ main {
 .box:hover {
     box-shadow: 10px 10px 10px #565656;
     cursor: pointer;
-    transform: scale(105%);
+    /*transform: scale(105%);*/
     transition: all 150ms linear, transform 300ms;
 }
 
 .box .img-frame {
     height: 101%; /* 151.5px */
-    width: 269px;
+    width: 269px; /* For a 16:9 ratio */
     flex-shrink: 0;
     overflow: hidden;
 }
@@ -56,14 +118,15 @@ main {
     flex-direction: column;
     padding: 0 20px;
     color: black;
+    text-align: justify;
 }
 
 .box.left .text {
-    text-align: left;
+    text-align-last: left;
 }
 
 .box.right .text {
-    text-align: right;
+    text-align-last: right;
 }
 
 .box .text h1 {
@@ -71,7 +134,12 @@ main {
     padding: 0;
     margin: 0;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+.box.right .text h1 {
+    right: 289px; /* 269px (width of image) + 20px for padding */
 }
 
 .box:hover .text h1 {
@@ -80,6 +148,7 @@ main {
     padding: 0;
     margin: 0;
     top: initial;
+    right: initial;
     transition: transform 0s;
 }
 
@@ -92,4 +161,18 @@ main {
 .box:hover .text p {
     opacity: 1;
     transition: 150ms;
+}
+
+@media (max-width: 1000px) {
+    .box {
+        height: 180px;
+        width: 90%;
+        margin: 20px 5%;
+    }
+    .banner .text h1 {
+        font-size:50px;
+    }
+    .banner .text p {
+        font-size: 18px;
+    }
 }
