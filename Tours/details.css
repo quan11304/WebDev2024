@@ -1,0 +1,133 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    padding-top: 125px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background */
+.banner img {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: relative;
+}
+
+.banner .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* To put the textbox in the middle of the banner */
+
+    color: white;
+    text-shadow: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .text h1 {
+    margin: 0;
+    font-size: 72px;
+    text-shadow:
+            5px 5px 4px rgba(0, 0, 0, 0.5),
+            -5px 5px 4px rgba(0, 0, 0, 0.5),
+            5px -5px 4px rgba(0, 0, 0, 0.5),
+            -5px -5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner .text p {
+    font-size: 24px;
+    text-shadow:
+            1px 1px 4px rgba(0, 0, 0, 0.5),
+            -1px 1px 4px rgba(0, 0, 0, 0.5),
+            1px -1px 4px rgba(0, 0, 0, 0.5),
+            -1px -1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner .triangle {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 400px solid transparent;   /* Width */
+    border-top: 90px solid transparent;     /* Height */
+    border-bottom: 100px solid #3ABEF980;   /* #3ABEF9 with 50% transparency */
+}
+
+.banner .triangle-text {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 4px #00000080;
+}
+
+.content {
+    display: flex;
+    width: 90%;
+    margin: 20px 5% 50px;
+}
+
+.overview {
+    flex:1; /* Take up 1/3 of the screen */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overview ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.overview ul li {
+    padding: 5px 0;
+    font-size: larger;
+}
+
+.overview .button {
+    border: 4px solid #3572EF;
+    border-radius: 50px;
+    margin: 0 0 5px;
+    color: #3572EF;
+    font-size: 25px;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.description {
+    border-left: 2px solid #050C9C;
+    padding: 0px 20px;
+    flex: 2; /* Take up 2/3 of the screen */
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 1000px) {
+    .banner .text h2 {
+        font-size:50px;
+    }
+    .banner .text p {
+        font-size: 18px;
+    }
+}
