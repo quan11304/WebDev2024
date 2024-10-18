@@ -1,56 +1,74 @@
-/* Navbar styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
+header {
     width: 100%;
     background-color: #003580;
+    position: fixed; /*always stay in the same place even if page scrolled*/
+    z-index: 2; /*set stack order of an element*/
     display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .navContainer {
     width: 100%;
-    max-width: 1024px;
-    color: white;
+    max-width: 1200px;
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Center the logo and button vertically */
+    justify-content: center;
 }
 
-/* Logo Styles */
-.logo-img {
-    height: 50px;
-    width: auto;  /* Keep original ratio */
-    margin-right: 20px; 
-    margin-top: 5px; 
+.navContainer a {
+    text-decoration: none;
 }
 
-.navItems {
-    display: flex;
-    gap: 10px;
-}
-
-.navButton {
-    padding: 3px 10px; /* Adjust the size of the button */
-    background-color: white;
+.navContainer a:hover{
+    background-color: #fff; 
     color: #003580;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-radius: 20px; 
+    transition: color 0.3s;
+
 }
 
-.navButton a {  
-    text-decoration: none; 
-    color: inherit; /* Use button text color */  
-}  
+.navContainer img {
+    height: 50px;
+}
 
-.navButton:hover {
+/*Display the button to login and register*/
+.navButton {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.navButton button{
+    border: none;  
+    cursor: pointer; 
+    border-radius: 5px; 
+    padding: 5px 15px 5px 15px;
+}
+
+.navButton button:hover {
     background-color: #0073e6;
     color: white;
+}
+
+/*Navigation menu link to another page*/
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/*mark the page where the user is at*/
+.navMenu.active {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
 }
