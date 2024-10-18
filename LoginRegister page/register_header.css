@@ -49,7 +49,7 @@
     color: #003580;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
 }
 
@@ -66,7 +66,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
 }
 
@@ -78,7 +78,7 @@
 /* LOGO */
 .logo img {
     height: 35px; /* Scale the logo to fill the header's height */
-    width: 140px; /* Keep the logo's aspect ratio */
+    width: 130px; /* Keep the logo's aspect ratio */
 }
 
 /* MENU */

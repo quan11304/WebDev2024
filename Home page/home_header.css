@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     height: 100%;
 }
 
@@ -55,7 +55,7 @@ header {
     color: #003580;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .navButton a{
@@ -94,6 +94,7 @@ header {
     justify-content: center; /* Center the menu */
     align-items: center;
     margin: 0; 
+    font-weight: bold;
 }
 
 .menu li {
@@ -136,7 +137,7 @@ header {
 
 .menu li:hover {
     background-color: #fff; 
-    border-radius: 5px; 
+    border-radius: 20px; 
 }
 
 .menu li:hover a {
