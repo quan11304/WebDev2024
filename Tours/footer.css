@@ -1,0 +1,139 @@
+/* Footer container */
+footer {
+    background-color: rgb(0, 31, 63);
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: flex-start; /* Aligning items to the top */
+}
+
+/* Main footer wrapper */
+footer .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Ensuring space between columns */
+    column-gap: 150px; /* Gap between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    color: white;
+}
+
+/* Content inside the container */
+footer .content {
+    flex: 1; /* Let each column grow equally */
+    display: flex;
+    flex-direction: column;
+    min-width: 200px; 
+    border-radius: 10px;
+}
+
+/* Title style */
+footer .title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 15px; 
+    color: #fff;
+    padding-top: 10px;
+}
+
+footer .title ul{
+    color: #fff;
+}
+
+footer .title ul li a{
+    color: #fff;
+}
+
+footer .mainLogo{
+    width: 160px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Style for the list in each footer column */
+footer .content ul {
+    line-height: 30px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0; 
+}
+
+footer .content ul li a, footer .content ul li i {
+    color: rgb(141, 139, 139);
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+}
+
+/* Optional: Hover effect to improve UX */
+footer .content ul li a span:hover {
+    text-decoration: underline; /* Optional underline on hover */
+}
+
+/* Bank logos style */
+footer .bankLogos {
+    display: flex;
+    flex-wrap: wrap; /* Wrapping if logos overflow */
+    gap: 10px; /* Gap between logos */
+    border-radius: 10px;
+}
+
+footer .bankLogos img {
+    border-radius: 10px;
+    width: 85px;
+    height: 55px; /* Maintain the aspect ratio */
+    background-color: #fff;
+}
+
+footer .bankLogos img:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+footer .bankLogo {
+    max-width: 100px; /* Increased from 50px to 100px */
+    height: 70px; /* Ensures the height adjusts proportionally */
+}
+
+/* Download logos style */
+footer .downloadLogos {
+    display: flex;
+    flex-direction: column; /* Stack the images vertically */
+    gap: 10px; /* Add space between the images */
+    width: 100%;
+}
+
+footer .downloadLogos:hover{
+    cursor: pointer;
+}
+
+footer .downloadLogo {
+    max-width: 150px; /* Adjust the size of the download logos */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive design for download logos */
+@media (max-width: 768px) {
+    footer .downloadLogos {
+        align-items: center; /* Center the logos on smaller screens */
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .content {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    footer .bankLogos {
+        justify-content: center;
+    }
+}

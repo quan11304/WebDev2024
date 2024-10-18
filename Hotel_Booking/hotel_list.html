@@ -5,34 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Booking</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../header/navbar.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="../footer/footer.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
-    <!-- Navbar Section -->
-    <nav class="navbar">
-        <div class="navContainer">
-            <a href="../Home page/home.html">
-                <img src="../Destination/logo/logotrang.png" alt="Travel Booking Logo" class="logo-img">
-            </a>
-            <div class="navItems">
-                <button type="button" class="navButton">
-                    <a href="../LoginRegister page/register.html">Register</a>
-                </button>
-                <button type="button" class="navButton">
-                    <a href="../LoginRegister page/login.html">Login</a>
-                </button>
+    <header style="height: 100px;">
+        <div class="navContainer" style="justify-content: space-between;">
+            <img src="../logo/logotrang.png"  >
+            <div class="navButton">
+                <a href="../LoginRegister page/register.html">
+                    <button type="submit">Register</button>
+                </a>
+                <a href="../LoginRegister page/login.html">
+                    <button type="submit">Login</button>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Header Section -->
     <header class="header">
-        <div class="headerContainer1">
+        <div class="headerContainer_listMode">
             <nav>
                 <ul class="menu">
                     <li class="other">
@@ -49,28 +47,29 @@
 
                     <li class="other">
                         <i class="fas fa-plane"></i>
-                        <a href="#services">Flights</a>
+                        <a href="../flight-booking/index.html">Flights</a>
                     </li>
 
                     <li class="active">
                             <i class="fas fa-bed"></i>
-                            <a href="">Hotels</a>
+                            <a href="../Hotel_booking/hotel_index.html">Hotels</a>
                     </li>
 
                     <li class="other">
                         <i class="fas fa-hotel"></i>
-                        <a href="#contact">Entertainment</a>
+                        <a href="../Destination/destination.html">Entertainment</a>
                     </li>
 
                     <li class="other">
                         <i class="fas fa-car"></i>
-                        <a href="../Transportation/car_main.html">Transportation</a>
+                        <a href="../Transportation/car_index1.html">Transportation</a>
                     </li>
                 </ul>
             </nav>
+        </div>
     </header>
 
-    <div class="listContainer">
+    <div class="listContainer" style="padding-top:125px ;">
         <div class="listWrapper">
             <div class="listSearch">
                 <h1 class="lsTitle">Search</h1>
@@ -86,23 +85,23 @@
                     <label>Options</label>
                     <div class="lsOptions">
                         <div class="lsOptionItem">
-                            <span class="lsOptionText">Min price <small>per night</small></span>
+                            <span>Min price <small>per night</small></span>
                             <input type="number" class="lsOptionInput" />
                         </div>
                         <div class="lsOptionItem">
-                            <span class="lsOptionText">Max price <small>per night</small></span>
+                            <span>Max price <small>per night</small></span>
                             <input type="number" class="lsOptionInput" />
                         </div>
                         <div class="lsOptionItem">
-                            <span class="lsOptionText">Adults</span>
+                            <span>Adults</span>
                             <input type="number" class="lsOptionInput" />
                         </div>
                         <div class="lsOptionItem">
-                            <span class="lsOptionText">Children</span>
+                            <span>Children</span>
                             <input type="number" class="lsOptionInput" />
                         </div>
                         <div class="lsOptionItem">
-                            <span class="lsOptionText">Rooms</span>
+                            <span>Rooms</span>
                             <input type="number" class="lsOptionInput" />
                         </div>
                     </div>
@@ -115,6 +114,77 @@
             </div>
         </div>
     </div>
+
+    <!--Footer-->
+     <footer class="footer">
+        <div class="footerContainer">
+            <!-- First Column: Logos -->
+            <div class="footerContent">
+                <div class="footerTitle">Payment partner</div>
+                <img src="../Destination/logo/logotrang.png" alt="Group 21 Logo" class="mainLogo">
+                <div class="bankLogos">
+                    <img src="/../footer/footer_image/Techcombank.jpg" alt="Bank 1" class="bankLogo">
+                    <img src="/../footer/footer_image/MBBank.jpg" alt="Bank 2" class="bankLogo">
+                    <img src="/../footer/footer_image/BIDV.jpg" alt="Bank 3" class="bankLogo">
+                    <img src="/../footer/footer_image/VIB.png" alt="Bank 4" class="bankLogo">
+                    <img src="/../footer/footer_image/TPBank.png" alt="Bank 5" class="bankLogo">
+                    <img src="/../footer/footer_image/Vietcombank.png" alt="Bank 6" class="bankLogo">
+                    <img src="/../footer/footer_image/Visa.png" alt="Bank 7" class="bankLogo">
+                    <img src="/../footer/footer_image/VNPay.png" alt="Bank 6" class="bankLogo">
+                    <img src="/../footer/footer_image/Momo.png" alt="Bank 6" class="bankLogo">
+                </div>
+            </div>
+    
+            <!-- Second Column: About Us -->
+            <div class="footerContent">
+                <div class="footerTitle">About Us</div>
+                <ul>
+                    <li>Lê Văn Trường - 22BI13440</li>
+                    <li>Hoàng Quân - 22BI13368</li>
+                    <li>Nguyễn Tài Anh - 22BI13028</li>
+                    <li>Nguyễn Hải Nam - 22BI13322</li>
+                    <li>Đỗ Bảo Nhi - 22BI13349</li>
+                    <li>Đỗ Trọng Đạt - 22BI13075</li>
+                </ul>
+            </div>
+    
+            <!-- Third Column: Links -->
+            <div class="footerContent">
+                <div class="footerTitle">Quick Links</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/quan11304/WebDev2024">Github</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/TravelokaVN">Facebook</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/traveloka.vn/">Instagram</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-google"></i>
+                        <a href="https://www.traveloka.com/en-vn">Google</a>
+                    </li>
+                </ul>
+
+                <div class="footerTitle">Download</div>
+                <div class="downloadLogos">
+                    <a href="https://play.google.com/store/apps/details?id=com.traveloka.android&hl=vi&pli=1">
+                        <img src="/../footer/footer_image/GetitonGoogleplay.png" alt="Google Play" class="downloadLogo">
+                    </a>
+
+                    <a href="https://apps.apple.com/vn/app/traveloka-kh%C3%A1ch-s%E1%BA%A1n-v%C3%A9-m%C3%A1y-bay/id898244857?l=vi">
+                        <img src="/../footer/footer_image/GetitonAppstore.png" alt="App Store" class="downloadLogo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript Section -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
