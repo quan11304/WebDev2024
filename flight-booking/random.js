@@ -95,10 +95,53 @@
                         <p class="old-price">₫${price.basePrice.toLocaleString()}</p>
                         <p class="price">₫${price.discountPrice.toLocaleString()}</p>
                     </div>
-                    <button class="select-button">Chọn</button>
+                    <button class="select-button">Book</button>
                 `;
                 flightCarousel.appendChild(flightCard);
             });
         }
 
         window.onload = generateFlights;
+
+// Get the modal and close button elements
+const modal = document.getElementById('booking-modal');
+const closeButton = document.querySelector('.close-button');
+
+// Function to open the modal with flight details
+function openModal(flightDetails) {
+    const modalFlightDetails = document.getElementById('modal-flight-details');
+    modalFlightDetails.innerHTML = flightDetails; // Set flight details in the modal
+    modal.style.display = 'block'; // Show the modal
+}
+
+// Function to close the modal
+closeButton.onclick = function() {
+    modal.style.display = 'none'; // Hide the modal
+}
+
+// Close the modal if the user clicks anywhere outside of it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none'; // Hide the modal
+    }
+}
+
+// Add event listeners to the "Book" buttons
+const bookButtons = document.querySelectorAll('.select-button');
+bookButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        const flightCard = button.closest('.flight-card');
+        const airline = flightCard.querySelector('.flight-details h3').textContent;
+        const details = flightCard.querySelector('.flight-details').innerHTML;
+        const price = flightCard.querySelector('.price-details .price').textContent;
+
+        // Create flight detail string for the modal
+        const flightDetails = `
+            <h3>${airline}</h3>
+            <p>${details}</p>
+            <p>Price: ${price}</p>
+        `;
+        openModal(flightDetails); // Open modal with flight details
+    });
+});
+
