@@ -62,6 +62,10 @@
     margin: 0; 
 }
 
+.footerContent ul li {
+    text-align: left; /* Ensure text is left-aligned */
+}
+
 .footerContent ul li a {
     color: rgb(141, 139, 139);
     text-decoration: none; /* Remove underline */
