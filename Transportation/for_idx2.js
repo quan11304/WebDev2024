@@ -1,4 +1,4 @@
-// Sample car data with prices depending on driver type
+// Sample car data with prices depending on car and driver type
 const carData = {
     4: [ // Cars with 4 seats
         { name: 'Hyundai i10', priceWithDriver: '30 USD', priceWithoutDriver: '24 USD ', image: src='../Transportation/car4seats/hyndaii104.webp' },
@@ -187,12 +187,6 @@ function toggleNav() {
         rentalDetails.style.display = "flex";
     }
 }
-
-// Function to adjust the position of an icon while scrolling
-window.onscroll = function() {
-    var icon = document.getElementById("scrollingIcon");
-    icon.style.top = (window.pageYOffset + 50) + "px"; // Adjust position based on scroll
-};
 
 // Call the function to display results on page load
 window.onload = displayResults;
