@@ -6,37 +6,55 @@
     <title>Order Flight</title>
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../header/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navbar Section -->
-    <div class="navbar">
-        <div class="navContainer">
-            <span class="logo">Flight Booking</span>
-            <div class="navMenu">
-                <div class="headerListItem">
-                    <i class="fas fa-bed"></i>
-                    <span>Hotels</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-utensils"></i>
-                    <span>Tours</span>
-                </div>
-                <div class="headerListItem active">
-                    <i class="fas fa-plane"></i>
-                    <span>Flights</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-hotel"></i>
-                    <span>Entertainment</span>
-                </div>
-                <div class="headerListItem">
-                    <i class="fas fa-car"></i>
-                    <span>Car Rentals</span>
-                </div>
+    <!--Navigation bar part-->
+    <!--Navigation bar on header contain logo bar and menu bar, which are displayed 
+    by separate navigation container-->
+    <header style="height: 100px; z-index: 1000;">
+        <div class="navContainer" style="justify-content: space-between;">
+            <img src="../logo/logotrang.png">
+            <div class="navButton">
+                <a href="../LoginRegister page/register.html">
+                    <button type="submit">Register</button>
+                </a>
+                <a href="../LoginRegister page/login.html">
+                    <button type="submit">Login</button>
+                </a>
             </div>
         </div>
-    </div>
+        <!--Navigation bar menu-->
+        <!--each navigation container is arranged in -->
+        <div class="navContainer" style="column-gap: 40px;">
+            <a href="../Home page/home.html" class="navMenu">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../Hotel_Booking/hotel_index.html" class="navMenu">
+                <i class="fas fa-bed"></i>
+                <span>Hotels</span>
+            </a>
+            <a href="../Tours/tours.html" class="navMenu">
+                <i class="fas fa-utensils"></i>
+                <span>Tours</span>
+            </a>
+            <a href="../flight-booking/index.html" class="navMenu active">
+                <i class="fas fa-plane"></i>
+                <span>Flights</span>
+            </a>
+            <a href="../Destination/destination.html" class="navMenu">
+                <i class="fas fa-hotel"></i>
+                <span>Destination</span>
+            </a>
+            <a href="../Transportation/car_index1.html" class="navMenu">
+                <i class="fas fa-car"></i>
+                <span>Transportation</span>
+            </a>
+        </div> 
+    </header>
 
     <!-- Main Content Section -->
     <main>
@@ -44,7 +62,7 @@
          <section class="order-summary">
             <h1>Order Flight</h1>
             <div class="summary-details">
-                <h2>Flight Details:</h2>
+                <h2>Flight Details</h2>
                 <p><strong>From:</strong> <span id="summary-from"></span></p>
                 <p><strong>To:</strong> <span id="summary-to"></span></p>
                 <p><strong>Departure Date:</strong> <span id="summary-departure"></span></p>
@@ -55,35 +73,33 @@
 
             <button id="confirm-order-btn" class="confirm-btn">Confirm Order</button>
         </section>
-        <script>
-            window.addEventListener('load', function () {
-                // Get data from localStorage
-                const from = localStorage.getItem('from');
-                const to = localStorage.getItem('to');
-                const departure = localStorage.getItem('departure');
-                const returnDate = localStorage.getItem('returnDate');
-                const passengers = localStorage.getItem('passengers');
-                const flightClass = localStorage.getItem('flightClass');
 
-                // Display the data in the order summary
-                document.getElementById('summary-from').textContent = from || 'N/A';
-                document.getElementById('summary-to').textContent = to || 'N/A';
-                document.getElementById('summary-departure').textContent = departure || 'N/A';
-                document.getElementById('summary-return').textContent = returnDate || 'N/A';
-                document.getElementById('summary-passengers').textContent = passengers || 'N/A';
-                document.getElementById('summary-class').textContent = flightClass || 'N/A';
-            });
+        <!-- Available Flights Section -->
+        <section class="flight-selection">
+            <h2>🛫 Available Flights</h2>
+            <div class="flight-carousel-container">
+                <div class="flight-options" id="flight-carousel">
+                    <!-- Flight cards will be generated here -->
+                </div>
+            </div>
+        </section>
 
-        </script>
-    <!-- Available Flights Section -->
-    <section class="flight-selection">
-        <h2>🛫 Available Flights</h2>
-        <div class="flight-carousel-container">
-            <div class="flight-options" id="flight-carousel">
-                <!-- Flight cards will be generated here -->
+        <!-- Modal Structure -->
+        <div id="booking-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Flight Booking</h2>
+                <div id="modal-flight-details">
+                    <!-- Flight details will be populated here -->
+                </div>
+                <h3>Select Payment Method</h3>
+                <div class="payment-methods">
+                    <button class="payment-button">Credit Card</button>
+                    <button class="payment-button">PayPal</button>
+                    <button class="payment-button">Bank Transfer</button>
+                </div>
             </div>
         </div>
-    </section>
     </main>
 
         <!--Footer-->
@@ -160,5 +176,6 @@
 </html>
     <script src="random.js"></script>
     <script src="script.js"></script>
+    <script src="details.js"></script>
 </body>
 </html>
