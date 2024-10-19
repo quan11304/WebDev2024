@@ -204,6 +204,7 @@ main {
     width: fit-content;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 @media (max-width: 1000px) {
