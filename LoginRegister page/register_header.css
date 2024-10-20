@@ -53,11 +53,11 @@
     text-decoration: none;
 }
 
-.navButtonLogin a{
+a .navButtonLogin{
     text-decoration: none;
 }
 
-.navButtonLogin a:visited{
+a:visited .navButtonLogin{
     text-decoration: none;
 }
 .navButtonRegister{
